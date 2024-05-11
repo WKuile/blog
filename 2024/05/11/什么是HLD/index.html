@@ -43,6 +43,10 @@
 
 
 
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
 
 
 
@@ -156,6 +160,12 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+        <div id="comment">
+            <div id="waline-container">
+            </div>
+        </div>
+        
     <div>
         <h1>什么是HLD?</h1>
     </div>
@@ -178,6 +188,10 @@
     
     
     
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
     
     
     
@@ -214,6 +228,41 @@
     
     
 
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <script>
+        Waline.init({
+            el: '#waline-container',
+            serverURL: "kuile.vercel.app",
+            commentCount: "true",
+            pageview: "false",
+            emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(','),
+            meta: "nick,mail,link".split(','),
+            requiredMeta: "nick".split(','),
+            lang: "zh-CN",
+            wordLimit: parseInt("200"),
+            pageSize: "15",
+            login: "enable",
+        });
+    </script>
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "kuile.vercel.app",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "zh-CN",
+        wordLimit: 200,
+        pageSize: "15",
+        login: "enable",
+        
+    });
+</script>
 
 
 
