@@ -42,6 +42,14 @@
 
 
 
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+
+
 <link rel="stylesheet" href="/blog/css/main.css" />
 
 <meta name="generator" content="Hexo 7.2.0"></head>
@@ -187,7 +195,7 @@
             
             <span class="tag">
                 
-                <a href="/blog/tags/HLD/" style="color: #03a9f4">
+                <a href="/blog/tags/HLD/" style="color: #ff7d73">
                     HLD
                 </a>
             </span>
@@ -204,9 +212,30 @@
     </div>
     
     <div class="content" v-pre>
-        <p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记<br>具体内容有待开发</p>
+        <p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
+<p><img src="https://pic.imgdb.cn/item/66402ef90ea9cb14037ce6de.png"></p>
+<hr>
+<p>对于此改版的主旨，就如同改版名称所说的那样，以“快乐生活”为核心所进行的更改，目前所暂定的游戏更改有:</p>
+<ul>
+<li>新的学习系统玩法</li>
+<li>添加了一些额外的特殊衣服</li>
+<li>具有更多新的剧情与内容</li>
+<li>拥有基于原版设定的独属于Teaching Feeling的小世界观</li>
+<li>男主与各个角色的互动事件更多，同时每个角色拥有独立的角色故事</li>
+<li>以及一些其他待添加的游戏内容</li>
+</ul>
+<p>具体的游戏内容包括但不限于以上的游戏内容，更多的游戏内容还待添加，如有更好的想法可以在该文章的评论区进行评论，如有好的点子可能会进行采纳</p>
 
     </div>
+    
+    
+    
+    
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    
     
     
 </div>
@@ -239,6 +268,47 @@
         
     </div>
     <script src="/blog/js/main.js"></script>
+    
+    
+
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <script>
+        Waline.init({
+            el: '#waline-container',
+            serverURL: "kuile.vercel.app",
+            commentCount: "true",
+            pageview: "false",
+            emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(','),
+            meta: "nick,mail,link".split(','),
+            requiredMeta: "nick".split(','),
+            lang: "zh-CN",
+            wordLimit: parseInt("200"),
+            pageSize: "15",
+            login: "enable",
+        });
+    </script>
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "kuile.vercel.app",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "zh-CN",
+        wordLimit: 200,
+        pageSize: "15",
+        login: "enable",
+        
+    });
+</script>
+
+
+
     
 </body>
 </html>
