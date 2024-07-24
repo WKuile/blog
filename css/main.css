@@ -1417,7 +1417,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff936c;
+  background: #38ffc3;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2716,6 +2716,21 @@ header.header {
   }
   .sidebar-active .footer-fixed {
     left: 320px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("https://pic.imgdb.cn/item/66a0dd1ed9c307b7e9419981.jpg") center 0 no-repeat;
+    background-size: cover;
   }
 }
 body {
