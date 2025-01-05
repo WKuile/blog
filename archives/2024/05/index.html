@@ -47,7 +47,20 @@
 
 
 
-<link rel="dns-prefetch" href="kuile.vercel.app"><!-- 页面点击小红心 -->
+<link rel="dns-prefetch" href="kuile.vercel.app"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/love.js"></script>
 
   <noscript>
@@ -156,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -166,7 +179,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -187,13 +200,8 @@
 	</div>
 	<ul class="links-of-blogroll-list recent-posts-list">
 	        <li class="my-links-of-blogroll-item">
-		    <a href="/post/114514/" title="游戏介绍-Psycho Love" target="">
-		    游戏介绍-Psycho Love
-		    </a>
-		</li>
-	        <li class="my-links-of-blogroll-item">
-		    <a href="/post/20717/" title="Creepy Love-毛骨悚然的爱-汉化双端" target="">
-		    Creepy Love-毛骨悚然的爱-汉化双端
+		    <a href="/post/49615/" title="Ray-Kbys同人游戏介绍一览" target="">
+		    Ray-Kbys同人游戏介绍一览
 		    </a>
 		</li>
 	        <li class="my-links-of-blogroll-item">
@@ -228,33 +236,13 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
-      <span class="collection-header">2024<span class="collection-year-count">3</span></span>
+      <span class="collection-header">2024<span class="collection-year-count">1</span></span>
     </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-12T15:18:12+08:00"
-              content="2024-05-12">
-          05-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/post/20717/" itemprop="url">
-            <span itemprop="name">Creepy Love-毛骨悚然的爱-汉化双端</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -366,6 +354,15 @@ document.addEventListener('page:loaded', () => {
 });
 </script>
 
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "default";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
 </body>
 
 <!-- 页面点击小红心 -->
