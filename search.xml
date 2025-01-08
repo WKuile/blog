@@ -3,7 +3,14 @@
   <entry>
     <title>Ray-Kbys笔下角色译名一览(文字版)</title>
     <url>/post/29934/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><style>
+  table {
+    background-color: white;
+    color: brown; /* 设置文字颜色为黑色 */
+  }
+</style>
+
+<table>
 <thead>
 <tr>
 <th align="center">作品标题</th>
