@@ -1419,7 +1419,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #fffff4;
+    background: #f50edb;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2359,6 +2359,15 @@ pre code {
   to {
     transform: rotateZ(-30deg);
   }
+}
+a:not(.btn) {
+  color: #ca6900;
+  border-bottom: none;
+}
+a:not(.btn):hover {
+  color: #a55600;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .category-all-page .category-all-title {
   text-align: center;
