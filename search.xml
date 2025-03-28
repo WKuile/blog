@@ -2,8 +2,27 @@
 <search>
   <entry>
     <title>TeachingFeeling的改版教程(持续更新中)</title>
-    <url>/post/101/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <url>/post/teaching/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>[!CAUTION]</p>
+<p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
+</blockquote>
+<p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
+<h2 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h2><h3 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h3><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
+<p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
+<p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;而游戏的3.0到4.0.6版本，则使用了Electron框架用于运行游戏，可以使用Tyrano官方的Tyrano Script V5对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;这里对两个框架的区别和作用不做过多介绍，只是稍作了解。</p>
+<hr>
+<h3 id="2-文本编辑器的选择"><a href="#2-文本编辑器的选择" class="headerlink" title="2.文本编辑器的选择"></a>2.文本编辑器的选择</h3><p>&emsp;&emsp;就和C++、Java或是Python那些代码语言一样，我们也是需要一款文本编辑器来对代码进行修改，这里针对电脑Windows端和手机安卓端各推荐一款编辑器</p>
+<p>&emsp;&emsp;<strong>电脑端推荐-Visual Studio Code</strong></p>
+<p>&emsp;&emsp;也就是我们俗称的VSC，该编辑器的优点在于拥有诸多的功能以及优秀的插件，其中Tyrano官方提供了VSC的语法高亮插件，使得我们能够更直白明了的查看游戏的代码。</p>
+<p>&emsp;&emsp;<strong>手机端推荐-MT管理器</strong></p>
+<p>&emsp;&emsp;手机端其实很遗憾的没有带有语法高亮的编辑器，只能使用原始的黑白文本，但这里还是推荐了MT管理器，原因是它针对文件管理相比较于其他管理器拥有更多的功能，并且采用双列文件管理，能够更方便我们对改版文件进行管理与更改。</p>
+<hr>
+<p><em>下图中的图片左侧为未启用语法高亮的代码片段，右侧为启用了语法高亮的代码片段</em></p>
+<p><img src="https://pic1.imgdb.cn/item/67e6d1490ba3d5a1d7e5cb50.png"></p>
+]]></content>
       <tags>
         <tag>教程</tag>
         <tag>改版</tag>
