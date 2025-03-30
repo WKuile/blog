@@ -1,98 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>TeachingFeeling的改版教程(持续更新中)</title>
-    <url>/post/teaching/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>[!CAUTION]</p>
-<p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
-</blockquote>
-<p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
-<h1 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h1><h2 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h2><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
-<p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
-<p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
-<p>&emsp;&emsp;而游戏的3.0到4.0.6版本，则使用了Electron框架用于运行游戏，可以使用Tyrano官方的Tyrano Script V5对游戏进行辅助修改。</p>
-<p>&emsp;&emsp;这里对两个框架的区别和作用不做过多介绍，只是稍作了解。</p>
-<hr>
-<h2 id="2-文本编辑器的选择"><a href="#2-文本编辑器的选择" class="headerlink" title="2.文本编辑器的选择"></a>2.文本编辑器的选择</h2><p>&emsp;&emsp;就和C++、Java或是Python那些代码语言一样，我们也是需要一款文本编辑器来对代码进行修改，这里针对电脑Windows端和手机安卓端各推荐一款编辑器</p>
-<p>&emsp;&emsp;<strong>电脑端推荐-Visual Studio Code</strong></p>
-<p>&emsp;&emsp;也就是我们俗称的VSC，该编辑器的优点在于拥有诸多的功能以及优秀的插件，其中Tyrano官方提供了VSC的语法高亮插件，使得我们能够更直白明了的查看游戏的代码。</p>
-<p>&emsp;&emsp;<strong>手机端推荐-MT管理器</strong></p>
-<p>&emsp;&emsp;手机端其实很遗憾的没有带有语法高亮的编辑器，只能使用原始的黑白文本，但这里还是推荐了MT管理器，原因是它针对文件管理相比较于其他管理器拥有更多的功能，并且采用双列文件管理，能够更方便我们对改版文件进行管理与更改。</p>
-<p><font color="Gray"><em>下图中的图片左侧为未启用语法高亮的代码片段，右侧为启用了语法高亮的代码片段</em></font></p>
-<p><img src="https://pic1.imgdb.cn/item/67e6d1490ba3d5a1d7e5cb50.png"></p>
-<hr>
-<h2 id="3-了解文件结构"><a href="#3-了解文件结构" class="headerlink" title="3.了解文件结构"></a>3.了解文件结构</h2><p>&emsp;&emsp;接下来，你需要了解游戏的文件目录结构，也就是存放游戏数据的data文件夹内的东西。</p>
-<p>&emsp;&emsp;其中，NW.js的data文件夹就在根目录，而Electron的data文件夹则存放于“.\resources\app”(此处的\代表目录分隔符，“.”代表游戏根目录，也就是说整体意思为游戏根目录下的resources文件夹内的app文件夹内)</p>
-<p>&emsp;&emsp;<font color="Gray"><em>如下图所示，左边为NW.js，右边为Electron</em></font></p>
-<p><img src="https://pic1.imgdb.cn/item/67e7ed6c0ba3d5a1d7e67dec.png"></p>
-<hr>
-<p>&emsp;&emsp;当你打开data文件夹，你则会看到以下文件夹，而他们的作用分别是</p>
-<p>&emsp;&emsp;&emsp;&emsp;bgimage——存放游戏背景图片</p>
-<p>&emsp;&emsp;&emsp;&emsp;bgm——存放游戏背景音乐</p>
-<p>&emsp;&emsp;&emsp;&emsp;fgimage——存放游戏内容图片(包括角色所有立绘以及衣服)</p>
-<p>&emsp;&emsp;&emsp;&emsp;image——存放游戏按键图片(包括对话按键，菜单按键在内的所有图片)</p>
-<p>&emsp;&emsp;&emsp;&emsp;scenario——存放游戏剧本文件(包括游戏文本以及变量)</p>
-<p>&emsp;&emsp;&emsp;&emsp;sound——存放游戏音效文件(包括做爱时的精液声)</p>
-<p>&emsp;&emsp;&emsp;&emsp;system——存放游戏系统配置文件(包括字体类型大小、快进速度等近100项游戏外的设置)</p>
-<p>&emsp;&emsp;&emsp;&emsp;video——存放游戏视频文件(包括游戏开头logo)</p>
-<p>&emsp;&emsp;<font color="Gray"><em>(另外在部分版本当中可能还存在scenario_old、scenariod_beat，这两个文件夹是作者Ray-Kbys对旧版本游戏的备份，完全无用，只是忘记删了。其余文件需要根据当前版本考虑作用，有些作者可能会乱塞东西。)</em></font></p>
-<hr>
-<p>&emsp;&emsp;对于以上这些文件夹的使用，取决于作者要怎么制作自己的改版，如果有人要制作一个新的开头动画，那文件需要放在video文件夹内，如果需要加入新的菜单按钮之类的，也更建议放到image文件夹内。这些分类一定程度上并不是固定的，虽然你也可以把按键放到fgimage文件夹内，但是更建议遵守规则来放置图片，因为图片的调用在系统中是按照默认文件夹来调用的，比如你想要调用一张按键图片，那系统会默认从image文件夹里面找，背景图和其他文件也是同理，会在对应文件夹去找，除非你在调用按键的时候额外写一个参数告诉系统你要从指定的文件夹里面去找图片，那样未免太过于麻烦了。</p>
-<hr>
-<h1 id="二、改版制作教程"><a href="#二、改版制作教程" class="headerlink" title="二、改版制作教程"></a>二、改版制作教程</h1><h2 id="1-文件要素"><a href="#1-文件要素" class="headerlink" title="1.文件要素"></a>1.文件要素</h2><p>&emsp;&emsp;讲了那么多，现在已经可以开始正式进入教程了。</p>
-<p>&emsp;&emsp;首先，我们需要知道，在TyranoScript的游戏脚本文件中，主要由两种的东西构成，也就是<u><strong>文本</strong></u>(Text)和<u><strong>标签</strong></u>(Tag)，至于标记(Label)和名称标记(#)，本质上是辅助代码用的，名称标记更只是个附属用品，这个后文会讲到。<font size=2>(那个名称标记#其实并没有名字，这是我取的，所以英文名就写了它本身)</font></p>
-<p>&emsp;&emsp;那文本和标签具体是什么东西，可以让我们来看一段代码</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">再次初次见面、我叫希尔薇。<span class="punctuation">[</span>lr<span class="punctuation">]</span></span><br><span class="line">感谢你收留我。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line">虽然无法干力气活、但我想如果你让我错简单的杂用程度的活我可以做到。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">…求你、手下留情。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>stop_bgm<span class="punctuation">]</span><span class="punctuation">[</span>black<span class="punctuation">]</span><span class="punctuation">[</span>chara_stop<span class="punctuation">]</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">[</span>jump storage<span class="operator">=</span><span class="string">&quot;intro/step1.ks&quot;</span> target<span class="operator">=</span><span class="string">&quot;*step1&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
-
-<p><font color="Gray"><em>前面说的语法高亮只是由插件做成的第三方效果，TyranoScript本身的语法并没有对应的原生语法高亮，此处是随便找了个稍微符合高亮的语言</em></font></p>
-<p>&emsp;&emsp;在上述代码中，你能够看到两样东西，分别是普通的文字文本，和带有括号的标签。</p>
-<h3 id="1-1-文本"><a href="#1-1-文本" class="headerlink" title="1.1 文本"></a>1.1 文本</h3><p>&emsp;&emsp;TyranoScript的文本就像小说一样，是不需要像其他游戏引擎或者程序语言那样，用任何代码或标识符将文本单独输出，比如游戏引擎Ren’py需要使用双引号(”“)来输出对话。</p>
-<p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
-<p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
-<h3 id="1-2-标签"><a href="#1-2-标签" class="headerlink" title="1.2 标签"></a>1.2 标签</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
-<p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
-<p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(这个东西下文会提到，你可以暂时不用管这个)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
-<p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
-<p>&emsp;&emsp;不同于官方的标签，由你自己定义的标签的名字是可以随意更改的，但是要记住，标签的命名尽量使用英文。空格用_代替。</p>
-<p>&emsp;&emsp;而参数比较特殊，它是对标签的一个补充，就比如上述标签中的</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;它由名称和参数两个部分组成，待在第一位的chara_mod就是它的名称，而后面的name、time、storage则是他的参数。这个标签的作用就是更改角色的图像，通常会用来更改角色的表情，但在此处用来更改整个角色立绘。</p>
-<p>&emsp;&emsp;这里我们倒着讲，最后一个storage参数的作用就是定义你要调用什么图片，在上面，它调用了fgimage文件夹里面，一个名称为s的文件夹内，名称为body的文件夹内的stand-c.png图片。（至于为什么是fgimage可以翻回去看一下文件结构那部分），所以在这里写作s&#x2F;body&#x2F;stand-c.png，后续不再做过多的赘述，直接用xxx&#x2F;xxx&#x2F;xxx的形式表示文件结构。</p>
-<p>&emsp;&emsp;time参数的作用在此处的作用是定义图片切换的淡出淡入时间，单位为毫秒(ms)，此处定义为了100，则代表着切换角色图片时会有0.1s的淡出淡入，如果设置为0的话则直接变换，不做淡出淡入。</p>
-<p>&emsp;&emsp;对于name参数，它作用就是用于管理同一name参数的角色图片。(实际上它并不是由chara_mod定义的，而是由另一个叫做chara_new的标签定义的，只不过我没在这里写出来。)</p>
-<p>&emsp;&emsp;比如上述代码中</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;两个chara_mod标签分别调用了叫stand-c和stang-t的图片，但是它们的name都是boay。要注意，此处的name并不是指它们的文件名称叫做body，而是指它们在系统中都属于“boay”这一名称的分类。而且游戏中不能同时存在两个name一样的图片，则是会被切换(time的切换淡出淡入就是在这里使用的)，stand-t.png被调用后，由于场上已经存在name为body的图片了，所以stand-c.png就会消失在游戏里，stand-t.png则会出现在游戏中。</p>
-<p>&emsp;&emsp;当name为其他值的时候也是同样的道理，游戏里只能存在同一个name，后调用者会替换前调用者。但是chara_mod能调用哪些name，需要看chara_new赋予了什么样的name，如果说chara_new赋予三张图片的name分别是eye、body、hand，那你如果用chara_mod是调用出name为foot或是其他值的图片，否则游戏将会报错，因为chara_new并没有赋予这些不存在的值。</p>
-<p><font color="Gray"><em>下图为游戏内stand-c和stand-t替换的过程</em></font></p>
-<p><img src="https://i.ptu.me/file/2025/03/29/IWTh.gif" alt="IWTh.gif"></p>
-]]></content>
-      <tags>
-        <tag>改版</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同人小说《我与梦寐以求的她》(持续更新)</title>
-    <url>/post/56328/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>[!IMPORTANT]</p>
-<font color=red>
-
-<p>前排重要提醒:</p>
-<p>本小说搬运自国外小说网站Wattpad上用户的同人小说《<a href="https://www.wattpad.com/story/115296341-sylvie-el-regalo-que-siempre-hemos-a%C3%B1orado">Sylvie, el regalo que siempre hemos añorado</a>》(点击小说名前往原网站)，在此搬运并翻译为中文，并且已经过原作者授权。不定期更新</p>
-</font>
-</blockquote>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录:"></a>目录:</h2><h3 id="第一章-在荒诞中寻找理想"><a href="#第一章-在荒诞中寻找理想" class="headerlink" title="第一章:在荒诞中寻找理想"></a><a href="https://wraykbys.top/post/2562/">第一章:在荒诞中寻找理想</a></h3><h3 id="第二章-新的伙伴"><a href="#第二章-新的伙伴" class="headerlink" title="第二章:新的伙伴"></a><a href="https://wraykbys.top/post/2563/">第二章:新的伙伴</a></h3><h3 id="第三章-我与她的新纽带"><a href="#第三章-我与她的新纽带" class="headerlink" title="第三章:我与她的新纽带"></a><a href="https://wraykbys.top/post/2564/">第三章:我与她的新纽带</a></h3>]]></content>
-      <tags>
-        <tag>同人</tag>
-        <tag>小说</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ray-Kbys笔下角色译名一览(文字版)</title>
     <url>/post/29934/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><style>
@@ -630,6 +538,120 @@
       </tags>
   </entry>
   <entry>
+    <title>什么是HLD?</title>
+    <url>/post/47495/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
+<p><img src="https://pic.imgdb.cn/item/66402ef90ea9cb14037ce6de.png"></p>
+<hr>
+<p>对于此改版的主旨，就如同改版名称所说的那样，以“快乐生活”为核心所进行的更改，目前所暂定的游戏更改有:</p>
+<ul>
+<li>新的学习系统玩法</li>
+<li>添加了一些额外的特殊衣服</li>
+<li>具有更多新的剧情与内容</li>
+<li>拥有基于原版设定的独属于Teaching Feeling的小世界观</li>
+<li>男主与各个角色的互动事件更多，同时每个角色拥有独立的角色故事</li>
+<li>以及一些其他待添加的游戏内容</li>
+</ul>
+<p>具体的游戏内容包括但不限于以上的游戏内容，更多的游戏内容还待添加，如有更好的想法可以在该文章的评论区进行评论，如有好的点子可能会进行采纳</p>
+]]></content>
+      <tags>
+        <tag>HLD</tag>
+        <tag>改版</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TeachingFeeling的改版教程(持续更新中)</title>
+    <url>/post/teaching/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>[!CAUTION]</p>
+<p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
+</blockquote>
+<p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
+<h1 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h1><h2 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h2><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
+<p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
+<p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;而游戏的3.0到4.0.6版本，则使用了Electron框架用于运行游戏，可以使用Tyrano官方的Tyrano Script V5对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;这里对两个框架的区别和作用不做过多介绍，只是稍作了解。</p>
+<hr>
+<h2 id="2-文本编辑器的选择"><a href="#2-文本编辑器的选择" class="headerlink" title="2.文本编辑器的选择"></a>2.文本编辑器的选择</h2><p>&emsp;&emsp;就和C++、Java或是Python那些代码语言一样，我们也是需要一款文本编辑器来对代码进行修改，这里针对电脑Windows端和手机安卓端各推荐一款编辑器</p>
+<p>&emsp;&emsp;<strong>电脑端推荐-Visual Studio Code</strong></p>
+<p>&emsp;&emsp;也就是我们俗称的VSC，该编辑器的优点在于拥有诸多的功能以及优秀的插件，其中Tyrano官方提供了VSC的语法高亮插件，使得我们能够更直白明了的查看游戏的代码。</p>
+<p>&emsp;&emsp;<strong>手机端推荐-MT管理器</strong></p>
+<p>&emsp;&emsp;手机端其实很遗憾的没有带有语法高亮的编辑器，只能使用原始的黑白文本，但这里还是推荐了MT管理器，原因是它针对文件管理相比较于其他管理器拥有更多的功能，并且采用双列文件管理，能够更方便我们对改版文件进行管理与更改。</p>
+<p><font color="Gray"><em>下图中的图片左侧为未启用语法高亮的代码片段，右侧为启用了语法高亮的代码片段</em></font></p>
+<p><img src="https://pic1.imgdb.cn/item/67e6d1490ba3d5a1d7e5cb50.png"></p>
+<hr>
+<h2 id="3-了解文件结构"><a href="#3-了解文件结构" class="headerlink" title="3.了解文件结构"></a>3.了解文件结构</h2><p>&emsp;&emsp;接下来，你需要了解游戏的文件目录结构，也就是存放游戏数据的data文件夹内的东西。</p>
+<p>&emsp;&emsp;其中，NW.js的data文件夹就在根目录，而Electron的data文件夹则存放于“.\resources\app”(此处的\代表目录分隔符，“.”代表游戏根目录，也就是说整体意思为游戏根目录下的resources文件夹内的app文件夹内)</p>
+<p>&emsp;&emsp;<font color="Gray"><em>如下图所示，左边为NW.js，右边为Electron</em></font></p>
+<p><img src="https://pic1.imgdb.cn/item/67e7ed6c0ba3d5a1d7e67dec.png"></p>
+<hr>
+<p>&emsp;&emsp;当你打开data文件夹，你则会看到以下文件夹，而他们的作用分别是</p>
+<p>&emsp;&emsp;&emsp;&emsp;bgimage——存放游戏背景图片</p>
+<p>&emsp;&emsp;&emsp;&emsp;bgm——存放游戏背景音乐</p>
+<p>&emsp;&emsp;&emsp;&emsp;fgimage——存放游戏内容图片(包括角色所有立绘以及衣服)</p>
+<p>&emsp;&emsp;&emsp;&emsp;image——存放游戏按键图片(包括对话按键，菜单按键在内的所有图片)</p>
+<p>&emsp;&emsp;&emsp;&emsp;scenario——存放游戏剧本文件(包括游戏文本以及变量)</p>
+<p>&emsp;&emsp;&emsp;&emsp;sound——存放游戏音效文件(包括做爱时的精液声)</p>
+<p>&emsp;&emsp;&emsp;&emsp;system——存放游戏系统配置文件(包括字体类型大小、快进速度等近100项游戏外的设置)</p>
+<p>&emsp;&emsp;&emsp;&emsp;video——存放游戏视频文件(包括游戏开头logo)</p>
+<p>&emsp;&emsp;<font color="Gray"><em>(另外在部分版本当中可能还存在scenario_old、scenariod_beat，这两个文件夹是作者Ray-Kbys对旧版本游戏的备份，完全无用，只是忘记删了。其余文件需要根据当前版本考虑作用，有些作者可能会乱塞东西。)</em></font></p>
+<hr>
+<p>&emsp;&emsp;对于以上这些文件夹的使用，取决于作者要怎么制作自己的改版，如果有人要制作一个新的开头动画，那文件需要放在video文件夹内，如果需要加入新的菜单按钮之类的，也更建议放到image文件夹内。这些分类一定程度上并不是固定的，虽然你也可以把按键放到fgimage文件夹内，但是更建议遵守规则来放置图片，因为图片的调用在系统中是按照默认文件夹来调用的，比如你想要调用一张按键图片，那系统会默认从image文件夹里面找，背景图和其他文件也是同理，会在对应文件夹去找，除非你在调用按键的时候额外写一个参数告诉系统你要从指定的文件夹里面去找图片，那样未免太过于麻烦了。</p>
+<hr>
+<h1 id="二、改版制作教程"><a href="#二、改版制作教程" class="headerlink" title="二、改版制作教程"></a>二、改版制作教程</h1><h2 id="1-文件要素"><a href="#1-文件要素" class="headerlink" title="1.文件要素"></a>1.文件要素</h2><p>&emsp;&emsp;讲了那么多，现在已经可以开始正式进入教程了。</p>
+<p>&emsp;&emsp;首先，我们需要知道，在TyranoScript的游戏脚本文件中，主要由两种的东西构成，也就是<u><strong>文本</strong></u>(Text)和<u><strong>标签</strong></u>(Tag)，至于标记(Label)和名称标记(#)，本质上是辅助代码用的，名称标记更只是个附属用品，这个后文会讲到。<font size=2>(那个名称标记#其实并没有名字，这是我取的，所以英文名就写了它本身)</font></p>
+<p>&emsp;&emsp;那文本和标签具体是什么东西，可以让我们来看一段代码</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line">再次初次见面、我叫希尔薇。<span class="punctuation">[</span>lr<span class="punctuation">]</span></span><br><span class="line">感谢你收留我。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line">虽然无法干力气活、但我想如果你让我错简单的杂用程度的活我可以做到。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">…求你、手下留情。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>stop_bgm<span class="punctuation">]</span><span class="punctuation">[</span>black<span class="punctuation">]</span><span class="punctuation">[</span>chara_stop<span class="punctuation">]</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">[</span>jump storage<span class="operator">=</span><span class="string">&quot;intro/step1.ks&quot;</span> target<span class="operator">=</span><span class="string">&quot;*step1&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p><font color="Gray"><em>前面说的语法高亮只是由插件做成的第三方效果，TyranoScript本身的语法并没有对应的原生语法高亮，此处是随便找了个稍微符合高亮的语言</em></font></p>
+<p>&emsp;&emsp;在上述代码中，你能够看到两样东西，分别是普通的文字文本，和带有括号的标签。</p>
+<h3 id="1-1-文本"><a href="#1-1-文本" class="headerlink" title="1.1 文本"></a>1.1 文本</h3><p>&emsp;&emsp;TyranoScript的文本就像小说一样，是不需要像其他游戏引擎或者程序语言那样，用任何代码或标识符将文本单独输出，比如游戏引擎Ren’py需要使用双引号(”“)来输出对话。</p>
+<p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
+<p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
+<h3 id="1-2-标签"><a href="#1-2-标签" class="headerlink" title="1.2 标签"></a>1.2 标签</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
+<p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
+<p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(这个东西下文会提到，你可以暂时不用管这个)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
+<p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
+<p>&emsp;&emsp;不同于官方的标签，由你自己定义的标签的名字是可以随意更改的，但是要记住，标签的命名尽量使用英文。空格用_代替。</p>
+<p>&emsp;&emsp;而参数比较特殊，它是对标签的一个补充，就比如上述标签中的</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;它由名称和参数两个部分组成，待在第一位的chara_mod就是它的名称，而后面的name、time、storage则是他的参数。这个标签的作用就是更改角色的图像，通常会用来更改角色的表情，但在此处用来更改整个角色立绘。</p>
+<p>&emsp;&emsp;这里我们倒着讲，最后一个storage参数的作用就是定义你要调用什么图片，在上面，它调用了fgimage文件夹里面，一个名称为s的文件夹内，名称为body的文件夹内的stand-c.png图片。（至于为什么是fgimage可以翻回去看一下文件结构那部分），所以在这里写作s&#x2F;body&#x2F;stand-c.png，后续不再做过多的赘述，直接用xxx&#x2F;xxx&#x2F;xxx的形式表示文件结构。</p>
+<p>&emsp;&emsp;time参数的作用在此处的作用是定义图片切换的淡出淡入时间，单位为毫秒(ms)，此处定义为了100，则代表着切换角色图片时会有0.1s的淡出淡入，如果设置为0的话则直接变换，不做淡出淡入。</p>
+<p>&emsp;&emsp;对于name参数，它作用就是用于管理同一name参数的角色图片。(实际上它并不是由chara_mod定义的，而是由另一个叫做chara_new的标签定义的，只不过我没在这里写出来。)</p>
+<p>&emsp;&emsp;比如上述代码中</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> <span class="punctuation">]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="punctuation">[</span>p<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">[</span>chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;两个chara_mod标签分别调用了叫stand-c和stang-t的图片，但是它们的name都是boay。要注意，此处的name并不是指它们的文件名称叫做body，而是指它们在系统中都属于“boay”这一名称的分类。而且游戏中不能同时存在两个name一样的图片，则是会被切换(time的切换淡出淡入就是在这里使用的)，stand-t.png被调用后，由于场上已经存在name为body的图片了，所以stand-c.png就会消失在游戏里，stand-t.png则会出现在游戏中。</p>
+<p>&emsp;&emsp;当name为其他值的时候也是同样的道理，游戏里只能存在同一个name，后调用者会替换前调用者。但是chara_mod能调用哪些name，需要看chara_new赋予了什么样的name，如果说chara_new赋予三张图片的name分别是eye、body、hand，那你如果用chara_mod是调用出name为foot或是其他值的图片，否则游戏将会报错，因为chara_new并没有赋予这些不存在的值。</p>
+<p><font color="Gray"><em>下图为游戏内stand-c和stand-t替换的过程</em></font></p>
+<p><img src="https://i.ptu.me/file/2025/03/29/IWTh.gif" alt="IWTh.gif"></p>
+]]></content>
+      <tags>
+        <tag>改版</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>同人小说《我与梦寐以求的她》(持续更新)</title>
+    <url>/post/56328/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>[!IMPORTANT]</p>
+<font color=red>
+
+<p>前排重要提醒:</p>
+<p>本小说搬运自国外小说网站Wattpad上用户的同人小说《<a href="https://www.wattpad.com/story/115296341-sylvie-el-regalo-que-siempre-hemos-a%C3%B1orado">Sylvie, el regalo que siempre hemos añorado</a>》(点击小说名前往原网站)，在此搬运并翻译为中文，并且已经过原作者授权。不定期更新</p>
+</font>
+</blockquote>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录:"></a>目录:</h2><h3 id="第一章-在荒诞中寻找理想"><a href="#第一章-在荒诞中寻找理想" class="headerlink" title="第一章:在荒诞中寻找理想"></a><a href="https://wraykbys.top/post/2562/">第一章:在荒诞中寻找理想</a></h3><h3 id="第二章-新的伙伴"><a href="#第二章-新的伙伴" class="headerlink" title="第二章:新的伙伴"></a><a href="https://wraykbys.top/post/2563/">第二章:新的伙伴</a></h3><h3 id="第三章-我与她的新纽带"><a href="#第三章-我与她的新纽带" class="headerlink" title="第三章:我与她的新纽带"></a><a href="https://wraykbys.top/post/2564/">第三章:我与她的新纽带</a></h3>]]></content>
+      <tags>
+        <tag>同人</tag>
+        <tag>小说</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ray-Kbys同人游戏介绍一览</title>
     <url>/post/49615/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Ray-Kbys的同人游戏介绍一览"><a href="#Ray-Kbys的同人游戏介绍一览" class="headerlink" title="Ray-Kbys的同人游戏介绍一览"></a>Ray-Kbys的同人游戏介绍一览</h1><blockquote>
@@ -795,28 +817,6 @@
 ]]></content>
       <tags>
         <tag>同人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是HLD?</title>
-    <url>/post/47495/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
-<p><img src="https://pic.imgdb.cn/item/66402ef90ea9cb14037ce6de.png"></p>
-<hr>
-<p>对于此改版的主旨，就如同改版名称所说的那样，以“快乐生活”为核心所进行的更改，目前所暂定的游戏更改有:</p>
-<ul>
-<li>新的学习系统玩法</li>
-<li>添加了一些额外的特殊衣服</li>
-<li>具有更多新的剧情与内容</li>
-<li>拥有基于原版设定的独属于Teaching Feeling的小世界观</li>
-<li>男主与各个角色的互动事件更多，同时每个角色拥有独立的角色故事</li>
-<li>以及一些其他待添加的游戏内容</li>
-</ul>
-<p>具体的游戏内容包括但不限于以上的游戏内容，更多的游戏内容还待添加，如有更好的想法可以在该文章的评论区进行评论，如有好的点子可能会进行采纳</p>
-]]></content>
-      <tags>
-        <tag>HLD</tag>
-        <tag>改版</tag>
       </tags>
   </entry>
 </search>
