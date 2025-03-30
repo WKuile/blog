@@ -1419,7 +1419,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #a716f5;
+    background: #ffffeb;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2777,7 +2777,7 @@ header.header {
 @media (max-width: 991px) {
   .main-inner {
     border-radius: initial;
-    width: 100%;
+    width: 150%;
   }
 }
 .footer-inner {
