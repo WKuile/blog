@@ -1419,7 +1419,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #c3ff0a;
+    background: #9652d0;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2777,7 +2777,7 @@ header.header {
 @media (max-width: 991px) {
   .main-inner {
     border-radius: initial;
-    width: 150%;
+    width: 100%;
   }
 }
 .footer-inner {
@@ -3005,6 +3005,14 @@ header.header {
   margin-top: 10px;
   font-size: 13px;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .post-body {
+    font-size: 12px !important;
+  }
+  .site-description {
+    font-size: 14px !important;
+  }
 }
 @media (max-width: 768px) {
   .post-block {
