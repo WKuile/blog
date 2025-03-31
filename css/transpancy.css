@@ -1,0 +1,27 @@
+/* 主页文章卡片透明度 */
+#aside_content .card-widget, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* 文章页面透明度 */
+.layout_post>#post {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* 全局卡片透明度 */
+:root {
+  --card-bg: rgba(255, 255, 255, 0.6);
+}
+
+/* 黑夜模式透明度 */
+[data-theme='dark']:root {
+  --card-bg: rgba(18, 18, 18, 0.5);
+}
+
+
+.post-content img {
+  max-width: 100%; /* 确保图片宽度不会超过其父容器 */
+  height: auto; /* 自动调整高度以保持图片比例 */
+  display: block; /* 防止图片与文字换行时出现多余空间 */
+  margin: 0 auto; /* 居中对齐图片 */
+}
