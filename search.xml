@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博客体验Bug反馈处</title>
+    <url>/post/211112/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>[!IMPORTANT]</p>
+<p>如有问题请于该文章的评论区进行反馈</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>TeachingFeeling的改版教程(持续更新中)</title>
     <url>/post/teaching/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -74,8 +83,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>改版</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -830,8 +839,8 @@
         <category>改版</category>
       </categories>
       <tags>
-        <tag>改版</tag>
         <tag>HLD</tag>
+        <tag>改版</tag>
       </tags>
   </entry>
 </search>
