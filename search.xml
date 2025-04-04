@@ -17,6 +17,10 @@
 <p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
 </blockquote>
 <p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
+<script type="text/javascript">
+SAONotify("文章更新","2025.4.4 17:20<br>更新了变量部分的教程</br>");
+</script>
+
 <h1 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h1><h2 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h2><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
 <p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
 <p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
@@ -193,8 +197,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>改版</tag>
         <tag>教程</tag>
+        <tag>改版</tag>
       </tags>
   </entry>
   <entry>
@@ -949,8 +953,8 @@
         <category>改版</category>
       </categories>
       <tags>
-        <tag>HLD</tag>
         <tag>改版</tag>
+        <tag>HLD</tag>
       </tags>
   </entry>
 </search>
