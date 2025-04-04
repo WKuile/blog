@@ -3,7 +3,7 @@
   <entry>
     <title>博客体验Bug反馈处</title>
     <url>/post/211112/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+    <content><![CDATA[<blockquote>
 <p>[!IMPORTANT]</p>
 <p>如有问题请于该文章的评论区进行反馈</p>
 </blockquote>
@@ -12,7 +12,7 @@
   <entry>
     <title>TeachingFeeling的改版教程(持续更新中)</title>
     <url>/post/teaching/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+    <content><![CDATA[<blockquote>
 <p>[!CAUTION]</p>
 <p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
 </blockquote>
@@ -59,7 +59,7 @@
 <h3 id="1-1-文本"><a href="#1-1-文本" class="headerlink" title="1.1 文本"></a>1.1 文本</h3><p>&emsp;&emsp;TyranoScript的文本就像小说一样，是不需要像其他游戏引擎或者程序语言那样，用任何代码或标识符将文本单独输出，比如游戏引擎Ren’py需要使用双引号(”“)来输出对话。</p>
 <p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
 <p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
-<h3 id="1-2-标签"><a href="#1-2-标签" class="headerlink" title="1.2 标签"></a>1.2 标签</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
+<h3 id="1-2-标签-重点"><a href="#1-2-标签-重点" class="headerlink" title="1.2 标签(重点)"></a>1.2 标签(重点)</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
 <p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
 <p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(这个东西下文会提到，你可以暂时不用管这个)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
 <p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
@@ -76,21 +76,131 @@
 
 <p>&emsp;&emsp;两个chara_mod标签分别调用了叫stand-c和stang-t的图片，但是它们的name都是boay。要注意，此处的name并不是指它们的文件名称叫做body，而是指它们在系统中都属于“boay”这一名称的分类。而且游戏中不能同时存在两个name一样的图片，则是会被切换(time的切换淡出淡入就是在这里使用的)，stand-t.png被调用后，由于场上已经存在name为body的图片了，所以stand-c.png就会消失在游戏里，stand-t.png则会出现在游戏中。</p>
 <p>&emsp;&emsp;当name为其他值的时候也是同样的道理，游戏里只能存在同一个name，后调用者会替换前调用者。但是chara_mod能调用哪些name，需要看chara_new赋予了什么样的name，如果说chara_new赋予三张图片的name分别是eye、body、hand，那你如果用chara_mod是调用出name为foot或是其他值的图片，否则游戏将会报错，因为chara_new并没有赋予这些不存在的值。</p>
+<p>&emsp;&emsp;<strong>而且务必要记住，参数后面的值要跟着半角上下引号(也就是英文输入法内的上下引号)。虽然一般情况下也可以不写，但是部分参数不写的话会报错，所以为了不用专门记哪些参数要加上下引号，这边建议是统一写上下引号</strong></p>
 <p><font color="Gray"><em>下图为游戏内stand-c和stand-t替换的过程</em></font></p>
 <p><img src="https://i.ptu.me/file/2025/03/29/IWTh.gif" alt="IWTh.gif"></p>
+<h4 id="1-2-1-基础标签"><a href="#1-2-1-基础标签" class="headerlink" title="1.2.1 基础标签"></a>1.2.1 基础标签</h4><p>&emsp;&emsp;接下来将会罗列几个基础的标签和他们对应的作用，以此便于你们能够做出最基本的文本</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>作用</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[r]</td>
+<td>文本换行</td>
+<td></td>
+</tr>
+<tr>
+<td>[l]</td>
+<td>停顿文本，单击屏幕后继续</td>
+<td></td>
+</tr>
+<tr>
+<td>[lr]</td>
+<td>停顿文本，单击屏幕后换行</td>
+<td></td>
+</tr>
+<tr>
+<td>[p]</td>
+<td>文本切页(这么讲便于理解)</td>
+<td></td>
+</tr>
+<tr>
+<td>[s]</td>
+<td>暂停代码运行</td>
+<td>该标签后的代码不会运行，可以防止不同作用的代码混起来</td>
+</tr>
+<tr>
+<td>[return_bace]</td>
+<td>返回行动菜单</td>
+<td>行动菜单即带有摸头，对话按键的那个界面</td>
+</tr>
+<tr>
+<td>[black]</td>
+<td>清除游戏背景</td>
+<td></td>
+</tr>
+<tr>
+<td>[cm]</td>
+<td>清空游戏文本</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="1-3-变量-重点"><a href="#1-3-变量-重点" class="headerlink" title="1.3 变量(重点)"></a>1.3 变量(重点)</h3><p>&emsp;&emsp;因为游戏的底层逻辑是基于标签以及变量组成的(不如说所有编程语言都差不多)，所以这部分和<strong>标签</strong>一样，非常的重要。</p>
+<h4 id="1-3-1-什么是变量"><a href="#1-3-1-什么是变量" class="headerlink" title="1.3.1 什么是变量"></a>1.3.1 什么是变量</h4><p>&emsp;&emsp;首先，我们来理解，什么是**<u>变量</u>**(Variable)</p>
+<p>&emsp;&emsp;在原版游戏2.5.2中，当希尔薇对玩家的好感度低于50的时候，那么希尔薇就会在生病事件中死去，如果等于或大于50，则会活下来，开启后续事件。</p>
+<p>&emsp;&emsp;在这段事件中，“好感度”就是一个变量，用来判断玩家是否满足一个特定的条件。变量本身是游戏程序的保存下来的不同数值，就比如刚刚说的“好感度”，我们可以通过特定的代码更改这些变量的值。</p>
+<p>&emsp;&emsp;使用一个比较形象的比喻的话，那就是变量相当于一个盒子，每个盒子都拥有着自己的名字，盒子里面装的就是一个个数据，他们可以是字符串(也就是普通的文本)，可以是数字，也可以是其他东西。而游戏程序就是盒子外的人，根据指定的条件，来判断需不需要对某个盒子进行更改。</p>
+<p>&emsp;&emsp;也就是说，当一个叫做”好感度“的盒子里面的数字大于或者等于50的时候，盒子外的人才会决定让希尔薇活下去，否则希尔薇就会死亡。</p>
+<p>&emsp;&emsp;这就是变量在程序中最基本的运用。</p>
+<h4 id="1-3-2-变量的命名"><a href="#1-3-2-变量的命名" class="headerlink" title="1.3.2 变量的命名"></a>1.3.2 变量的命名</h4><p>&emsp;&emsp;变量是有着属于自己的命名方式的，你不可能在代码里面真的将变量命名为“好感度”，这种是我们自己的命名，对于游戏程序，我们还是要给变量取一个程序看得懂的名字。</p>
+<p>&emsp;&emsp;关于变量的命名，基本和所有编程语言一样，TyranoScript的变量命名也遵循一下几种规则</p>
+<p>&emsp;&emsp;<strong>1.请使用数字，英文字母和下划线</strong>(_)<strong>命名</strong></p>
+<p>&emsp;&emsp;**2.请勿使用空格，如果想使用分单词，可以使用驼峰式命名(**如MacCom，这种单词的首字母大写)<strong>，或使用下划线</strong>(_)<strong>代替空格</strong>(如Mac_Com)</p>
+<p>&emsp;&emsp;<strong>3.请勿使用数字开头</strong>(如1MacCom)</p>
+<p>&emsp;&emsp;但是作为JavaScript为基础代码的游戏，理论上命名也可以使用中日韩等字符，但是不建议这么写，另外在如果有部分变量在设置后就再也不会变化，建议使用全大写命名，便于分辨(如MACCOM)。</p>
+<p>&emsp;&emsp;另外在TyranoScript中，变量分为两个部分，也就是<strong>种类</strong>和<strong>名称</strong>，必须要遵循“<strong>种类.名称</strong>”式的命名法，例如变量“<strong>f.love</strong>”，f就是他的种类，love才是他的名字，中间必须用”**.**“来隔开。</p>
+<p>&emsp;&emsp;给变量取一个易懂的名字，可以很大概率提升你后续开发或是别人使用你代码时的效率，比如你想把一个变量用来当做游戏所度过的天数，那你就可以给这个变量命名为f.day或者f.tianshu，前者day就是天数、日子的英文，后者tianshu就是天数的拼音，这样你一眼就能看出来这个变量在游戏里有什么用，别人也可以。否则你给这个变量取一个名字叫做f.a114514，你第一眼也看不出这变量到底是干什么用的，别人也只能根据这个变量在代码里的作用猜测它到底是做什么的，实在是太过费时费力</p>
+<p>&emsp;&emsp;在TyranoScript中，所有的初始变量都写在了scenario的exp.ks文件中，便于管理，虽然说并不一样需要都写在exp.ks文件里，你写在其他地方一样赋值，就算写在游戏剧情里也可以，因为变量的设置只是后台的人操作，玩家看不见，但是便于管理，如果没有特殊需要的话，通常变量都是写在exp.ks文件中提前赋值，不然你把10个变量写在10不同的文件里，等你想找的时候你又不知道从何找起。（具体exp.ks文件位置在不同的游戏版本是不一定一样的，需要你自己找一下）</p>
+<hr>
+<h4 id="1-3-3-变量的种类"><a href="#1-3-3-变量的种类" class="headerlink" title="1.3.3 变量的种类"></a>1.3.3 变量的种类</h4><p>&emsp;&emsp;在TyranoScript中，变量有着三种类型，分别是<strong>普通变量</strong>、<strong>全局变量</strong>、<strong>临时变量</strong>三种，可以查看下列表格来更明确他们的作用(列表中的例子变量是随便取的名字)</p>
+<table>
+<thead>
+<tr>
+<th>种类名称</th>
+<th>种类</th>
+<th>种类作用</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>f</td>
+<td>普通变量</td>
+<td>游戏内最常见最基础的变量，每个存档的普通变量都不一定一样</td>
+<td>f.love f.name f.money</td>
+</tr>
+<tr>
+<td>tf</td>
+<td>临时变量</td>
+<td>无论给这种变量取什么名字赋什么值，所有这种变量在游戏程序被关闭后一定会被消除，不会永久保存</td>
+<td>tf.time tf.name tf.apple</td>
+</tr>
+<tr>
+<td>sf</td>
+<td>全局变量</td>
+<td>这种变量是全局的，所有存档共用一个变量。也就是说你在存档a设置了一个全局变量为1，那么存档b的这个变量也一样会被更改为1，就算重新开一个存档，这个变量还是1，除非重新赋值</td>
+<td>sf.hcg sf.hcg2</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="1-3-4-变量的赋值"><a href="#1-3-4-变量的赋值" class="headerlink" title="1.3.4 变量的赋值"></a>1.3.4 变量的赋值</h4><p>&emsp;&emsp;我们可以来看一下以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[eval exp=&quot;f.love=0&quot; ][eval exp=&quot;f.lust=0&quot; ]</span><br><span class="line">[eval exp=&quot;f.name=&#x27;主人&#x27;&quot; ][eval exp=&quot;f.name_h=0&quot; ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;其中，eval标签的作用就是给变量赋值，而参数exp就是具体的赋值表现，上述代码块中，存在四个普通变量，<strong>f.love</strong>变量(好感度)和<strong>f.lust</strong>变量(淫乱值)被赋予了0作为初始变量，这也是游戏一开始希尔薇没有任何好感度和淫乱值的原因。而<strong>f.name</strong>(玩家称呼)则被默认为了“主人”，所有游戏里的希尔薇如果在不更改称呼的情况下，就默认称呼玩家为主人。而最后一个<strong>f.name_h</strong>(玩家淫语称呼)则是和希尔薇在做爱的时候，希尔薇称呼玩家的特殊淫语，该变量在后期需要单独设置，所以这里被设置为0来表示不作任何值。</p>
+<p>&emsp;&emsp;而具体赋值语法则是**[eval exp&#x3D;“变量赋值”]**</p>
+<p>&emsp;&emsp;其中“<strong>变量赋值</strong>”可以写最基本的赋值语句，也可以使用加减乘除进行最基本的更改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[eval exp=&quot;f.love=0&quot; ]——将f.love直接设置为0</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=f.love+3&quot; ]——将f.love值加3</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=f.love-3&quot; ]——将f.love值减3</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=f.love*3&quot; ]——将f.love值乘3</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=f.love/3&quot; ]——将f.love值除3</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=&#x27;好感度爆棚1&#x27;&quot; ]——将f.love值设置为字符串“好感度爆棚1”(设置字符串时要给外面加上单引号，不加单引号只能设置为数字)</span><br><span class="line"></span><br><span class="line">[eval exp=&quot;f.love=f.day/3&quot; ]——将f.love的值设置为当前f.day的值的3倍</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;以上是最基本的赋值语句，你也可以同时给多个变量赋值，但是需要用半角逗号（不能使用中文输入法的逗号）隔开比如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[eval exp=&quot;f.love=f.love/3,f.day=f.day+1,tf.awa=&#x27;awawawwaa&#x27;&quot; ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;上面说的只是最基本的赋值语句，当对于你们来说已经足够用了，更多的赋值类型如有需要再说</p>
 ]]></content>
       <categories>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>改版</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
     <title>同人小说《我与梦寐以求的她》(持续更新)</title>
     <url>/post/56328/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+    <content><![CDATA[<blockquote>
 <p>[!IMPORTANT]</p>
 <font color=red>
 
@@ -110,7 +220,7 @@
   <entry>
     <title>Ray-Kbys笔下角色译名一览(文字版)</title>
     <url>/post/29934/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><style>
+    <content><![CDATA[<style>
   table {
     background-color: white;
     color: brown; /* 设置文字颜色为黑色 */
@@ -650,7 +760,7 @@
   <entry>
     <title>Ray-Kbys同人游戏介绍一览</title>
     <url>/post/49615/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Ray-Kbys的同人游戏介绍一览"><a href="#Ray-Kbys的同人游戏介绍一览" class="headerlink" title="Ray-Kbys的同人游戏介绍一览"></a>Ray-Kbys的同人游戏介绍一览</h1><blockquote>
+    <content><![CDATA[<h1 id="Ray-Kbys的同人游戏介绍一览"><a href="#Ray-Kbys的同人游戏介绍一览" class="headerlink" title="Ray-Kbys的同人游戏介绍一览"></a>Ray-Kbys的同人游戏介绍一览</h1><blockquote>
 <p>[!NOTE]</p>
 <p>前排提醒，本文章仅介绍同人游戏，不包括任何Ray-Kbys的原作</p>
 </blockquote>
@@ -821,7 +931,7 @@
   <entry>
     <title>什么是HLD?</title>
     <url>/post/47495/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
+    <content><![CDATA[<p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
 <p><img src="https://pic.imgdb.cn/item/66402ef90ea9cb14037ce6de.png"></p>
 <hr>
 <p>对于此改版的主旨，就如同改版名称所说的那样，以“快乐生活”为核心所进行的更改，目前所暂定的游戏更改有:</p>
