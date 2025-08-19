@@ -67,6 +67,7 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
 <p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
 <p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
 <h3 id="1-2-标签-重点"><a href="#1-2-标签-重点" class="headerlink" title="1.2 标签(重点)"></a>1.2 标签(重点)</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
+<p>&emsp;&emsp;(此处的[lr]并不是Tyranoscript引擎的原版标签，而是作者Ray-K自己自定义的，作用就是[l]和[r]的结合。)</p>
 <p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
 <p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(<strong>见1.4.2</strong>)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
 <p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
@@ -1163,31 +1164,6 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
       </categories>
       <tags>
         <tag>同人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是HLD?</title>
-    <url>/post/47495/</url>
-    <content><![CDATA[<p><strong>TF-HLD</strong>,是我大约与两年前提出的改版作品，全称是Teaching Feeling Happy Life Diary，中文可叫做与希尔薇的快乐生活日记，基于变态协会所汉化的2.5.2版本的Teaching Feeling所更改而来</p>
-<p><img src="https://pic.imgdb.cn/item/66402ef90ea9cb14037ce6de.png"></p>
-<hr>
-<p>对于此改版的主旨，就如同改版名称所说的那样，以“快乐生活”为核心所进行的更改，目前所暂定的游戏更改有:</p>
-<ul>
-<li>新的学习系统玩法</li>
-<li>添加了一些额外的特殊衣服</li>
-<li>具有更多新的剧情与内容</li>
-<li>拥有基于原版设定的独属于Teaching Feeling的小世界观</li>
-<li>男主与各个角色的互动事件更多，同时每个角色拥有独立的角色故事</li>
-<li>以及一些其他待添加的游戏内容</li>
-</ul>
-<p>具体的游戏内容包括但不限于以上的游戏内容，更多的游戏内容还待添加，如有更好的想法可以在该文章的评论区进行评论，如有好的点子可能会进行采纳</p>
-]]></content>
-      <categories>
-        <category>改版</category>
-      </categories>
-      <tags>
-        <tag>改版</tag>
-        <tag>HLD</tag>
       </tags>
   </entry>
 </search>
