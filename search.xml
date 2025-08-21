@@ -675,7 +675,7 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
 <p>&emsp;&emsp;然后<strong>nsis</strong>文件夹内应该还会有两个文件夹</p>
 <p><img src="https://pic1.imgdb.cn/item/68a5471f58cb8da5c83c2ef1.png"></p>
 <p>&emsp;&emsp;而winCodeSign文件夹里则会有一个文件夹</p>
-<p><img src="C:\Users\zeroi\AppData\Roaming\Typora\typora-user-images\image-20250820115551760.png" alt="image-20250820115551760"></p>
+<p><img src="https://pic1.imgdb.cn/item/68a6f00058cb8da5c8410928.png"></p>
 <p>&emsp;&emsp;我们需要注意的<strong>nsis-3.0.4.1</strong>、<strong>nsis-resources-3.4.1</strong>、<strong>winCodeSign-2.6.0</strong>就是这三个文件夹(版本不一定对得上，也有可能是nsis-3.0.4.2或者winCodeSign-2.7.0之类的，一切按照你的文件夹内版本为准)</p>
 <p>&emsp;&emsp;随后打开Electron Builder的<a href="https://github.com/electron-userland/electron-builder-binaries/releases">Github</a>界面，找到和自己版本相符的文件</p>
 <p>&emsp;&emsp;比如我的nsis是3.0.4.1版本的，就往下拉，没有就去后几页找，找到对应版本</p>
