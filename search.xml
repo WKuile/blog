@@ -436,6 +436,191 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
       </tags>
   </entry>
   <entry>
+    <title>如何使用TyranoStory</title>
+    <url>/post/story/</url>
+    <content><![CDATA[<h1 id="一、什么是TyranoStory"><a href="#一、什么是TyranoStory" class="headerlink" title="一、什么是TyranoStory"></a>一、什么是TyranoStory</h1><p>&nbsp;&nbsp;TyranoStory是TyranoScript官方所发布的模板工具，可以使玩家轻松创建一个聊天故事型视觉小说游戏。因为本质上是基于TyranoScript而制作的扩展，所以TyranoScript原本的标签都可以使用，除此之外，也有一些TyranoStory独有的标签。</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0b77cc5157e1a882336e3.png"></p>
+<h1 id="二、游戏前的准备"><a href="#二、游戏前的准备" class="headerlink" title="二、游戏前的准备"></a>二、游戏前的准备</h1><p>&nbsp;&nbsp;首先，用户需要一个加载游戏的工具，也就是官方的<a href="https://tyrano.jp/dl/rider">TyranoRider</a>工具，以及<a href="https://tyrano.jp/story/download/">TyranoStory</a>本体(理论上也可以使用TyranoStudio，不过Studio版本较高，所以更建议使用TyranoRider)</p>
+<p>&nbsp;&nbsp;解压TyranoStory后，启动TyranoRider，点击图中的“<strong>プロジェクトを選択</strong>”，随后选择index.html即可。最后点击“<strong>ゲーム開始</strong>”即可启动游戏文件。</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0b8abc5157e1a88234504.png"></p>
+<h1 id="三、TyranoStory的使用"><a href="#三、TyranoStory的使用" class="headerlink" title="三、TyranoStory的使用"></a>三、TyranoStory的使用</h1><h2 id="1-基本的对话"><a href="#1-基本的对话" class="headerlink" title="1.基本的对话"></a>1.基本的对话</h2><p>&nbsp;&nbsp;接下来我们就需要开始学习TyranoStory的使用了，它的使用本身并不难，我们需要使用的最基本的标签是<strong>chat_talk</strong>，它的参数如下:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名</th>
+<th align="left">参数作用</th>
+<th align="left">可用参数内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">pos</td>
+<td align="left">可用于指定说话人的头像位置，left为左，right为右，center为中间</td>
+<td align="left">left&#x2F;right&#x2F;center</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">可用于指定说话人的名字，当pos参数为center时，该参数无效</td>
+<td align="left">自行填写</td>
+</tr>
+<tr>
+<td align="left">delay</td>
+<td align="left">可用于消息加载的延迟，单位为毫秒(类似于对方正在输入中)</td>
+<td align="left">消息时间</td>
+</tr>
+<tr>
+<td align="left">face</td>
+<td align="left">可用于指定说话人的头像图片，默认根目录位置在fgimage内</td>
+<td align="left">图片路径</td>
+</tr>
+<tr>
+<td align="left">layer</td>
+<td align="left">可设置该角色的整个气泡的图层优先级</td>
+<td align="left">数字或指定参数</td>
+</tr>
+<tr>
+<td align="left">bgcolor</td>
+<td align="left">可用于指定消息颜色背景，设置为trams或transparent时清除背景颜色</td>
+<td align="left">十六进制颜色代码</td>
+</tr>
+<tr>
+<td align="left">folder</td>
+<td align="left">可以指定graphic的根目录，不填写时默认为fgimage</td>
+<td align="left">文件夹名称</td>
+</tr>
+<tr>
+<td align="left">graphic</td>
+<td align="left">可指定角色发送的图片，默认根目录位置在fgimage内，支持PNG JPG PNG BMP GIF</td>
+<td align="left">图片路径</td>
+</tr>
+<tr>
+<td align="left">graphic_height</td>
+<td align="left">可以指定graphic参数发送的图片的高度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">graphic_width</td>
+<td align="left">可以指定graphic参数发送的图片的宽度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">指定聊天气泡的宽度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">bottom</td>
+<td align="left">指定聊天气泡的高度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">reflect</td>
+<td align="left">翻转角色头像，不填写默认为False</td>
+<td align="left">True&#x2F;False</td>
+</tr>
+<tr>
+<td align="left">se</td>
+<td align="left">指定聊天气泡出现时的音效</td>
+<td align="left">音频路径</td>
+</tr>
+<tr>
+<td align="left">id</td>
+<td align="left">用于指定id，可在JavaScript函数中调用</td>
+<td align="left">数字或英文</td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;理解了这些，那么来看实例:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[chat_talk pos=<span class="string">&quot;right&quot;</span> name=<span class="string">&quot;1&quot;</span> graphic=<span class="string">&quot;chat/logo.png&quot;</span> text=<span class="string">&quot;awa&quot;</span> face=<span class="string">&quot;chat/yamato/normal.png&quot;</span> delay=1000  bgcolor=<span class="string">&quot;0xFF7F50&quot;</span> graphic_width=270 graphic_height=120 width=400 bottom=300]</span></span><br><span class="line"><span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;表现出来的效果如下:</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0c100c5157e1a88239e70.png"></p>
+<p>&nbsp;&nbsp;这里不过多讲解内容，用户们可以对着标签和上面的表格自己参照一下具体的作用。</p>
+<p>&nbsp;&nbsp;(下面是用户名字被设置在左边和中间的效果，第二个awa是背景被设置为透明的效果。)</p>
+<img src="https://pic1.imgdb.cn/item/68d0c16ec5157e1a8823a363.png" style="zoom: 80%;" />
+
+
+
+<p>&nbsp;&nbsp;另外，用户可以使用**[chat_config]**来填写默认数值，则默认指定部分数值，使得玩家不用每一次都手动设置，建议写在剧本开头:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名</th>
+<th align="left">参数作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">top</td>
+<td align="left">可以指定聊天区域的内容与游戏屏幕顶部的距离</td>
+</tr>
+<tr>
+<td align="left">left</td>
+<td align="left">可以指定聊天区域的内容与屏幕左侧的距离</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">可以指定整个聊天区域的显示高度</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">可以指定整个聊天区域的显示宽度</td>
+</tr>
+<tr>
+<td align="left">face_width</td>
+<td align="left">可以指定表情部分的图像宽度，默认为100</td>
+</tr>
+<tr>
+<td align="left">margin_face</td>
+<td align="left">可以更改表情部分与屏幕边缘的距离，默认为20</td>
+</tr>
+<tr>
+<td align="left">left_bgcolor</td>
+<td align="left">可以指定在左侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">right_bgcolor</td>
+<td align="left">可以指定在中央显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">center_bgcolor</td>
+<td align="left">可以指定在右侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">name_font_size</td>
+<td align="left">可以指定角色名字的字体大小</td>
+</tr>
+<tr>
+<td align="left">name_font_color</td>
+<td align="left">可以指定角色名字的字体颜色，以0x000000形式指定</td>
+</tr>
+<tr>
+<td align="left">under_height</td>
+<td align="left">可以指定消息显示的区域高度，即当消息达到这个高度时，气泡会向上滚动。建议保留足够的空间以便在屏幕底部进行点击操作。默认值为屏幕高度的70%</td>
+</tr>
+<tr>
+<td align="left">margin_top</td>
+<td align="left">可以指定气泡顶部的空间，默认为25</td>
+</tr>
+<tr>
+<td align="left">zindex</td>
+<td align="left">可以指定在图层中的图层顺序，值越大越靠前显示</td>
+</tr>
+<tr>
+<td align="left">anim_time</td>
+<td align="left">可以指定数值。指定0以上的值时，气泡会以动画形式移动，以毫秒为单位指定</td>
+</tr>
+<tr>
+<td align="left">se</td>
+<td align="left">可以为显示气泡时设置音效</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Tyrano</category>
+      </categories>
+      <tags>
+        <tag>Tyrano</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>保姆向-基于Electron Builder的Tyrano引擎游戏打包方式</title>
     <url>/post/electron/</url>
     <content><![CDATA[<p>&emsp;&emsp;打包问题，是每一位Tyrano用户都不得不品尝的一个环节。(Tyrano Studio的导出会比Tyrano Builder好一点)</p>
