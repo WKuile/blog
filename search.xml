@@ -849,9 +849,13 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
 <p>&emsp;&emsp;不过这并不是绝对的，你写不写都可以，预发布标签更多是一种约定俗成的写法，如果不写预发布标签就正常写<strong>1.0.0</strong>之类的即可。</p>
 <h2 id="Electron-Builder下载失败"><a href="#Electron-Builder下载失败" class="headerlink" title="Electron-Builder下载失败"></a>Electron-Builder下载失败</h2><p>&emsp;&emsp;如果打包时一直卡在此处，然后报错显示下载失败</p>
 <p><img src="https://pic1.imgdb.cn/item/68a5461e58cb8da5c83c27d7.png"></p>
-<p>&emsp;&emsp;那么可以更换镜像源(这里不提供其他镜像源，请自行搜索寻找)，或者手动下载。</p>
+<p>&emsp;&emsp;首先一样打开<strong>命令提示符</strong>，在里面输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;然后再次尝试打包即可。</p>
+<p>&emsp;&emsp;如果依旧无法打包，那么可以更换<strong>其他镜像源</strong>(这里不提供其他镜像源，请自行搜索寻找)，或者进行<strong>手动下载</strong>。</p>
 <hr>
-<p>&emsp;&emsp;这里说怎么手动下载</p>
+<p>&emsp;&emsp;这里只说<strong>手动下载</strong>的方法</p>
 <p>&emsp;&emsp;首先<strong>win+R</strong>唤出运行，输入</p>
 <figure class="highlight haml"><table><tr><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">LOCALAPPDATA</span></span>%/electron-builder/Cache</span><br></pre></td></tr></table></figure>
 
