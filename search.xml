@@ -436,6 +436,48 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
       </tags>
   </entry>
   <entry>
+    <title>保姆向-如何在Tyrano中设置一个日期检测</title>
+    <url>/post/electron/</url>
+    <content><![CDATA[<p>&emsp;&emsp;该教程尽量用较直白且详细的语气去说明如何制作一个日期检测的方法，可以将当前现实时间的的时间保存为变量，如何运用到游戏里</p>
+<p>&emsp;&emsp;就假设我们需要制作一个生日祝福的功能，玩家可以设置自己的生日，当现实时间与玩家在游戏内设置的日期相同时则触发生日剧情。需要做出这一步功能，我们需要三个步骤:</p>
+<p>&emsp;&emsp;&emsp;&emsp;1.获取现实时间<br>&emsp;&emsp;&emsp;&emsp;2.让玩家设置生日<br>&emsp;&emsp;&emsp;&emsp;3.校对两者</p>
+<h1 id="一、获取现实时间"><a href="#一、获取现实时间" class="headerlink" title="一、获取现实时间"></a>一、获取现实时间</h1><p>&emsp;&emsp;TyranoScript的普通语法是不支持这一点的，所以我们需要用到**函数(Function)**。</p>
+<p>&emsp;&emsp;我们都知道，TyranoScript本身是基于JavaScript所开发的游戏引擎，但他有着自己的一套语法，那我们能不能在TyranoScript里使用JavaScript本身的代码和语法吗？答案是可以的，也就是上面所说的函数。</p>
+<p>&emsp;&emsp;TyranoScript的函数与Python之类编程语言不同，TyranoScript的函数只有一个功能，就是在TyranoScript中使用JavaScript的语法与代码，很多TyranoScript本身做不到的功能，都可以通过JavaScript来实现，那么下面就让我们来看这段代码:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[iscript]</span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();  <span class="comment">// 创建Date对象并赋值给now变量</span></span><br><span class="line"><span class="keyword">var</span> year = now.<span class="title function_">getFullYear</span>();  <span class="comment">// 获取当前年份并存储到year变量里</span></span><br><span class="line"><span class="keyword">var</span> month = now.<span class="title function_">getMonth</span>() + <span class="number">1</span>;  <span class="comment">// 获取当前月份并存储到month变量里</span></span><br><span class="line"><span class="keyword">var</span> day = now.<span class="title function_">getDate</span>();  <span class="comment">// 获取当前日期并存储到day变量里</span></span><br><span class="line"><span class="keyword">var</span> hours = now.<span class="title function_">getHours</span>();  <span class="comment">// 获取当前小时并存储到hours变量里</span></span><br><span class="line"><span class="keyword">var</span> minutes = now.<span class="title function_">getMinutes</span>();  <span class="comment">// 获取当前分数并存储到minutes变量里</span></span><br><span class="line"><span class="keyword">var</span> seconds = now.<span class="title function_">getSeconds</span>();  <span class="comment">//获取当前秒数并存储到seconds</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//===============================================</span></span><br><span class="line"></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.year=&quot;</span> + year &#125;);  <span class="comment">//将year变量的内容赋给sf.year变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.month=&quot;</span> + month &#125;);  <span class="comment">//将month变量的内容赋给sf.month变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.day=&quot;</span> + day &#125;);  <span class="comment">//将day变量的内容赋给sf.day变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.hours=&quot;</span> + hours &#125;);  <span class="comment">//将hours变量的内容赋给sf.hours变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.minutes=&quot;</span> + minutes &#125;);  <span class="comment">//将minutes变量的内容赋给sf.minutes变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.seconds=&quot;</span> + seconds &#125;);  <span class="comment">//将seconds变量的内容赋给sf.seconds变量</span></span><br><span class="line">[endscript]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;如代码块所示，这块代码就是最主要的内容，还是蛮简单了，上半部分的代码负责获取当前各个时间，包括年份，月份，日期以及时分秒，然后存储到对应的变量里，但要注意，目前的变量是JavaScript的变量，并不是TyranoScript变量，所以我们还专门写了下半部分的代码，可以将JavaScript代码的值赋给TyranoScript的变量。</p>
+<p>&emsp;&emsp;例如，当前时间是2025年11月28日19时02分20秒，那么经过这些代码以后，这些变量的值就会是:</p>
+<p>&emsp;&emsp;sf.year&#x3D;2025，sf.month&#x3D;11，sf.day&#x3D;28，sf.hours&#x3D;19，sf.minutes&#x3D;02，sf.seconds&#x3D;20</p>
+<p>&emsp;&emsp;而sf这种变量类型已经在以前的教程中讲过了，这里不再赘述，当然如果你想把变量改成别的名字和类型，比如f.awa之类的，也是没问题，只要作用正确并且你能够记住这个变量干什么用的，随便叫什么都可以。</p>
+<p>&emsp;&emsp;只需要把上述代码写到first.ks，亦或是title.ks&#x2F;title_screen.ks这种游戏启动必定会加载的文件里，那么每次启动游戏都可以获取到当前游戏启动的时间。</p>
+<h2 id="二、让玩家设置生日"><a href="#二、让玩家设置生日" class="headerlink" title="二、让玩家设置生日"></a>二、让玩家设置生日</h2><p>&emsp;&emsp;第二步就是让玩家设置生日，这一步的方法很多，最方便的是写几个输入框用于获取玩家生日。</p>
+<p>&emsp;&emsp;这一步只需要用到edit标签即可</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;*sf.api*&quot;</span> length=100 width=450 left=170 top=165]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这里的name参数内容用于写你要赋值的变量，比如我这里写了sf.api，那么当玩家在输入框里输入任何字符后并提交后，那么玩家写的内容就会给这个sf.api，length用于设置输入框高度，width设置输入框宽度，left和top分别设置输入框的xy轴坐标。</p>
+<p>&emsp;&emsp;另外还有几个没写到的，maxchars可以设置输入框可输入最大长度，size可以设置输入的字大小，color可以设置输入的文字颜色(使用html颜色代码)。</p>
+<p>&emsp;&emsp;你可以多设置几个输入框并提示让玩家在不同的输入框里写入自己的出生年月日之类的。</p>
+<p>&emsp;&emsp;另外，输入框在输入完字后需要专门的提交标签，看下述代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*config</span><br><span class="line"><span class="selector-attr">[button graphic=<span class="string">&quot;number/1/02.png&quot;</span> x=<span class="string">&quot;500&quot;</span> y=<span class="string">&quot;500&quot;</span> target=<span class="string">&quot;*commit2&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;sf.api&quot;</span> length=100 width=450 left=170 top=165]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[s]</span></span><br><span class="line"></span><br><span class="line">*commit2</span><br><span class="line"><span class="selector-attr">[commit]</span><span class="selector-attr">[jump target=<span class="string">&quot;*config&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;第一个button标签设置了一个转跳到commit2的功能，而commit2只有一个功能，那就是<strong>commit</strong>标签，然后转跳回来。</p>
+<p>&emsp;&emsp;commit标签只有一个功能，就是将当<strong>前屏幕中显示的所有输入框</strong>的内容全都提交给对应的name。比如上述代码中，我edit要提交的变量是sf.api，那么假设玩家在输入框输入了“123456789”，不管按什么按键，都是无法提交的，也就是sf.api的内容依旧是空的，只有使用commit标签，才能够将输入的内容提交给对应的变量。所以我专门写了一个按钮，用于使用commit提交输入框的内容。</p>
+<h1 id="三、比对变量"><a href="#三、比对变量" class="headerlink" title="三、比对变量"></a>三、比对变量</h1><p>&emsp;&emsp;这一步其实没啥好说的，也很简单。</p>
+<p>&emsp;&emsp;你只要专门写一个语句用于比较当前显示日期和玩家设置的生日一不一样就可以了。</p>
+<p>&emsp;&emsp;假设我用第一步的函数获取到了当前日期，然后又用第二部的输入框获取到了玩家的出生年月日，分别设置为f.year，f.month，f.day，那么我就可以这样</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;sf.year==f.year &amp;&amp; sf.month==f.month &amp;&amp; sf.day==f.day&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[jump target=<span class="string">&quot;*awa&quot;</span> storage=<span class="string">&quot;birthday.ks&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[endif]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;第一步就是比较两边变量的值一不一样，如果一样就跳转到专门的剧情文件里，当然你要精准到时分秒的话，那就在后面继续加上sf.hours之类的比对即可，用&amp;&amp;分开即可。</p>
+]]></content>
+      <categories>
+        <category>Tyrano</category>
+      </categories>
+      <tags>
+        <tag>Tyrano</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何使用TyranoStory</title>
     <url>/post/story/</url>
     <content><![CDATA[<h1 id="一、什么是TyranoStory"><a href="#一、什么是TyranoStory" class="headerlink" title="一、什么是TyranoStory"></a>一、什么是TyranoStory</h1><p>&nbsp;&nbsp;TyranoStory是TyranoScript官方所发布的模板工具，可以使玩家轻松创建一个聊天故事型视觉小说游戏。因为本质上是基于TyranoScript而制作的扩展，所以TyranoScript原本的标签都可以使用，除此之外，也有一些TyranoStory独有的标签。</p>
