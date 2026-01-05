@@ -1,947 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>博客体验Bug反馈处</title>
-    <url>/post/211112/</url>
-    <content><![CDATA[<blockquote>
-<p>[!IMPORTANT]</p>
-<p>如有问题请于该文章的评论区进行反馈</p>
+    <title>Ray-Kbys同人游戏介绍一览</title>
+    <url>/post/49615/</url>
+    <content><![CDATA[<h1 id="Ray-Kbys的同人游戏介绍一览"><a href="#Ray-Kbys的同人游戏介绍一览" class="headerlink" title="Ray-Kbys的同人游戏介绍一览"></a>Ray-Kbys的同人游戏介绍一览</h1><blockquote>
+<p>[!NOTE]</p>
+<p>前排提醒，本文章仅介绍同人游戏，不包括任何Ray-Kbys的原作</p>
 </blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title>TeachingFeeling的改版教程(持续更新中)</title>
-    <url>/post/teaching/</url>
-    <content><![CDATA[<blockquote>
-<p>[!CAUTION]</p>
-<p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
+<h2 id="一、Creepy-Love-毛骨悚然的爱"><a href="#一、Creepy-Love-毛骨悚然的爱" class="headerlink" title="一、Creepy Love(毛骨悚然的爱)"></a>一、Creepy Love(毛骨悚然的爱)</h2><p>​	“我是一名普通的学生，最近我交了一个新的女朋友，她叫<strong>深杉爱子</strong>，她哪里都好，只是有一点小奇怪…</p>
+<p>​	就这样，在某一天，她向我献出了一份<strong>毛骨悚然的爱</strong>。”</p>
+<p>​	面对女朋友的奇怪礼物，“我”最终还是决定打开它，接受这份心意。</p>
+<blockquote>
+<p><em><strong>“你知道吗？我得尽可能保持它的新鲜度”</strong></em></p>
+<p><em><strong>————深杉爱子</strong></em></p>
 </blockquote>
-<p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
-<script type="text/javascript">
-SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"的教程</br>");
-</script>
-
-
-
-<h1 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h1><h2 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h2><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
-<p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
-<p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
-<p>&emsp;&emsp;而游戏的3.0到4.0.6版本，则使用了Electron框架用于运行游戏，可以使用Tyrano官方的Tyrano Script V5对游戏进行辅助修改。</p>
-<p>&emsp;&emsp;这里对两个框架的区别和作用不做过多介绍，只是稍作了解。</p>
 <hr>
-<h2 id="2-文本编辑器的选择"><a href="#2-文本编辑器的选择" class="headerlink" title="2.文本编辑器的选择"></a>2.文本编辑器的选择</h2><p>&emsp;&emsp;就和C++、Java或是Python那些代码语言一样，我们也是需要一款文本编辑器来对代码进行修改，这里针对电脑Windows端和手机安卓端各推荐一款编辑器</p>
-<p>&emsp;&emsp;<strong>电脑端推荐-Visual Studio Code</strong></p>
-<p>&emsp;&emsp;也就是我们俗称的VSC，该编辑器的优点在于拥有诸多的功能以及优秀的插件，其中Tyrano官方提供了VSC的语法高亮插件，使得我们能够更直白明了的查看游戏的代码。</p>
-<p>&emsp;&emsp;<strong>手机端推荐-MT管理器</strong></p>
-<p>&emsp;&emsp;手机端其实很遗憾的没有带有语法高亮的编辑器，只能使用原始的黑白文本，但这里还是推荐了MT管理器，原因是它针对文件管理相比较于其他管理器拥有更多的功能，并且采用双列文件管理，能够更方便我们对改版文件进行管理与更改。</p>
-<p><font color="Gray"><em>下图中的图片左侧为未启用语法高亮的代码片段，右侧为启用了语法高亮的代码片段</em></font></p>
-<p><img src="https://pic1.imgdb.cn/item/67e6d1490ba3d5a1d7e5cb50.png"></p>
+<p>游戏英文名:Creepy Love</p>
+<p>游戏中文名:毛骨悚然的爱</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Android</p>
+<p>游戏主角:深杉爱子</p>
+<p>最新版本:0.5</p>
+<p>上次更新:约2017-2018</p>
+<p><img src="https://pic1.imgdb.cn/item/677a51dfd0e0a243d4ef26eb.jpg"></p>
 <hr>
-<h2 id="3-了解文件结构"><a href="#3-了解文件结构" class="headerlink" title="3.了解文件结构"></a>3.了解文件结构</h2><p>&emsp;&emsp;接下来，你需要了解游戏的文件目录结构，也就是存放游戏数据的data文件夹内的东西。</p>
-<p>&emsp;&emsp;其中，NW.js的data文件夹就在根目录，而Electron的data文件夹则存放于“.\resources\app”(此处的\代表目录分隔符，“.”代表游戏根目录，也就是说整体意思为游戏根目录下的resources文件夹内的app文件夹内)</p>
-<p>&emsp;&emsp;<font color="Gray"><em>如下图所示，左边为NW.js，右边为Electron</em></font></p>
-<p><img src="https://pic1.imgdb.cn/item/67e7ed6c0ba3d5a1d7e67dec.png"></p>
+<p>​	该游戏是由西班牙母语者<a href="https://www.youtube.com/@TsukuneLee"><strong>Tsukune Lee</strong></a>制作的同人游戏。</p>
+<p>​	游戏主要讲述了男主与病娇少女深杉爱子的日常，同时以及一些其他角色的小段剧情。该同人的游戏流程篇幅不长，游戏时长仅仅不到两个小时，与爱子的好感度大于200后就没有什么新的剧情了，但同时它又作为最早的一批同人游戏，与七八年前就被创作出来，经典的同时又给后续一些作品留下了深刻的影响。</p>
+<p>​	同时游戏的更新基本早已废弃，所以不必期待该游戏的新版本。并且该作是我的早期汉化作品，当时的汉化水平不完善，如有汉化问题，属于正常现象，并且欢迎在评论区提出。</p>
 <hr>
-<p>&emsp;&emsp;当你打开data文件夹，你则会看到以下文件夹，而他们的作用分别是</p>
-<p>&emsp;&emsp;&emsp;&emsp;bgimage——存放游戏背景图片</p>
-<p>&emsp;&emsp;&emsp;&emsp;bgm——存放游戏背景音乐</p>
-<p>&emsp;&emsp;&emsp;&emsp;fgimage——存放游戏内容图片(包括角色所有立绘以及衣服)</p>
-<p>&emsp;&emsp;&emsp;&emsp;image——存放游戏按键图片(包括对话按键，菜单按键在内的所有图片)</p>
-<p>&emsp;&emsp;&emsp;&emsp;scenario——存放游戏剧本文件(包括游戏文本以及变量)</p>
-<p>&emsp;&emsp;&emsp;&emsp;sound——存放游戏音效文件(包括做爱时的精液声)</p>
-<p>&emsp;&emsp;&emsp;&emsp;system——存放游戏系统配置文件(包括字体类型大小、快进速度等近100项游戏外的设置)</p>
-<p>&emsp;&emsp;&emsp;&emsp;video——存放游戏视频文件(包括游戏开头logo)</p>
-<p>&emsp;&emsp;<font color="Gray"><em>(另外在部分版本当中可能还存在scenario_old、scenariod_beat，这两个文件夹是作者Ray-Kbys对旧版本游戏的备份，完全无用，只是忘记删了。其余文件需要根据当前版本考虑作用，有些作者可能会乱塞东西。)</em></font></p>
-<hr>
-<p>&emsp;&emsp;对于以上这些文件夹的使用，取决于作者要怎么制作自己的改版，如果有人要制作一个新的开头动画，那文件需要放在video文件夹内，如果需要加入新的菜单按钮之类的，也更建议放到image文件夹内。这些分类一定程度上并不是固定的，虽然你也可以把按键放到fgimage文件夹内，但是更建议遵守规则来放置图片，因为图片的调用在系统中是按照默认文件夹来调用的，比如你想要调用一张按键图片，那系统会默认从image文件夹里面找，背景图和其他文件也是同理，会在对应文件夹去找，除非你在调用按键的时候额外写一个参数告诉系统你要从指定的文件夹里面去找图片，那样未免太过于麻烦了。</p>
-<hr>
-<h1 id="二、改版制作基础教程"><a href="#二、改版制作基础教程" class="headerlink" title="二、改版制作基础教程"></a>二、改版制作基础教程</h1><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>&emsp;&emsp;该部分为“改版制作基础教程”，虽说是改版，但由于知识点较为基础，所以可以在除了Teaching Feeling以外的使用了TyranoScript引擎的游戏上使用，或者自己用这些知识和TyranoScript引擎制作一款新的游戏也是问题不大的，并不用局限于Teaching Feeling，不过教程的代码和举例基本都是使用的Teaching Feeling，所以实际上会和其他TyranoScript引擎的游戏会有一些差异。</p>
-<h2 id="1-文件要素"><a href="#1-文件要素" class="headerlink" title="1.文件要素"></a>1.文件要素</h2><p>&emsp;&emsp;讲了那么多，现在已经可以开始正式进入教程了。</p>
-<p>&emsp;&emsp;首先，我们需要知道，在TyranoScript的游戏脚本文件中，主要由两种的东西构成，也就是<u><strong>文本</strong></u>(Text)和<u><strong>标签</strong></u>(Tag)，至于标记(Label)和名称标记(#)，本质上是辅助代码用的，名称标记更只是个附属用品，这个后文会讲到。<font size=2>(那个名称标记#其实并没有名字，这是我取的，所以英文名就写了它本身)</font></p>
-<p>&emsp;&emsp;那文本和标签具体是什么东西，可以让我们来看一段代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">再次初次见面、我叫希尔薇。<span class="selector-attr">[lr]</span></span><br><span class="line">感谢你收留我。<span class="selector-attr">[p]</span></span><br><span class="line">虽然无法干力气活、但我想如果你让我错简单的杂用程度的活我可以做到。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[chara_mod name=<span class="string">&quot;body&quot;</span> time=<span class="string">&quot;100&quot;</span> storage=<span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[chara_mod name=<span class="string">&quot;body&quot;</span> time=<span class="string">&quot;100&quot;</span> storage=<span class="string">&quot;s/body/stand-t.png&quot;</span> ]</span></span><br><span class="line">…求你、手下留情。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[stop_bgm]</span><span class="selector-attr">[black]</span><span class="selector-attr">[chara_stop]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[jump storage=<span class="string">&quot;intro/step1.ks&quot;</span> target=<span class="string">&quot;*step1&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
-
-<p><font color="Gray"><em>前面说的语法高亮只是由插件做成的第三方效果，TyranoScript本身在系统里没有对应的默认原生语法高亮，此处套用了css的语法高亮</em></font></p>
-<p>&emsp;&emsp;在上述代码中，你能够看到两样东西，分别是普通的文字文本，和带有括号的标签。</p>
-<h3 id="1-1-文本"><a href="#1-1-文本" class="headerlink" title="1.1 文本"></a>1.1 文本</h3><p>&emsp;&emsp;TyranoScript的文本就像小说一样，是不需要像其他游戏引擎或者程序语言那样，用任何代码或标识符将文本单独输出，比如游戏引擎Ren’py需要使用双引号(”“)来输出对话。</p>
-<p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
-<p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
-<h3 id="1-2-标签-重点"><a href="#1-2-标签-重点" class="headerlink" title="1.2 标签(重点)"></a>1.2 标签(重点)</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
-<p>&emsp;&emsp;(此处的[lr]并不是Tyranoscript引擎的原版标签，而是作者Ray-K自己自定义的，作用就是[l]和[r]的结合。)</p>
-<p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
-<p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(<strong>见1.4.2</strong>)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
-<p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
-<p>&emsp;&emsp;不同于官方的标签，由你自己定义的标签的名字是可以随意更改的，但是要记住，标签的命名尽量使用英文。空格用_代替。</p>
-<p>&emsp;&emsp;而参数比较特殊，它是对标签的一个补充，就比如上述标签中的</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;它由名称和参数两个部分组成，待在第一位的chara_mod就是它的名称，而后面的name、time、storage则是他的参数。这个标签的作用就是更改角色的图像，通常会用来更改角色的表情，但在此处用来更改整个角色立绘。</p>
-<p>&emsp;&emsp;这里我们倒着讲，最后一个storage参数的作用就是定义你要调用什么图片，在上面，它调用了fgimage文件夹里面，一个名称为s的文件夹内，名称为body的文件夹内的stand-c.png图片。（至于为什么是fgimage可以翻回去看一下文件结构那部分），所以在这里写作s&#x2F;body&#x2F;stand-c.png，后续不再做过多的赘述，直接用xxx&#x2F;xxx&#x2F;xxx的形式表示文件结构。</p>
-<p>&emsp;&emsp;time参数的作用在此处的作用是定义图片切换的淡出淡入时间，单位为毫秒(ms)，此处定义为了100，则代表着切换角色图片时会有0.1s的淡出淡入，如果设置为0的话则直接变换，不做淡出淡入。</p>
-<p>&emsp;&emsp;对于name参数，它作用就是用于管理同一name参数的角色图片。(实际上它并不是由chara_mod定义的，而是由另一个叫做chara_new的标签定义的，只不过我没在这里写出来。)</p>
-<p>&emsp;&emsp;比如上述代码中</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。[p]</span><br><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> ]</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;两个chara_mod标签分别调用了叫stand-c和stang-t的图片，但是它们的name都是boay。要注意，此处的name并不是指它们的文件名称叫做body，而是指它们在系统中都属于“boay”这一名称的分类。而且游戏中不能同时存在两个name一样的图片，则是会被切换(time的切换淡出淡入就是在这里使用的)，stand-t.png被调用后，由于场上已经存在name为body的图片了，所以stand-c.png就会消失在游戏里，stand-t.png则会出现在游戏中。</p>
-<p>&emsp;&emsp;当name为其他值的时候也是同样的道理，游戏里只能存在同一个name，后调用者会替换前调用者。但是chara_mod能调用哪些name，需要看chara_new赋予了什么样的name，如果说chara_new赋予三张图片的name分别是eye、body、hand，那你如果用chara_mod是调用出name为foot或是其他值的图片，否则游戏将会报错，因为chara_new并没有赋予这些不存在的值。</p>
-<p>&emsp;&emsp;<strong>而且务必要记住，参数后面的值要跟着半角上下引号(也就是英文输入法内的上下引号)。虽然一般情况下也可以不写，但是部分参数不写的话会报错，所以为了不用专门记哪些参数要加上下引号，这边建议是统一写上下引号</strong></p>
-<p><font color="Gray"><em>下图为游戏内stand-c和stand-t替换的过程</em></font></p>
-<p><img src="https://i.ptu.me/file/2025/03/29/IWTh.gif" alt="IWTh.gif"></p>
-<!--标签参数没有固定的位置，你可以把name写在time前面，也可以把time写在name前面-->
-
-<h4 id="1-2-1-基础标签"><a href="#1-2-1-基础标签" class="headerlink" title="1.2.1 基础标签"></a>1.2.1 基础标签</h4><p>&emsp;&emsp;接下来将会罗列几个基础的标签和他们对应的作用，以此便于你们能够做出最基本的文本</p>
-<table>
-<thead>
-<tr>
-<th>标签</th>
-<th>作用</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>[r]</td>
-<td>文本换行</td>
-<td></td>
-</tr>
-<tr>
-<td>[l]</td>
-<td>停顿文本，单击屏幕后继续</td>
-<td></td>
-</tr>
-<tr>
-<td>[lr]</td>
-<td>停顿文本，单击屏幕后换行</td>
-<td></td>
-</tr>
-<tr>
-<td>[p]</td>
-<td>文本切页(这么讲便于理解)</td>
-<td></td>
-</tr>
-<tr>
-<td>[s]</td>
-<td>暂停代码运行</td>
-<td>该标签后的代码不会运行，可以防止不同作用的代码混起来</td>
-</tr>
-<tr>
-<td>[return_bace]</td>
-<td>返回行动菜单</td>
-<td>行动菜单即带有摸头，对话按键的那个界面</td>
-</tr>
-<tr>
-<td>[black]</td>
-<td>清除游戏背景</td>
-<td></td>
-</tr>
-<tr>
-<td>[cm]</td>
-<td>清空游戏文本</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="1-3-变量-重点"><a href="#1-3-变量-重点" class="headerlink" title="1.3 变量(重点)"></a>1.3 变量(重点)</h3><p>&emsp;&emsp;因为游戏的底层逻辑是基于标签以及变量组成的(不如说所有编程语言都差不多)，所以这部分和<strong>标签</strong>一样，非常的重要。</p>
-<h4 id="1-3-1-什么是变量"><a href="#1-3-1-什么是变量" class="headerlink" title="1.3.1 什么是变量"></a>1.3.1 什么是变量</h4><p>&emsp;&emsp;首先，我们来理解，什么是 <strong><u>变量</u></strong> (Variable)</p>
-<p>&emsp;&emsp;在原版游戏2.5.2中，当希尔薇对玩家的好感度低于50的时候，那么希尔薇就会在生病事件中死去，如果等于或大于50，则会活下来，开启后续事件。</p>
-<p>&emsp;&emsp;在这段事件中，“好感度”就是一个变量，用来判断玩家是否满足一个特定的条件。变量本身是游戏程序的保存下来的不同数值，就比如刚刚说的“好感度”，我们可以通过特定的代码更改这些变量的值。</p>
-<p>&emsp;&emsp;使用一个比较形象的比喻的话，那就是变量相当于一个盒子，每个盒子都拥有着自己的名字，盒子里面装的就是一个个数据，他们可以是字符串(也就是普通的文本)，可以是数字，也可以是其他东西。而游戏程序就是盒子外的人，根据指定的条件，来判断需不需要对某个盒子进行更改。</p>
-<p>&emsp;&emsp;也就是说，当一个叫做”好感度“的盒子里面的数字大于或者等于50的时候，盒子外的人才会决定让希尔薇活下去，否则希尔薇就会死亡。</p>
-<p>&emsp;&emsp;这就是变量在程序中最基本的运用。</p>
-<h4 id="1-3-2-变量的命名"><a href="#1-3-2-变量的命名" class="headerlink" title="1.3.2 变量的命名"></a>1.3.2 变量的命名</h4><p>&emsp;&emsp;变量是有着属于自己的命名方式的，你不可能在代码里面真的将变量命名为“好感度”，这种是我们自己的命名，对于游戏程序，我们还是要给变量取一个程序看得懂的名字。</p>
-<p>&emsp;&emsp;关于变量的命名，基本和所有编程语言一样，TyranoScript的变量命名也遵循一下几种规则</p>
-<p>&emsp;&emsp;<strong>1.请使用数字，英文字母和下划线</strong>(_)<strong>命名</strong></p>
-<p>&emsp;&emsp;**2.请勿使用空格，如果想使用分单词，可以使用驼峰式命名(**如MacCom，这种单词的首字母大写)<strong>，或使用下划线</strong>(_)<strong>代替空格</strong>(如Mac_Com)</p>
-<p>&emsp;&emsp;<strong>3.请勿使用数字开头</strong>(如1MacCom)</p>
-<p>&emsp;&emsp;但是作为JavaScript为基础代码的游戏，理论上命名也可以使用中日韩等字符，但是不建议这么写，另外在如果有部分变量在设置后就再也不会变化，建议使用全大写命名，便于分辨(如MACCOM)。</p>
-<p>&emsp;&emsp;另外在TyranoScript中，变量分为两个部分，也就是<strong>种类</strong>和<strong>名称</strong>，必须要遵循“<strong>种类.名称</strong>”式的命名法，例如变量“<strong>f.love</strong>”，f就是他的种类，love才是他的名字，中间必须用”**.**“来隔开。</p>
-<p>&emsp;&emsp;给变量取一个易懂的名字，可以很大概率提升你后续开发或是别人使用你代码时的效率，比如你想把一个变量用来当做游戏所度过的天数，那你就可以给这个变量命名为f.day或者f.tianshu，前者day就是天数、日子的英文，后者tianshu就是天数的拼音，这样你一眼就能看出来这个变量在游戏里有什么用，别人也可以。否则你给这个变量取一个名字叫做f.a114514，你第一眼也看不出这变量到底是干什么用的，别人也只能根据这个变量在代码里的作用猜测它到底是做什么的，实在是太过费时费力</p>
-<p>&emsp;&emsp;在TyranoScript中，所有的初始变量都写在了scenario的exp.ks文件中，便于管理，虽然说并不一样需要都写在exp.ks文件里，你写在其他地方一样赋值，就算写在游戏剧情里也可以，因为变量的设置只是后台的人操作，玩家看不见，但是便于管理，如果没有特殊需要的话，通常变量都是写在exp.ks文件中提前赋值，不然你把10个变量写在10不同的文件里，等你想找的时候你又不知道从何找起。（具体exp.ks文件位置在不同的游戏版本是不一定一样的，需要你自己找一下）</p>
-<hr>
-<h4 id="1-3-3-变量的种类"><a href="#1-3-3-变量的种类" class="headerlink" title="1.3.3 变量的种类"></a>1.3.3 变量的种类</h4><p>&emsp;&emsp;在TyranoScript中，变量有着三种类型，分别是<strong>普通变量</strong>、<strong>全局变量</strong>、<strong>临时变量</strong>三种，可以查看下列表格来更明确他们的作用(列表中的例子变量是随便取的名字)</p>
-<table>
-<thead>
-<tr>
-<th>种类名称</th>
-<th>种类</th>
-<th>种类作用</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>f</td>
-<td>普通变量</td>
-<td>游戏内最常见最基础的变量，每个存档的普通变量都不一定一样</td>
-<td>f.love f.name f.money</td>
-</tr>
-<tr>
-<td>tf</td>
-<td>临时变量</td>
-<td>无论给这种变量取什么名字赋什么值，所有这种变量在游戏程序被关闭后一定会被消除，不会永久保存</td>
-<td>tf.time tf.name tf.apple</td>
-</tr>
-<tr>
-<td>sf</td>
-<td>全局变量</td>
-<td>这种变量是全局的，所有存档共用一个变量。也就是说你在存档a设置了一个全局变量为1，那么存档b的这个变量也一样会被更改为1，就算重新开一个存档，这个变量还是1，除非重新赋值</td>
-<td>sf.hcg sf.hcg2</td>
-</tr>
-</tbody></table>
-<hr>
-<h4 id="1-3-4-变量的赋值"><a href="#1-3-4-变量的赋值" class="headerlink" title="1.3.4 变量的赋值"></a>1.3.4 变量的赋值</h4><p>&emsp;&emsp;我们可以来看一下以下代码</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=0&quot;</span> ][<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.lust=0&quot;</span> ]</span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.name=&#x27;主人&#x27;&quot;</span> ][<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.name_h=0&quot;</span> ]</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;其中，eval标签的作用就是给变量赋值，而参数exp就是具体的赋值表现，上述代码块中，存在四个普通变量，<strong>f.love</strong>变量(好感度)和<strong>f.lust</strong>变量(淫乱值)被赋予了0作为初始变量，这也是游戏一开始希尔薇没有任何好感度和淫乱值的原因。而<strong>f.name</strong>(玩家称呼)则被默认为了“主人”，所有游戏里的希尔薇如果在不更改称呼的情况下，就默认称呼玩家为主人。而最后一个<strong>f.name_h</strong>(玩家淫语称呼)则是和希尔薇在做爱的时候，希尔薇称呼玩家的特殊淫语，该变量在后期需要单独设置，所以这里被设置为0来表示不作任何值。</p>
-<p>&emsp;&emsp;而具体赋值语法则是<strong>[eval exp&#x3D;“变量赋值”]</strong></p>
-<p>&emsp;&emsp;其中“<strong>变量赋值</strong>”可以写最基本的赋值语句，也可以使用加减乘除进行最基本的更改</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=0&quot;</span> ]——将f.love直接设置为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love+3&quot;</span> ]——将f.love值加<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love-3&quot;</span> ]——将f.love值减<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love*3&quot;</span> ]——将f.love值乘<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love/3&quot;</span> ]——将f.love值除<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=&#x27;好感度爆棚1&#x27;&quot;</span> ]——将f.love值设置为字符串“好感度爆棚<span class="number">1</span>”(设置字符串时要给外面加上单引号，不加单引号只能设置为数字)</span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.day/3&quot;</span> ]——将f.love的值设置为当前f.day的值的<span class="number">3</span>倍</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;以上是最基本的赋值语句，你也可以同时给多个变量赋值，但是需要用半角逗号（不能使用中文输入法的逗号）隔开比如</p>
-<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love/3,f.day=f.day+1,tf.awa=&#x27;awawawwaa&#x27;&quot;</span> ]</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;上面说的只是最基本的赋值语句类型，对于目前来说已经足够用了，更多的赋值类型如有需要再说</p>
-<h3 id="1-4-其他"><a href="#1-4-其他" class="headerlink" title="1.4 其他"></a>1.4 其他</h3><h4 id="1-4-1-标记-重点"><a href="#1-4-1-标记-重点" class="headerlink" title="1.4.1 标记(重点)"></a>1.4.1 标记(重点)</h4><p>&emsp;&emsp;让我们假设，在一个文件里，写着有七八种实现不同功能的代码，那我们该如何精准的调用自己所需要的功能呢？你也许会说把它们写到不同的文件以此来调用，但是这样未免过于麻烦了。所以，这个时候，我们就需要用到<strong>标记</strong>了</p>
-<p>&emsp;首先，关于这一部分我们依旧需要讨论几个老生常谈的问题，即:</p>
-<p>&emsp;&emsp;&emsp;到底什么是标签？<br>&emsp;&emsp;&emsp;标签有什么用？<br>&emsp;&emsp;&emsp;如何使用标签？</p>
-<p>&emsp;&emsp;<strong><u>标记</u></strong>(Label)，<strong>在游戏中是对代码块的区分起到标识的作用</strong>。在文件中，标签都以*<em>星号(</em>)**作为开头。</p>
-<p>&emsp;&emsp;按照惯例，我们依旧结合代码来讲解。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*step1</span><br><span class="line"><span class="selector-attr">[set_sit]</span><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[show_sit]</span><span class="selector-attr">[show_repeat_role_room]</span><span class="selector-attr">[bgm_SG]</span><span class="selector-attr">[_]</span>（啊、怎么了吗…。<span class="selector-attr">[p_]</span><span class="selector-attr">[jump target=<span class="string">&quot;*before_menu&quot;</span> ]</span></span><br><span class="line">——————</span><br><span class="line">*show_bace</span><br><span class="line"><span class="selector-attr">[cm]</span><span class="selector-attr">[clearstack]</span><span class="selector-attr">[set_sit]</span><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[set_time_r]</span><span class="selector-attr">[show_sit]</span><span class="selector-attr">[show_repeat_role_room]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.act==&#x27;non&#x27;&quot;</span> ]</span><span class="selector-attr">[eval exp=<span class="string">&quot;f.act=0&quot;</span> ]</span><span class="selector-attr">[bgm_SG]</span><span class="selector-attr">[syl]</span><span class="selector-attr">[f/cl]</span>…早上好、主人。<span class="selector-attr">[p_]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[_]</span></span><br><span class="line">——————</span><br><span class="line">*before_menu</span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.act&gt;=7&quot;</span> ]</span><span class="selector-attr">[jump target=<span class="string">&quot;*night&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[set_time_r]</span><span class="selector-attr">[show_button_intro]</span></span><br><span class="line">——————</span><br><span class="line">*night</span><br><span class="line"><span class="selector-attr">[eval exp=<span class="string">&quot;f.last_act=&#x27;awake&#x27;,f.act=&#x27;non&#x27;,f.day=f.day+1,f.repeat_mode=0&quot;</span> ]</span><span class="selector-attr">[stop_bgm]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.intro_flag==0&quot;</span> ]</span><span class="selector-attr">[jump storage=<span class="string">&quot;intro/event.ks&quot;</span> target=<span class="string">&quot;*feed&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.day&gt;=4&quot;</span> ]</span><span class="selector-attr">[jump storage=<span class="string">&quot;intro/event.ks&quot;</span> target=<span class="string">&quot;*to_next&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[_]</span>…。<span class="selector-attr">[p_]</span>（已经到晚上了…准备睡觉吧。<span class="selector-attr">[p_]</span></span><br><span class="line"><span class="selector-attr">[syl]</span><span class="selector-attr">[f/r]</span>…晚安。<span class="selector-attr">[p_]</span><span class="selector-attr">[_]</span><span class="selector-attr">[black]</span>…。<span class="selector-attr">[p_]</span></span><br><span class="line"><span class="selector-attr">[jump target=<span class="string">&quot;*show_bace&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;上述代码是从同一个文件里拿出来的。从内容来看，你能够看到4个以*开头的单词，它们就是标记，用于给不同的代码块命名，方便调用，在这里，它们的作用各不相同，你现在不需要知道里面的语句到底是干什么的，你只需要知道它们的大致作用就可以了。而且它们还划分出了四个不同的代码块。(“——————”在源代码中并不存在，这里是为了方便明确不同的代码块而手动添加的。)</p>
-<p>&emsp;&emsp;&emsp;step1————用于在开局收养完希尔薇后增加一个过渡对话。<br>&emsp;&emsp;&emsp;show_bace————用于开始新的一天<br>&emsp;&emsp;&emsp;before_menu————在你用行动菜单进行摸头对话等操作后判断是不是晚上了，如果是则转跳到night，如果不是则将推进一格时间并且重新显示行动菜单(因为对话会清除行动菜单的按键)<br>&emsp;&emsp;&emsp;night————在条件符合时触发游戏初期的吃饭睡觉等事件，如果无事件触发则正常触发夜晚对话，然后转跳到show_bace开启新的一天</p>
-<p>&emsp;&emsp;首先我们要知道，系统是从文件第一行开始，逐行往下阅读代码，直到最后一行，这个过程是不可逆的，不可能先阅读1、3、5、7、9行，再阅读2、4、6、8、10行这样子。而标记就给系统提供一个便捷的中间调用的功能。</p>
-<p>&emsp;&emsp;就比如你调用了上述的代码文件，那么它只会从*step1开始逐行往下调用，但是假设你需要从*night开始调用呢？标记就把这部分标记了出来，告诉系统可以从这里开始调用。</p>
-<p>&emsp;&emsp;如果没有标记，那么上述四个功能就会变为一体，你无法单独调用其中任何一个功能，每次调用都要从头开始，而有了标记后，他们四个功能独立了，就变得可以单独调用代码块了。</p>
-<p>&emsp;&emsp;而且标记除了分隔代码块以外，还起到和变量名称一样的说明作用，像*night一眼就能看出来是和夜晚有关的代码块，但是命名和变量名不同的是，你可以使用中文或日文等其他语言，比如“*夜晚调用”、“*开启下一天”之类的，但是为了美观，通常还是建议使用英文。</p>
-<p>&emsp;&emsp;所以标记让游戏代码读取变得更加高效，在没有需要额外调用代码情况下，你可以将不同的代码块按顺序放在一起，只要他们的顺序能达成你的目的。如果需要额外调用，那再使用调用语句就可以了。</p>
-<hr>
-<p>&emsp;&emsp;但是也有人会问，那我们应该如何阻止阅读完上一个代码块后，系统继续向下一个代码块运行呢？</p>
-<p>&emsp;&emsp;在这里，我们有两种方法:</p>
-<p>&emsp;&emsp;<strong>1.使用jump标签</strong></p>
-<p>&emsp;&emsp;&emsp;jump标签的作用就是跳转到对应文件或者对应标记，它有两个参数</p>
-<table>
-<thead>
-<tr>
-<th>参数名称</th>
-<th>参数作用</th>
-<th>例子</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>storage</td>
-<td>指定跳转文件，如为空则使用本文件</td>
-<td>[jump storage&#x3D;”intro&#x2F;opening.ks”]  ——跳转到intro&#x2F;opening.ks文件的开头开始读取代码</td>
-</tr>
-<tr>
-<td>target</td>
-<td>指定跳转标记，如为空则从文件开头读取</td>
-<td>[jump target&#x3D;”*opening”] ——跳转到本文件的*opening标记开始读取代码<br />[jump target&#x3D;”*no” storage&#x3D;”intro&#x2F;opening.ks”] ——跳转到inrto&#x2F;opening.ks的*no标记处开始读取代码</td>
-</tr>
-</tbody></table>
-<p>&emsp;&emsp;&emsp;注意，这两个参数必须至少存在一个，不可以两个参数都不写</p>
-<p>&emsp;&emsp;<strong>2.使用[s]参数</strong></p>
-<p>&emsp;&emsp;&emsp;具体可以看前文<strong>1.2.1 基础标签</strong>一章中[s]的部分，它可以使代码运行到它这里就完全不再继续往下运行，这通常用在一个代码块的结尾处，用于分隔上下两个代码块，否则这一段代码块运行完了以后就会自动运行下一块。但务必记住在使用[s]的时候要有调用出去的方法，否则如果你在游戏对话的时候使用了这个，那你对话就会完全卡住无法运行。前文的before_menu之所以可以阻止代码的运行，是因为[show_button_intro]标签宏内带有[s]，如果没有[s]的话，就会自动运行到*night。</p>
-<h4 id="1-4-2-宏-重点"><a href="#1-4-2-宏-重点" class="headerlink" title="1.4.2 宏(重点)"></a>1.4.2 宏(重点)</h4><p>&emsp;&emsp;<strong><u>宏</u></strong>(macro)，也算是TyranoScript语法中较为总要的一环了，合理编写运用宏可以极大的节省你在编程过程中的时间。</p>
-<p>&emsp;&emsp;大多人也许或多或少用过鼠标宏、键盘宏或者手柄宏之类的功能，这里也就是要牵扯到宏的原理——即<strong>将较长的指令序列用某种规则对应到较短的指令序列的规则或模式。</strong></p>
-<p>&emsp;&emsp;简单来说，也就是将某段较长的代码、指令之类的东西和一个较短的代码、指令绑定在一起，当你使用短代码、指令的时候就自动映射执行长代码、指令。举个形象点的例子，就像是毕加索的全名，几十个字，但当人们说“毕加索”的时候，和毕加索全名指的都是一个人，只是并没有展开称呼全名而已。宏也是类似，当你输入一个宏时，它的背后是另一段长代码。</p>
-<p>&emsp;&emsp;那怎么定义一个宏呢？我们可以使用[macro]和[endmacro]来定义一个宏，只需要在这之间写入代码即可。</p>
-<p>&emsp;&emsp;看得迷迷糊糊或看不懂也没关系，按照老惯例，我们来进入实例讲解的环节，搭配实例来理解即可：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[bgm_ST]</span></span><br><span class="line"><span class="selector-attr">[set_stand]</span></span><br><span class="line"><span class="selector-attr">[f/nt]</span></span><br><span class="line"><span class="selector-attr">[bg_town]</span></span><br><span class="line"><span class="selector-attr">[set_weather]</span></span><br><span class="line"><span class="selector-attr">[show_stand]</span></span><br><span class="line"><span class="selector-attr">[act_win_stand]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;在这一段代码中的带括号的都是宏，从[bgm_ST]到[act_win_stand]都是，不过这里并不全讲解，我们只讲解[bgm_ST]和[bg_town]，因为这两个讲解起来简单且方便方便。</p>
-<p>&emsp;&emsp;那么当我们把其余讲不到的宏去掉以后，代码变成了这样:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[bgm_ST]</span></span><br><span class="line"><span class="selector-attr">[bg_town]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;当我们查找macro.ks后，可以看到这两个宏的原代码是这样的(我缩进了一下代码方便讲解，原代码是没有缩进，连在一行里的)</p>
-<p><strong>[bgm_ST]</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bgm_ST&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[eval exp=<span class="string">&quot;f.current_bgm=&#x27;ST&#x27;&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[playbgm loop=<span class="string">&quot;true&quot;</span> storage=<span class="string">&quot;Smooth_Turquoise.ogg&quot;</span> ]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>[bg_town]</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bg_town&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[bg time=<span class="string">&quot;400&quot;</span> method=<span class="string">&quot;crossfade&quot;</span> storage=<span class="string">&quot;bg/town.jpg&quot;</span> ]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;(代码块中的macro用于开始定义宏，name用于定义宏的名称，底下的endmacro则是结束定义，也就是说，一个宏所包含的代码只在macro和endmacro之间。)</p>
-<p>&emsp;&emsp;从上述代码可以看出，[bgm_ST]主要作用是播放Smooth_Turquoise.ogg音频。</p>
-<p>&emsp;&emsp;而[bg_town]的作用更简单，调用town.jpg作为背景图。</p>
-<p>&emsp;&emsp;RayK将这两大段定义成了[bgm_ST]和[bg_town]两个宏，否则的话你会看到这样的代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bgm_ST&quot;</span> ]</span><span class="selector-attr">[eval exp=<span class="string">&quot;f.current_bgm=&#x27;ST&#x27;&quot;</span> ]</span><span class="selector-attr">[playbgm loop=<span class="string">&quot;true&quot;</span> storage=<span class="string">&quot;Smooth_Turquoise.ogg&quot;</span> ]</span><span class="selector-attr">[endmacro]</span></span><br><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bg_town&quot;</span> ]</span><span class="selector-attr">[bg time=<span class="string">&quot;400&quot;</span> method=<span class="string">&quot;crossfade&quot;</span> storage=<span class="string">&quot;bg/town.jpg&quot;</span> ]</span><span class="selector-attr">[endmacro]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;每次调用的时候都很麻烦，要么写一遍，要么复制一遍，但是定义为宏的话就只需要写[bgm_ST]和[bg_town]短短的几个字母即可了。</p>
-<hr>
-<p>&emsp;&emsp;当然，宏并不死板，就像其他计算机语言一样，它也有<strong>参数传递</strong>。</p>
-<p>&emsp;&emsp;接下来看一段代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=newtag]</span></span><br><span class="line">    <span class="selector-attr">[font color=%iro]</span></span><br><span class="line">    Teaching Feeling</span><br><span class="line">    <span class="selector-attr">[resetfont]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br><span class="line"></span><br><span class="line">——————</span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[newtag iro=0x000000]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;在这段代码中，定义一个名字叫做newtag的宏，功能是打出“Teaching Feeling”这句话，但字体的颜色是黑色(font用于自定义字体颜色，resetfont用于划定改变颜色的字体范围)。</p>
-<p>&emsp;&emsp;但是在宏中，我们能看到它设置颜色的部分“color&#x3D;%iro”并没有直接输入HTML颜色代码(最后的0x000000就是HTML颜色代码，浏览器可以找到颜色表或者颜色图，这里的0x000000就指黑色)，而是输入一个<strong>形参</strong>“%iro”，直到调用newtag时才输入了<strong>实参</strong>“0x000000”。</p>
-<p>&emsp;&emsp;这样做的好处是什么？就是用户能够更加方便的编辑自己所要的颜色，假设你要想输入10个不同颜色的“Teaching Feeling”，就不需要定义十个宏或者写十遍代码，而是只需要在传递的时候更改自己的实参即可。本质上就是前面标签那一章提到的参数，只不过你可以自定义参数的名字和参数的位置。</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p><strong>形参</strong>也就是形式参数，指的是在定义函数、宏之类时写入的虚拟函数，本身并不存在，上述的%iro就是一个形参(TyranoScript定义形参时，前面必须要加%)。就像是占位符一样，占着这个位，告诉程序这里有个参数，但是参数的内容暂时先空着。<br><strong>实参</strong>是实际参数，就是实际存在的参数，比如“[newtag iro&#x3D;0x000000]”中的”0x000000”就是一个实参，也可以是一个变量，填写形参占位的空白。</p>
-<p>就好像你公司部门的主管被辞退了，那么这个空着的主管职位就是一个形参，告诉你这里有个职位，但是是谁当暂时空着，而过几天来了个叫甲的新主管，那么这个新的主管就是实参。“主管”这个职位是由人们主观定义出来的一个职位，是形参。但是担任主管工作的甲是客观上存在的一个人，那么他是实参。</p>
+<p>​	补充:该作者在2019年12月2日时有在Youtube上传了一个毛骨悚然的爱的新版本的视频，但是此后游戏的消息便石沉大海了</p>
+<p><img src="https://pic1.imgdb.cn/item/677a68f0d0e0a243d4ef2b39.png"></p>
 </blockquote>
-<h1 id="二、改版制作扩展教程"><a href="#二、改版制作扩展教程" class="headerlink" title="二、改版制作扩展教程"></a>二、改版制作扩展教程</h1><h3 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;该教程区别于“改版制作基础教程”，基础教程不仅仅适用于Teaching Feeling，也同样适用于其他任何使用TyranoScript游戏引擎的游戏。而“改版制作扩展教程”是在基础教程的基础上，专门实现一些仅仅适用于Teaching Feeling的功能，例如添加更多衣服、更多CG、或者像随机服装之类这种在别的游戏没用，只适用于Teaching Feeling的教程。所以如果你学习这些教程的目的并不是为了制作该游戏的改版，而是为了自己制作一款新游戏的话，那就没有必要看着一章节了。</p>
-<p>&emsp;&emsp;<strong>该部分教程仅适用于原版2.5.2或任何以2.5.2为基础所制作的改版，理论上2.x大部分都适用，但我并没有测试过。</strong></p>
-<h3 id="1-服装添加教程"><a href="#1-服装添加教程" class="headerlink" title="1. 服装添加教程"></a>1. 服装添加教程</h3><h4 id="1-1-文件命名"><a href="#1-1-文件命名" class="headerlink" title="1.1 文件命名"></a>1.1 文件命名</h4><p>&emsp;&emsp;&emsp;先不着急来讲服装部分，我们要先认识自定义服装系统，在2.4版本及以前，Ray-Kbys是由制作自定义服装系统的，也就是玩家可以更便捷的添加自定义服装，不过我们这里用的是2.5.2，所以无法使用该功能，打2.5版本开始这功能就被删除了，只剩下了一个壳。</p>
-<p>&emsp;&emsp;不过重点不是自定义服装系统本身，而是它的命名方式，Ray-Kbys为了方便玩家添加服装而使用了一套命名方式便于管理，目前玩家自制服装最多的服装包来源于国外整合，其命名形式也使用了此套命名。不过并不是全都是如此命名，也有可能直接命名为什么“外套”、“坐姿”之类的名字，这里只不过提出来让用户更方便的辨认。</p>
-<p>&emsp;&emsp;命名方式为:</p>
-<p>&emsp;&emsp;&emsp;&emsp;字母_v_服装名.png</p>
-<p>&emsp;&emsp;不同的字母则代表希尔薇在不同情景下的服装，比如D代表换装界面的服装，R代表行动菜单界面的坐姿服装。后面的服装名则只是单纯的命名用处。例如R_v_army.png就代表希尔薇坐姿的army(军装)服装图片。</p>
-<p>&emsp;&emsp;除此之外，服装除了本体图片还会有部分扩展图片，比如左右袖子，因为部分动作下的希尔薇的胳膊会有遮挡，所以通常大部分情况下，左右袖子是和本体图片分开的，也就是两张额外的图片，而他们的命名通常就只是在原图片名字后面添加下划线(_)，例如</p>
-<p>&emsp;&emsp;&emsp;R_v_army.png————军装身体部分<br>&emsp;&emsp;&emsp;R_v_army_.png————军座左袖子部分<br>&emsp;&emsp;&emsp;R_v_army__.png————军装右袖子部分</p>
-<p>&emsp;&emsp;而添加服装的时候就把这三张图片放在一起即可。(其实这里的军装并没有右袖子，因为希尔薇坐姿时的侧身会把右臂挡住，所以并没有右袖子，但是按照游戏代码来说，添加服装时必须添加一整套，所以即使没有右袖子也要添加一张空白图片进去，这里的右袖子就是一张大小1*1的空白图片，这种图片在其他姿势也有。)</p>
-<p>&emsp;&emsp;以下是全字母和对应作用:</p>
-<table>
-<thead>
-<tr>
-<th>字母</th>
-<th>对应场景</th>
-<th>额外图片</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>D</td>
-<td>换装场景立绘</td>
-<td>无额外图片</td>
-</tr>
-<tr>
-<td>F</td>
-<td>正常站姿立绘</td>
-<td>后缀带_为袖子部分</td>
-</tr>
-<tr>
-<td>Hf</td>
-<td>掀衣服露私处立绘</td>
-<td>后缀带_为袖子部分，带_a为手臂部分</td>
-</tr>
-<tr>
-<td>Hx1</td>
-<td>H时的正常体位cg</td>
-<td>无额外图片</td>
-</tr>
-<tr>
-<td>Hx2</td>
-<td>背对且坐在医生上面cg</td>
-<td>无额外图片</td>
-</tr>
-<tr>
-<td>N</td>
-<td>摸头立绘</td>
-<td>无额外图片</td>
-</tr>
-<tr>
-<td>R</td>
-<td>行动菜单坐姿</td>
-<td>后缀带_为左袖子，带__为右袖子</td>
-</tr>
-<tr>
-<td>S</td>
-<td>吃饭时的坐姿</td>
-<td>后缀带_为正常坐姿右袖子和左袖口，带__为左袖子。带__a为抬手吃东西的右手袖子，带_a为左手袖子</td>
-</tr>
-</tbody></table>
-<p>&emsp;&emsp;以上是正常自定义服装会用的命名，如果还是听不懂，可以根据我提供的链接下载示例服装配合教程理解。</p>
-<hr>
-<p>&emsp;&emsp;除此以外，服装也是有分种类的，例如衣服，帽子，袜子，眼睛等等，上述表格中的“额外图片”指的是衣服的额外图片，像帽子的所有字母分类都没有额外图片。</p>
-<p>&emsp;&emsp;下述的是分类文件夹名称和对应类型的衣服:</p>
-<p><strong>服装分类</strong></p>
-<table>
-<thead>
-<tr>
-<th>文件夹名称</th>
-<th>对应服装</th>
-<th>示例服装</th>
-<th>调用标记</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>b_acc</td>
-<td>身上挂件</td>
-<td>乳贴、乳环</td>
-<td>*ri_re</td>
-</tr>
-<tr>
-<td>dress</td>
-<td>衣裤(4.0版本以前不分上下装)</td>
-<td>水手服，轻薄的衣服</td>
-<td>*c_re</td>
-</tr>
-<tr>
-<td>glass</td>
-<td>眼镜</td>
-<td>圆形眼镜</td>
-<td>*g_re</td>
-</tr>
-<tr>
-<td>gloves</td>
-<td>手套</td>
-<td>皮带手套</td>
-<td>*a_re</td>
-</tr>
-<tr>
-<td>hat</td>
-<td>帽子</td>
-<td>兽耳装饰品、发箍、鸭舌帽</td>
-<td>*h_re</td>
-</tr>
-<tr>
-<td>neck</td>
-<td>脖子装饰</td>
-<td>围巾、围裙</td>
-<td>*ne_re</td>
-</tr>
-<tr>
-<td>pin</td>
-<td>前发(发夹)(通常同一个发夹会有片分、中分、露额三张图片，这个只能靠自己辨认了，这部分命名有些自由)</td>
-<td>细发卡</td>
-<td>*p_re</td>
-</tr>
-<tr>
-<td>socks</td>
-<td>袜子</td>
-<td>短袜子、长条纹(黑)</td>
-<td>*s_re</td>
-</tr>
-<tr>
-<td>und_b</td>
-<td>上半身内衣</td>
-<td>普通的胸罩、蕾丝的胸罩</td>
-<td>*ub_re</td>
-</tr>
-<tr>
-<td>und_p</td>
-<td>下半身内衣</td>
-<td>普通的内裤、类似的内裤</td>
-<td>*up_re</td>
-</tr>
-</tbody></table>
-<h4 id="1-2-调用部分"><a href="#1-2-调用部分" class="headerlink" title="1.2 调用部分"></a>1.2 调用部分</h4><p>&emsp;&emsp;接下来我们就得需要把衣服添加到游戏里了，首先我们需要知道衣服应该放在什么位置，基本所有正常立绘的衣服都放在fgimage&#x2F;s里，而Hf，Hx1和Hx2会稍微有些不一样，这三个是做爱时的衣服立绘，单独分开在fgimage&#x2F;H、fgimage&#x2F;Hx1、fgimage&#x2F;Hx2里。而s、H、Hx1、Hx2这四个文件夹里面游戏衣服分类了，看上面那个<strong>服装分类</strong>的表格就好了。</p>
-<p>&emsp;&emsp;然后首先你需要知道调用服装的原理，简单来说也就只是将几个变量分别设置为衣服图片的名字和种类，然后游戏会根据这几个变量里写着的衣服名称和种类在文件夹里寻找它，找到的话就会调用它，如果是带额外图片的就会一起调用，这也就是为什么衣服的额外图片必须用空白图片占位的原因了。</p>
-<p>&emsp;&emsp;下面是一个最简单的调用语句:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[button target=<span class="string">&quot;*c_re&quot;</span> graphic=<span class="string">&quot;number/mod/ori_halfclothe.png&quot;</span> x=<span class="string">&quot;835&quot;</span> y=<span class="string">&quot;435&quot;</span> exp=<span class="string">&quot;f.dress_t=&#x27;elf&#x27;,f.dress_c=&#x27;1&#x27;&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这个代码的主要作用是生成一个替换衣服为精灵服装的按钮，我是把它写到了替换服装的自定义服装界面(这部分后面再讲)。</p>
-<p>&emsp;&emsp;当中的**target&#x3D;”*c_re”**就是上面表格提过的调用标记了，代表设置为衣裤部分。</p>
-<p>&emsp;&emsp;而后面的graphic和x、y是设置按钮的图标和位置，这里不多讲，重点在结尾的两个变量，f.dress_t和f.dress_c上面，这两个变量的作用就是设置需要更换的衣服的名字，f.dress_t+f.dress_c就是文件名字，至于为什么要把文件名字分开设置，是因为影响到希尔薇衣服出门的逻辑。</p>
-<p>&emsp;&emsp;在游戏中，有一段代码是负责希尔薇是否能出门的，你之所以看到希尔薇只穿胸罩出不了门，就是因为这里的判断未通过，而判断的方式，就是检测身上穿的东西有没有指定的f.dress_t变量，而胸罩的变量名称为f.under_b_t和f.under_b_c，自然和f.dress_t没关系了。</p>
-<p>&emsp;&emsp;可能不是很好理解，我举例子讲好了。</p>
-<p>&emsp;&emsp;比如我这里调用的精灵服位置是”fgimage\s\dress\D\elf1.png”，可以看出来，我这件衣服的文件名字叫elf1，所以我把他名字拆成elf和1，然后写给f.dress_t和f.dress_c，然后再把”elf”写到出门服装判定里，这样当我穿上精灵服后就可以正常出门了、但是如果我没把f.dress_t&#x3D;“elf”的判定写到出门代码里，那么我就算穿上精灵服也出不了门。至于f.dress_c&#x3D;“1”则是为了不用每次添加服装都添加新的出门判定，因为你可以把衣服命名为elf1、elf2、elf3，这样加新衣服就可以只改后面的f.dress_c了。</p>
-<p>&emsp;&emsp;然后我们只要点击这个按钮，就可以把衣服替换为精灵服了。</p>
-<p><img src="https://pic1.imgdb.cn/item/687530f758cb8da5c8adc96f.gif"></p>
-<p>我这都写的什么乱七八糟的，自定义服装教程这一部分写的很乱，而且还没写完，如果有看不懂的地方，可以找博主询问</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>改版</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>保姆向-如何在Tyrano中设置一个日期检测</title>
-    <url>/post/101/</url>
-    <content><![CDATA[<p>&emsp;&emsp;该教程尽量用较直白且详细的语气去说明如何制作一个日期检测的方法，可以将当前现实时间的的时间保存为变量，如何运用到游戏里</p>
-<p>&emsp;&emsp;就假设我们需要制作一个生日祝福的功能，玩家可以设置自己的生日，当现实时间与玩家在游戏内设置的日期相同时则触发生日剧情。需要做出这一步功能，我们需要三个步骤:</p>
-<p>&emsp;&emsp;&emsp;&emsp;1.获取现实时间<br>&emsp;&emsp;&emsp;&emsp;2.让玩家设置生日<br>&emsp;&emsp;&emsp;&emsp;3.校对两者</p>
-<h1 id="一、获取现实时间"><a href="#一、获取现实时间" class="headerlink" title="一、获取现实时间"></a>一、获取现实时间</h1><p>&emsp;&emsp;TyranoScript的普通语法是不支持这一点的，所以我们需要用到**函数(Function)**。</p>
-<p>&emsp;&emsp;我们都知道，TyranoScript本身是基于JavaScript所开发的游戏引擎，但他有着自己的一套语法，那我们能不能在TyranoScript里使用JavaScript本身的代码和语法吗？答案是可以的，也就是上面所说的函数。</p>
-<p>&emsp;&emsp;TyranoScript的函数与Python之类编程语言不同，TyranoScript的函数只有一个功能，就是在TyranoScript中使用JavaScript的语法与代码，很多TyranoScript本身做不到的功能，都可以通过JavaScript来实现，那么下面就让我们来看这段代码:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[iscript]</span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();  <span class="comment">// 创建Date对象并赋值给now变量</span></span><br><span class="line"><span class="keyword">var</span> year = now.<span class="title function_">getFullYear</span>();  <span class="comment">// 获取当前年份并存储到year变量里</span></span><br><span class="line"><span class="keyword">var</span> month = now.<span class="title function_">getMonth</span>() + <span class="number">1</span>;  <span class="comment">// 获取当前月份并存储到month变量里</span></span><br><span class="line"><span class="keyword">var</span> day = now.<span class="title function_">getDate</span>();  <span class="comment">// 获取当前日期并存储到day变量里</span></span><br><span class="line"><span class="keyword">var</span> hours = now.<span class="title function_">getHours</span>();  <span class="comment">// 获取当前小时并存储到hours变量里</span></span><br><span class="line"><span class="keyword">var</span> minutes = now.<span class="title function_">getMinutes</span>();  <span class="comment">// 获取当前分数并存储到minutes变量里</span></span><br><span class="line"><span class="keyword">var</span> seconds = now.<span class="title function_">getSeconds</span>();  <span class="comment">//获取当前秒数并存储到seconds</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//===============================================</span></span><br><span class="line"></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.year=&quot;</span> + year &#125;);  <span class="comment">//将year变量的内容赋给sf.year变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.month=&quot;</span> + month &#125;);  <span class="comment">//将month变量的内容赋给sf.month变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.day=&quot;</span> + day &#125;);  <span class="comment">//将day变量的内容赋给sf.day变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.hours=&quot;</span> + hours &#125;);  <span class="comment">//将hours变量的内容赋给sf.hours变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.minutes=&quot;</span> + minutes &#125;);  <span class="comment">//将minutes变量的内容赋给sf.minutes变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.seconds=&quot;</span> + seconds &#125;);  <span class="comment">//将seconds变量的内容赋给sf.seconds变量</span></span><br><span class="line">[endscript]</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;如代码块所示，这块代码就是最主要的内容，还是蛮简单了，上半部分的代码负责获取当前各个时间，包括年份，月份，日期以及时分秒，然后存储到对应的变量里，但要注意，目前的变量是JavaScript的变量，并不是TyranoScript变量，所以我们还专门写了下半部分的代码，可以将JavaScript代码的值赋给TyranoScript的变量。</p>
-<p>&emsp;&emsp;例如，当前时间是2025年11月28日19时02分20秒，那么经过这些代码以后，这些变量的值就会是:</p>
-<p>&emsp;&emsp;sf.year&#x3D;2025，sf.month&#x3D;11，sf.day&#x3D;28，sf.hours&#x3D;19，sf.minutes&#x3D;02，sf.seconds&#x3D;20</p>
-<p>&emsp;&emsp;而sf这种变量类型已经在以前的教程中讲过了，这里不再赘述，当然如果你想把变量改成别的名字和类型，比如f.awa之类的，也是没问题，只要作用正确并且你能够记住这个变量干什么用的，随便叫什么都可以。</p>
-<p>&emsp;&emsp;只需要把上述代码写到first.ks，亦或是title.ks&#x2F;title_screen.ks这种游戏启动必定会加载的文件里，那么每次启动游戏都可以获取到当前游戏启动的时间。</p>
-<h2 id="二、让玩家设置生日"><a href="#二、让玩家设置生日" class="headerlink" title="二、让玩家设置生日"></a>二、让玩家设置生日</h2><p>&emsp;&emsp;第二步就是让玩家设置生日，这一步的方法很多，最方便的是写几个输入框用于获取玩家生日。</p>
-<p>&emsp;&emsp;这一步只需要用到edit标签即可</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;*sf.api*&quot;</span> length=100 width=450 left=170 top=165]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这里的name参数内容用于写你要赋值的变量，比如我这里写了sf.api，那么当玩家在输入框里输入任何字符后并提交后，那么玩家写的内容就会给这个sf.api，length用于设置输入框高度，width设置输入框宽度，left和top分别设置输入框的xy轴坐标。</p>
-<p>&emsp;&emsp;另外还有几个没写到的，maxchars可以设置输入框可输入最大长度，size可以设置输入的字大小，color可以设置输入的文字颜色(使用html颜色代码)。</p>
-<p>&emsp;&emsp;你可以多设置几个输入框并提示让玩家在不同的输入框里写入自己的出生年月日之类的。</p>
-<p>&emsp;&emsp;另外，输入框在输入完字后需要专门的提交标签，看下述代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*config</span><br><span class="line"><span class="selector-attr">[button graphic=<span class="string">&quot;number/1/02.png&quot;</span> x=<span class="string">&quot;500&quot;</span> y=<span class="string">&quot;500&quot;</span> target=<span class="string">&quot;*commit2&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;sf.api&quot;</span> length=100 width=450 left=170 top=165]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[s]</span></span><br><span class="line"></span><br><span class="line">*commit2</span><br><span class="line"><span class="selector-attr">[commit]</span><span class="selector-attr">[jump target=<span class="string">&quot;*config&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;第一个button标签设置了一个转跳到commit2的功能，而commit2只有一个功能，那就是<strong>commit</strong>标签，然后转跳回来。</p>
-<p>&emsp;&emsp;commit标签只有一个功能，就是将当<strong>前屏幕中显示的所有输入框</strong>的内容全都提交给对应的name。比如上述代码中，我edit要提交的变量是sf.api，那么假设玩家在输入框输入了“123456789”，不管按什么按键，都是无法提交的，也就是sf.api的内容依旧是空的，只有使用commit标签，才能够将输入的内容提交给对应的变量。所以我专门写了一个按钮，用于使用commit提交输入框的内容。</p>
-<h1 id="三、比对变量"><a href="#三、比对变量" class="headerlink" title="三、比对变量"></a>三、比对变量</h1><p>&emsp;&emsp;这一步其实没啥好说的，也很简单。</p>
-<p>&emsp;&emsp;你只要专门写一个语句用于比较当前显示日期和玩家设置的生日一不一样就可以了。</p>
-<p>&emsp;&emsp;假设我用第一步的函数获取到了当前日期，然后又用第二部的输入框获取到了玩家的出生年月日，分别设置为f.year，f.month，f.day，那么我就可以这样</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;sf.year==f.year &amp;&amp; sf.month==f.month &amp;&amp; sf.day==f.day&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[jump target=<span class="string">&quot;*awa&quot;</span> storage=<span class="string">&quot;birthday.ks&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[endif]</span></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;第一步就是比较两边变量的值一不一样，如果一样就跳转到专门的剧情文件里，当然你要精准到时分秒的话，那就在后面继续加上sf.hours之类的比对即可，用&amp;&amp;分开即可。</p>
-]]></content>
-      <categories>
-        <category>Tyrano</category>
-      </categories>
-      <tags>
-        <tag>Tyrano</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何使用TyranoStory</title>
-    <url>/post/story/</url>
-    <content><![CDATA[<h1 id="一、什么是TyranoStory"><a href="#一、什么是TyranoStory" class="headerlink" title="一、什么是TyranoStory"></a>一、什么是TyranoStory</h1><p>&nbsp;&nbsp;TyranoStory是TyranoScript官方所发布的模板工具，可以使玩家轻松创建一个聊天故事型视觉小说游戏。因为本质上是基于TyranoScript而制作的扩展，所以TyranoScript原本的标签都可以使用，除此之外，也有一些TyranoStory独有的标签。</p>
-<p><img src="https://pic1.imgdb.cn/item/68d0b77cc5157e1a882336e3.png"></p>
-<h1 id="二、游戏前的准备"><a href="#二、游戏前的准备" class="headerlink" title="二、游戏前的准备"></a>二、游戏前的准备</h1><p>&nbsp;&nbsp;首先，用户需要一个加载游戏的工具，也就是官方的<a href="https://tyrano.jp/dl/rider">TyranoRider</a>工具，以及<a href="https://tyrano.jp/story/download/">TyranoStory</a>本体(理论上也可以使用TyranoStudio，不过Studio版本较高，所以更建议使用TyranoRider)</p>
-<p>&nbsp;&nbsp;解压TyranoStory后，启动TyranoRider，点击图中的“<strong>プロジェクトを選択</strong>”，随后选择index.html即可。最后点击“<strong>ゲーム開始</strong>”即可启动游戏文件。</p>
-<p><img src="https://pic1.imgdb.cn/item/68d0b8abc5157e1a88234504.png"></p>
-<h1 id="三、TyranoStory的使用"><a href="#三、TyranoStory的使用" class="headerlink" title="三、TyranoStory的使用"></a>三、TyranoStory的使用</h1><h2 id="1-基本的对话"><a href="#1-基本的对话" class="headerlink" title="1.基本的对话"></a>1.基本的对话</h2><p>&nbsp;&nbsp;接下来我们就需要开始学习TyranoStory的使用了，它的使用本身并不难，我们需要使用的最基本的标签是<strong>chat_talk</strong>，它的参数如下:</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数名</th>
-<th align="left">参数作用</th>
-<th align="left">可用参数内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">pos</td>
-<td align="left">可用于指定说话人的头像位置，left为左，right为右，center为中间</td>
-<td align="left">left&#x2F;right&#x2F;center</td>
-</tr>
-<tr>
-<td align="left">name</td>
-<td align="left">可用于指定说话人的名字，当pos参数为center时，该参数无效</td>
-<td align="left">自行填写</td>
-</tr>
-<tr>
-<td align="left">delay</td>
-<td align="left">可用于消息加载的延迟，单位为毫秒(类似于对方正在输入中)</td>
-<td align="left">消息时间</td>
-</tr>
-<tr>
-<td align="left">face</td>
-<td align="left">可用于指定说话人的头像图片，默认根目录位置在fgimage内</td>
-<td align="left">图片路径</td>
-</tr>
-<tr>
-<td align="left">layer</td>
-<td align="left">可设置该角色的整个气泡的图层优先级</td>
-<td align="left">数字或指定参数</td>
-</tr>
-<tr>
-<td align="left">bgcolor</td>
-<td align="left">可用于指定消息颜色背景，设置为trams或transparent时清除背景颜色</td>
-<td align="left">十六进制颜色代码</td>
-</tr>
-<tr>
-<td align="left">folder</td>
-<td align="left">可以指定graphic的根目录，不填写时默认为fgimage</td>
-<td align="left">文件夹名称</td>
-</tr>
-<tr>
-<td align="left">graphic</td>
-<td align="left">可指定角色发送的图片，默认根目录位置在fgimage内，支持PNG JPG PNG BMP GIF</td>
-<td align="left">图片路径</td>
-</tr>
-<tr>
-<td align="left">graphic_height</td>
-<td align="left">可以指定graphic参数发送的图片的高度</td>
-<td align="left">数字</td>
-</tr>
-<tr>
-<td align="left">graphic_width</td>
-<td align="left">可以指定graphic参数发送的图片的宽度</td>
-<td align="left">数字</td>
-</tr>
-<tr>
-<td align="left">width</td>
-<td align="left">指定聊天气泡的宽度</td>
-<td align="left">数字</td>
-</tr>
-<tr>
-<td align="left">bottom</td>
-<td align="left">指定聊天气泡的高度</td>
-<td align="left">数字</td>
-</tr>
-<tr>
-<td align="left">reflect</td>
-<td align="left">翻转角色头像，不填写默认为False</td>
-<td align="left">True&#x2F;False</td>
-</tr>
-<tr>
-<td align="left">se</td>
-<td align="left">指定聊天气泡出现时的音效</td>
-<td align="left">音频路径</td>
-</tr>
-<tr>
-<td align="left">id</td>
-<td align="left">用于指定id，可在JavaScript函数中调用</td>
-<td align="left">数字或英文</td>
-</tr>
-</tbody></table>
-<p>&nbsp;&nbsp;理解了这些，那么来看实例:</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[chat_talk pos=<span class="string">&quot;right&quot;</span> name=<span class="string">&quot;1&quot;</span> graphic=<span class="string">&quot;chat/logo.png&quot;</span> text=<span class="string">&quot;awa&quot;</span> face=<span class="string">&quot;chat/yamato/normal.png&quot;</span> delay=1000  bgcolor=<span class="string">&quot;0xFF7F50&quot;</span> graphic_width=270 graphic_height=120 width=400 bottom=300]</span></span><br><span class="line"><span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;&nbsp;表现出来的效果如下:</p>
-<p><img src="https://pic1.imgdb.cn/item/68d0c100c5157e1a88239e70.png"></p>
-<p>&nbsp;&nbsp;这里不过多讲解内容，用户们可以对着标签和上面的表格自己参照一下具体的作用。</p>
-<p>&nbsp;&nbsp;(下面是用户名字被设置在左边和中间的效果，第二个awa是背景被设置为透明的效果。)</p>
-<img src="https://pic1.imgdb.cn/item/68d0c16ec5157e1a8823a363.png" style="zoom: 80%;" />
-
-
-
-<p>&nbsp;&nbsp;另外，用户可以使用**[chat_config]**来填写默认数值，则默认指定部分数值，使得玩家不用每一次都手动设置，建议写在剧本开头:</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数名</th>
-<th align="left">参数作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">top</td>
-<td align="left">可以指定聊天区域的内容与游戏屏幕顶部的距离</td>
-</tr>
-<tr>
-<td align="left">left</td>
-<td align="left">可以指定聊天区域的内容与屏幕左侧的距离</td>
-</tr>
-<tr>
-<td align="left">height</td>
-<td align="left">可以指定整个聊天区域的显示高度</td>
-</tr>
-<tr>
-<td align="left">width</td>
-<td align="left">可以指定整个聊天区域的显示宽度</td>
-</tr>
-<tr>
-<td align="left">face_width</td>
-<td align="left">可以指定表情部分的图像宽度，默认为100</td>
-</tr>
-<tr>
-<td align="left">margin_face</td>
-<td align="left">可以更改表情部分与屏幕边缘的距离，默认为20</td>
-</tr>
-<tr>
-<td align="left">left_bgcolor</td>
-<td align="left">可以指定在左侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
-</tr>
-<tr>
-<td align="left">right_bgcolor</td>
-<td align="left">可以指定在中央显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
-</tr>
-<tr>
-<td align="left">center_bgcolor</td>
-<td align="left">可以指定在右侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
-</tr>
-<tr>
-<td align="left">name_font_size</td>
-<td align="left">可以指定角色名字的字体大小</td>
-</tr>
-<tr>
-<td align="left">name_font_color</td>
-<td align="left">可以指定角色名字的字体颜色，以0x000000形式指定</td>
-</tr>
-<tr>
-<td align="left">under_height</td>
-<td align="left">可以指定消息显示的区域高度，即当消息达到这个高度时，气泡会向上滚动。建议保留足够的空间以便在屏幕底部进行点击操作。默认值为屏幕高度的70%</td>
-</tr>
-<tr>
-<td align="left">margin_top</td>
-<td align="left">可以指定气泡顶部的空间，默认为25</td>
-</tr>
-<tr>
-<td align="left">zindex</td>
-<td align="left">可以指定在图层中的图层顺序，值越大越靠前显示</td>
-</tr>
-<tr>
-<td align="left">anim_time</td>
-<td align="left">可以指定数值。指定0以上的值时，气泡会以动画形式移动，以毫秒为单位指定</td>
-</tr>
-<tr>
-<td align="left">se</td>
-<td align="left">可以为显示气泡时设置音效</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Tyrano</category>
-      </categories>
-      <tags>
-        <tag>Tyrano</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>保姆向-基于Electron Builder的Tyrano引擎游戏打包方式</title>
-    <url>/post/electron/</url>
-    <content><![CDATA[<p>&emsp;&emsp;打包问题，是每一位Tyrano用户都不得不品尝的一个环节。(Tyrano Studio的导出会比Tyrano Builder好一点)</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5238858cb8da5c83ae627.png"></p>
-<p>&emsp;&emsp;就是这样(</p>
-<p>&emsp;&emsp;不过究其原因，是因为Tyrano在打包的时候，后台会下载electron，但是下载速度又很慢，往往几分钟才下不到几MB(原包约100MB)，而且当下载时间过久的话则会下载失败，就会导致“导出”会一直转圈，但就是无法完成，因为导出需要Electron，但是Electron又下载失败了，就陷入了一个死循环。</p>
-<p>&emsp;&emsp;这一问题并不能用VPN解决，至少我无法用VPN解决，即使是挂着</p>
-<p>&emsp;&emsp;不过理论上只要下载好一次electron，后面就不用再下载第二次了，也就是不会再卡导出了。</p>
-<p>&emsp;&emsp;不过也有人可能会提出提前下好Electron然后替换下载，不过实际上并没有什么用，他每次下载，会在C:\Users\zeroi\AppData\Local\Temp路径内生成一个名为“electron-download-随机后缀”的文件夹，随机后缀部位每次会随机一定长度的随机字符串，所以基本是无法提前替换的。如果是等下载开始后再替换也没有什么用，因为校验文件环节需要等下载完成才会开始，即使你提前替换了，他后台进度条没有下载完成，那依旧会继续下载，还是卡着的局面。</p>
-<p>&emsp;&emsp;至于有没有其他解决方法，更换更好的VPN、更换旧版本Tyrano、让别人导出之类的都是方法，不过我们并不是来讨论这些解决方法的，这篇文章的主题就是让用户手动打包游戏。</p>
-<p>&emsp;&emsp;另外，本文章不会介绍下文下载的都是上面东西，太过浪费口舌，想知道是什么的自己去搜索就好了。</p>
-<h1 id="1-下载Node-js"><a href="#1-下载Node-js" class="headerlink" title="1.下载Node.js"></a>1.下载Node.js</h1><blockquote>
-<p>[!NOTE]</p>
-<p>如果本地已有Node.js，即可跳过该步骤</p>
-</blockquote>
-<p>&emsp;&emsp;首先打开<a href="https://nodejs.cn/download/">Node.js的下载界面</a></p>
-<p><img src="https://pic1.imgdb.cn/item/68a527ca58cb8da5c83b0ff3.png"></p>
-<p>&emsp;&emsp;此处选择<strong>长期支持版本</strong>即可，后选择<strong>Windows安装包(.msi)<strong>的</strong>64位</strong>进行下载即可。</p>
-<p>&emsp;&emsp;下载过来以后双击msi程序，</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5297f58cb8da5c83b1716.png"></p>
-<p><img src="https://pic1.imgdb.cn/item/68a5299858cb8da5c83b1718.png"></p>
-<p>&emsp;&emsp;此处可以将这一步的<strong>Add to PATH</strong>改为<strong>Entire feature will be installed on local hard drive</strong>。</p>
-<p>​	其余的一路默认安装过来即可。</p>
-<p>&emsp;&emsp;随后按下<strong>Win+R</strong>键，唤出<strong>运行</strong>窗口，输入<strong>cmd</strong>打开<strong>命令提示符</strong>，输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;查看自己版本号，如果安装正确，应该将显示一串数字吗，这就是版本号了。</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52a4758cb8da5c83b18ac.png"></p>
-<h1 id="2-设置npm镜像源"><a href="#2-设置npm镜像源" class="headerlink" title="2.设置npm镜像源"></a>2.设置npm镜像源</h1><p>&emsp;&emsp;镜像源是很有必要的，npm本身的下载链接都指向国外，下载速度十分之慢，不设置镜像源的话，下载十分缓慢，而且很容易失败。</p>
-<p>&emsp;&emsp;还是一样打开<strong>命令提示符</strong>，随后输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;随后一个“&#x2F;”开始旋转，等到安装成功的提醒出现后即可，然后输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;进行检查，如果安装都正确，则会提示</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52ba158cb8da5c83b23dc.png"></p>
-<h1 id="3-Electron"><a href="#3-Electron" class="headerlink" title="3.Electron"></a>3.Electron</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>&emsp;&emsp;随后打开自己的项目文件夹，也就是和自己Tyrano启动器同一个目录的myprojec文件夹，在里面找到自己想要导出的项目文件夹，打开以后如下</p>
-<p>(TyranoBuilder的是builder_config.json，TyranoStudio的是studio_config.json，不过影响不大)</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52c1258cb8da5c83b2c17.png"></p>
-<p>&emsp;&emsp;我们这里只需要三个文件夹，也就是<strong>data</strong>、<strong>tyrano</strong>和<strong>index.html</strong>文件夹。</p>
-<p>&emsp;&emsp;你可以选择直接在项目文件夹内进行打包，也可以选择新建一个文件夹(随便你建在哪里)，然后把这三个文件夹复制过去进行打包操作，我这里是把三个文件复制到了新的文件夹内。</p>
-<p>&emsp;&emsp;我更推荐后者，因为打包会下载一些依赖，会使项目文件夹变得很臃肿。但如果你的游戏项目文件太大，比如你的游戏有3个G(万一呢)，移动耗时间且占空间的话，那也无所谓。</p>
-<hr>
-<p>&emsp;&emsp;当你准备好以后，打开命令提示符，将目录移动到你要打包的项目内，就比如</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:\Download\dabao</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;不过命令提示符默认路径是在C盘，像我这种目录在D盘的，需要再输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">D:</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;将目录换到D盘内。</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52e6758cb8da5c83b3d7b.png"></p>
-<p><img src="https://pic1.imgdb.cn/item/68a52e8758cb8da5c83b3d7f.png"></p>
-<hr>
-<p>&emsp;&emsp;然后在这个路径下的命令提示符内输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm i -D electron</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;看到这样就算安装好了</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52f2658cb8da5c83b3e38.png"></p>
-<p>&emsp;&emsp;同时，游戏目录变成这样</p>
-<p><img src="https://pic1.imgdb.cn/item/68a52f4458cb8da5c83b3e3b.png"></p>
-<p>&emsp;&emsp;也就是多了一个<strong>package.json</strong>和<strong>node_modules</strong>文件夹</p>
-<p>&emsp;&emsp;随后打开package.json文件，将里面的内容替换为</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;your-app&quot;</span>,        </span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这里可以将name后的your-app更改你自己游戏的名字，而version后的0.1.0可以改为自己的游戏版本号。</p>
-<p>&emsp;&emsp;比如像我这样，将游戏名字改成了pvz，版本号改为了1.1.4(仅供示范</p>
-<p>&emsp;&emsp;此处的version只能是三位数，1.1和1.1.4.5都不行。不过可以写预发布标签，预发布标签请见文章结尾的<strong>预发布标签</strong>一栏</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;pvz&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.1.4&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>&emsp;&emsp;随后新建一个<strong>main.js</strong>，和其他文件一个目录</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5308b58cb8da5c83b47b5.png"></p>
-<p>&emsp;&emsp;然后打开main.js文件，将里面的内容改为</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; app, <span class="title class_">BrowserWindow</span> &#125; = <span class="built_in">require</span>(<span class="string">&quot;electron&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createWindow</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>(&#123;</span><br><span class="line">    <span class="attr">width</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">600</span>,</span><br><span class="line">    <span class="attr">webPreferences</span>: &#123;</span><br><span class="line">      <span class="attr">nodeIntegration</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">  win.<span class="property">webContents</span>.<span class="title function_">openDevTools</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">whenReady</span>().<span class="title function_">then</span>(createWindow);</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;随后还是在命令提示符中，输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;随后如果提示(底下那些报错无关紧要)</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5334d58cb8da5c83b6bc3.png"></p>
-<p>&emsp;&emsp;并且的成功跳出游戏窗口则可继续下一步。</p>
-<hr>
-<h2 id="去除调试"><a href="#去除调试" class="headerlink" title="去除调试"></a>去除调试</h2><p>&emsp;&emsp;不过此时游戏窗口会是这样的，顶上会有一排菜单栏，右边会有一个调试栏</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5339558cb8da5c83b76be.png"></p>
-<p>&emsp;&emsp;一般用不到这两个功能，打包后的游戏也不可能把这两个的功能给玩家用，所以在上面main.js打包的时候，可以将</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  win.loadFile(<span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">  // 打开开发者工具</span><br><span class="line">  win.webContents.openDevTools();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这部分的**win.webContents.openDevTools();<strong>整行删掉，或者在这行前面加上</strong>&#x2F;&#x2F;**，将这行注释掉。</p>
-<h2 id="去除菜单栏"><a href="#去除菜单栏" class="headerlink" title="去除菜单栏"></a>去除菜单栏</h2><p>&emsp;&emsp;在代码**win.loadFile(“index.html”);<strong>，上面一行添加一行</strong>win.setMenu(null);**即可</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">win.<span class="title function_">setMenu</span>(<span class="literal">null</span>);</span><br><span class="line">win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;记得前面的缩进要和别的行对齐</p>
-<hr>
-<p>&emsp;&emsp;去除掉这两个东西的话，就会变成正常的窗口了</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5358358cb8da5c83b9ce7.png"></p>
-<h1 id="3-Electron-Builder"><a href="#3-Electron-Builder" class="headerlink" title="3.Electron-Builder"></a>3.Electron-Builder</h1><p>&emsp;&emsp;随后还是在该目录的命令提示符内，输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm i -D electron-builder</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;安装Electron-Builder，这个就是主要用来打包的工具了</p>
-<p>&emsp;&emsp;安装后以后，将</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span>,</span><br><span class="line">  <span class="string">&quot;pack&quot;</span>: <span class="string">&quot;electron-builder --dir&quot;</span>,</span><br><span class="line">  <span class="string">&quot;dist&quot;</span>: <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;写到package.json里。</p>
-<p>&emsp;&emsp;完整package.json就应该是这样的</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;pvz&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.1.4&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pack&quot;</span>: <span class="string">&quot;electron-builder --dir&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dist&quot;</span>: <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;electron-builder&quot;</span>: <span class="string">&quot;^26.0.12&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;然后在命令提示符内输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;然后会生成一个<strong>dist</strong>文件夹，你的游戏就在里面的<strong>win-unpacked</strong>文件夹内了。</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5383658cb8da5c83bb457.png"></p>
-<p>&emsp;&emsp;然后你就可以改个文件夹的名字，然后压缩成zip上传到网络上了。</p>
-<hr>
-<p>&emsp;&emsp;或者说你也可以输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dist</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;上面的<strong>npm run pack</strong>是单纯的打包为文件夹。</p>
-<p>&emsp;&emsp;这个<strong>npm run dist</strong>则是在此基础上还会打包为各个系统的安装包，不过这里应该只会有windows的安装包，因为前面写package.js的时候没有指定target，不过也够用了。</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5392558cb8da5c83bba6d.png"></p>
-<h1 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h1><h2 id="更改图标"><a href="#更改图标" class="headerlink" title="更改图标"></a>更改图标</h2><p>&emsp;&emsp;这一步更改的是窗口的图标</p>
-<p><img src="https://pic1.imgdb.cn/item/68a53ab958cb8da5c83bc5a0.png"></p>
-<p>&emsp;&emsp;在<strong>main.js</strong>文件的**win.loadFile(“index.html”);<strong>前添加一行</strong>win.setIcon(‘.&#x2F;ico.ico’);**即可</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">win.<span class="title function_">setIcon</span>(<span class="string">&#x27;./ico.ico&#x27;</span>);</span><br><span class="line">win.<span class="title function_">setMenu</span>(<span class="literal">null</span>);</span><br><span class="line">win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;这里的ico.ico可以随便命名，后缀支持ico，png和icns三个格式，没有大小限制，随后将图标放入项目文件夹即可，如下图</p>
-<p><img src="https://pic1.imgdb.cn/item/68a53a4e58cb8da5c83bc2af.png"></p>
-<hr>
-<p>&emsp;&emsp;这一步更改的是程序的图标</p>
-<p><img src="https://pic1.imgdb.cn/item/68a53c2458cb8da5c83bc7bc.png"></p>
-<p>&emsp;&emsp;首先打开<strong>package.json</strong>，添加</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;build&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;win&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;icon&quot;</span>: <span class="string">&quot;./ico.ico&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;即可，完整代码如下</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pvz&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron .&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron-builder --dir&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;win&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;icon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./ico.ico&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;electron-builder&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^26.0.12&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;不过注意，package.json的图标设置仅支持ico文件，并且仅支持256x256分辨率大小的ico文件。</p>
-<hr>
-<p>&emsp;&emsp;如果出现了打包完后图标并没有变化的场景，请右键exe，选择<strong>“属性”</strong>，查看图标。</p>
-<p><img src="https://pic1.imgdb.cn/item/68a53ec458cb8da5c83bd1db.png"></p>
-<p>&emsp;&emsp;如果出现以上情况，那么则是缓存问题，通常重启<strong>Windows资源管理器</strong>或者<strong>重启电脑</strong>即可</p>
-<hr>
-<p>&emsp;&emsp;如果属性也显示为默认图标，那么请检查图标文件的格式是否为ico，分辨率是否为256x256及以上。</p>
-<h2 id="预发布标签"><a href="#预发布标签" class="headerlink" title="预发布标签"></a>预发布标签</h2><table>
-<thead>
-<tr>
-<th align="left">预发布标签</th>
-<th align="left">中文名称</th>
-<th align="left">含义说明</th>
-<th align="left">示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>alpha</code></td>
-<td align="left">内测版</td>
-<td align="left">早期测试版本，功能不完整，存在大量错误</td>
-<td align="left"><code>1.0.0-alpha.1</code></td>
-</tr>
-<tr>
-<td align="left"><code>beta</code></td>
-<td align="left">公测版</td>
-<td align="left">功能相对完整，邀请用户测试，可能存在错误</td>
-<td align="left"><code>1.0.0-beta.2</code></td>
-</tr>
-<tr>
-<td align="left"><code>rc</code></td>
-<td align="left">发布候选版</td>
-<td align="left">功能完整，极可能成为正式版，进行最后测试</td>
-<td align="left"><code>1.0.0-rc.1</code></td>
-</tr>
-<tr>
-<td align="left"><code>next</code></td>
-<td align="left">下一版本预览</td>
-<td align="left">下一个大版本的早期预览，可能包含破坏性变更</td>
-<td align="left"><code>2.0.0-next.0</code></td>
-</tr>
-<tr>
-<td align="left"><code>dev</code></td>
-<td align="left">开发版</td>
-<td align="left">自动化构建版本，与特定代码提交关联</td>
-<td align="left"><code>1.0.0-dev.1234</code></td>
-</tr>
-<tr>
-<td align="left"><code>canary</code></td>
-<td align="left">金丝雀版</td>
-<td align="left">在小范围用户&#x2F;环境中测试变更，用于A&#x2F;B测试</td>
-<td align="left"><code>1.0.0-canary.456</code></td>
-</tr>
-<tr>
-<td align="left"><code>preview</code></td>
-<td align="left">预览版</td>
-<td align="left">功能预览，让用户提前体验新特性</td>
-<td align="left"><code>1.0.0-preview</code></td>
-</tr>
-<tr>
-<td align="left"><code>snapshot</code></td>
-<td align="left">快照版</td>
-<td align="left">指向最新开发状态（Maven常用）</td>
-<td align="left"><code>1.0.0-snapshot</code></td>
-</tr>
-<tr>
-<td align="left"><code>unstable</code></td>
-<td align="left">不稳定版</td>
-<td align="left">明确告知版本极不稳定，风险很高</td>
-<td align="left"><code>1.0.0-unstable</code></td>
-</tr>
-<tr>
-<td align="left"><code>debug</code></td>
-<td align="left">调试版</td>
-<td align="left">包含额外调试信息，性能非最优</td>
-<td align="left"><code>1.0.0-debug</code></td>
-</tr>
-<tr>
-<td align="left"><code>experimental</code></td>
-<td align="left">实验版</td>
-<td align="left">包含高度实验性功能，可能被移除</td>
-<td align="left"><code>1.0.0-experimental</code></td>
-</tr>
-<tr>
-<td align="left"><code>edge</code></td>
-<td align="left">前沿版</td>
-<td align="left">最前沿的开发状态，极不稳定</td>
-<td align="left"><code>1.0.0-edge</code></td>
-</tr>
-</tbody></table>
-<p>&emsp;&emsp;不过这并不是绝对的，你写不写都可以，预发布标签更多是一种约定俗成的写法，如果不写预发布标签就正常写<strong>1.0.0</strong>之类的即可。</p>
-<h2 id="Electron-Builder下载失败"><a href="#Electron-Builder下载失败" class="headerlink" title="Electron-Builder下载失败"></a>Electron-Builder下载失败</h2><p>&emsp;&emsp;如果打包时一直卡在此处，然后报错显示下载失败</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5461e58cb8da5c83c27d7.png"></p>
-<p>&emsp;&emsp;首先一样打开<strong>命令提示符</strong>，在里面输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;然后再次尝试打包即可。</p>
-<p>&emsp;&emsp;如果依旧无法打包，那么可以更换<strong>其他镜像源</strong>(这里不提供其他镜像源，请自行搜索寻找)，或者进行<strong>手动下载</strong>。</p>
-<hr>
-<p>&emsp;&emsp;这里只说<strong>手动下载</strong>的方法</p>
-<p>&emsp;&emsp;首先<strong>win+R</strong>唤出运行，输入</p>
-<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">LOCALAPPDATA</span></span>%/electron-builder/Cache</span><br></pre></td></tr></table></figure>
-
-<p>&emsp;&emsp;运行后将会打开文件夹，里面应该如图所示</p>
-<p><img src="https://pic1.imgdb.cn/item/68a546f958cb8da5c83c2dd4.png"></p>
-<p>&emsp;&emsp;然后<strong>nsis</strong>文件夹内应该还会有两个文件夹</p>
-<p><img src="https://pic1.imgdb.cn/item/68a5471f58cb8da5c83c2ef1.png"></p>
-<p>&emsp;&emsp;而winCodeSign文件夹里则会有一个文件夹</p>
-<p><img src="https://pic1.imgdb.cn/item/68a6f00058cb8da5c8410928.png"></p>
-<p>&emsp;&emsp;我们需要注意的<strong>nsis-3.0.4.1</strong>、<strong>nsis-resources-3.4.1</strong>、<strong>winCodeSign-2.6.0</strong>就是这三个文件夹(版本不一定对得上，也有可能是nsis-3.0.4.2或者winCodeSign-2.7.0之类的，一切按照你的文件夹内版本为准)</p>
-<p>&emsp;&emsp;随后打开Electron Builder的<a href="https://github.com/electron-userland/electron-builder-binaries/releases">Github</a>界面，找到和自己版本相符的文件</p>
-<p>&emsp;&emsp;比如我的nsis是3.0.4.1版本的，就往下拉，没有就去后几页找，找到对应版本</p>
-<p><img src="https://pic1.imgdb.cn/item/68a548ab58cb8da5c83c36c7.png"></p>
-<p>&emsp;&emsp;打开<strong>Assets</strong>后选择第一个压缩包进行下载，下载后将压缩包内的文件放入<strong>nsis-3.0.4.1</strong>内，进行覆盖即可，其他两个文件同理。</p>
+<h2 id="二、Endearing-Nephy-可爱的涅芙依"><a href="#二、Endearing-Nephy-可爱的涅芙依" class="headerlink" title="二、Endearing Nephy(可爱的涅芙依)"></a>二、Endearing Nephy(可爱的涅芙依)</h2><p>​	“不知道从什么时候开始，我去咖啡厅的次数逐渐增加了，是因为那里的食物美味吗？还是说那里的环境很好吗？亦或是说……”</p>
 <blockquote>
-<p>[!NOTE]</p>
-<p>再次提醒，请根据自己的文件的版本寻找对应文件，请勿将完全照抄教程</p>
+<p><em><strong>“我很爱你。谢谢你也这么爱我♡”</strong></em></p>
+<p><em><strong>————涅芙依</strong></em></p>
 </blockquote>
+<p>游戏英文名:Endering Nephy</p>
+<p>游戏中文名:可爱的涅芙依</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Android</p>
+<p>游戏主角:涅芙依</p>
+<p>最新版本:0.7</p>
+<p>上次更新:约2019年</p>
+<p><img src="https://pic1.imgdb.cn/item/677a66e8d0e0a243d4ef2aad.jpg"></p>
+<hr>
+<p>​	该游戏是一款由西班牙母语者<strong>Dol Dev</strong>所制作(未找到该同人作者社交账号)，主要女主角为涅芙依的同人游戏。</p>
+<p>​	游戏主要内容为男主与涅芙依的一些日常交互，包括类原版的摸头与对话，只是将角色更换为了涅芙依，并且该游戏存在一个同居和示爱的阶段剧情，但是并没有具体的结局，并且游戏流程极短，大约只有十几分钟多，涅厨可以尝试游玩一番，但作为主要游戏日常游玩并不合适。</p>
+<p>​	该游戏最后一次更新的时间大约为2019年，所以此作基本也和毛骨悚然的爱一样大概率是不会再有什么新动静了，如果有新的消息的话我尽量第一时间更新。</p>
+<h1 id="三、Obsessive-Love-迷恋之爱"><a href="#三、Obsessive-Love-迷恋之爱" class="headerlink" title="三、Obsessive Love(迷恋之爱)"></a>三、Obsessive Love(迷恋之爱)</h1><p>​	“工作好烦啊…生活好累啊…这酒也好苦啊…该死的，宿醉后的头还真是痛得厉害。</p>
+<p>​	嗯？谁啊？别敲门了，来了。”</p>
+<blockquote>
+<p><em><strong>“我知道你必须做出非常艰难的决定，你为我牺牲了很多”</strong></em></p>
+<p><em><strong>————希尔薇</strong></em></p>
+</blockquote>
+<p>游戏英文名:Obsessive Love</p>
+<p>游戏中文名:迷恋之爱</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Android</p>
+<p>游戏主角:希尔薇</p>
+<p>最新版本:1.0</p>
+<p>上次更新:2019年</p>
+<p><img src="https://pic1.imgdb.cn/item/677a6e98d0e0a243d4ef2c03.jpg"></p>
+<hr>
+<p>​	该游戏由西班牙母语者<strong>Novak Love</strong>与[**El OtAkuシ**](<a href="https://www.youtube.com/@ElOtAkU_/search?query=obsessive">https://www.youtube.com/@ElOtAkU_/search?query=obsessive</a> love)所制作的一款以相对其他作品来说的多故事线和多结局的同人作品，其主要灵感于Wattpad平台的用户<a href="https://www.wattpad.com/user/MeroAngel"><strong>MeroAngel</strong></a>、SAS-SEMPAI与<a href="https://www.wattpad.com/user/SilverCristal"><strong>Cristina Martinez</strong></a>(旧名:SilverCristal)的同人小说，并且得到了几位用户的允许才得以制作出该作。(其中SAS的Wattpad账号我没找到，疑似改名了)</p>
+<p>​	故事拥有一条平行时空线和一条原版线路，并且拥有好几个不同的结局，但其中只有一条才是好结局，其余皆为坏结局。并且有大房静子、奥蕾莉亚等角色出场。因为大致是按照原版的剧情衍生展开的，所以在此具体内容不过多赘述。（游戏内部分图片会拉伸压缩，属于正常现象）</p>
+<p>​	该作因为本身是按照完结的同人小说改做的，所以是不会在更新了。</p>
+<p>(如果对同人小说感兴趣的话，我后续会尝试搬运且汉化这几位作者的小说)</p>
+<h1 id="四、ONE"><a href="#四、ONE" class="headerlink" title="四、ONE"></a>四、ONE</h1><p>​	“我会死吗？我会上天堂吗？我真的会…</p>
+<p>​	这到底是什么一回事？！”</p>
+<blockquote>
+<p><em><strong>“而且你长得太像他了，勾起了她曾经给我的很多回忆和感情”</strong></em></p>
+<p><em><strong>————希尔薇</strong></em></p>
+</blockquote>
+<p>游戏英文名:ONE</p>
+<p>游戏中文名:未作翻译</p>
+<p>游戏引擎:TyranoScript</p>
+<p>支持平台:Windows</p>
+<p>游戏主角:希尔薇</p>
+<p>最新版本:0.8</p>
+<p>上次更新:2020年12月29日</p>
+<p><img src="https://pic1.imgdb.cn/item/677a76f7d0e0a243d4ef2d85.jpg"></p>
+<hr>
+<p>​	游戏由西班牙母语者**<a href="https://www.youtube.com/@Twisted_Ambition_CL">Twisted Ambition</a>**所制作的一款同人游戏。</p>
+<p>​	游戏的故事时间线于Teaching Feeling的原主角医生死后所展开，主角<strong>杰克</strong>在回家的路上遭到了莫名的刺杀，等到他再一次睁开眼，却是一所陌生的诊所，这究竟是怎么一回事呢？而一位叫杰西的女孩，又是谁呢？</p>
+<p>​	该作少见的不同于其他同人作，使用了TyranoScript引擎制作，但作者的引擎编程水平却极差，从上面的主菜单图就可以看得出来。</p>
+<p>​	本作也拥有多条分支线，但是因为原作者较差的故事叙述能力与编程水平，该作的制作看上去极为潦草，因为制作的版本较少，内容也极其不完事，其单线游玩流程时长甚至不如可爱的涅芙依。</p>
+<p>​	游戏官网:<a href="https://ubercrack.itch.io/one"><strong>Itch.io</strong></a></p>
+<p>​	补充:该作者于2022年12月11日发了一个视频宣布了该作的无限期停更。</p>
+<p>​	补充2:该作者又与2024年11月宣布了该作的最终版的完成，并通知正在适配安卓版本</p>
+<h1 id="五、La-Navidad-Con-Sylvie-与希尔薇的圣诞节"><a href="#五、La-Navidad-Con-Sylvie-与希尔薇的圣诞节" class="headerlink" title="五、La Navidad Con Sylvie(与希尔薇的圣诞节)"></a>五、La Navidad Con Sylvie(与希尔薇的圣诞节)</h1><p>​	“啊，又到了圣诞节呢，这个圣诞节，应该给希尔薇准备什么样的惊喜呢…”</p>
+<blockquote>
+<p><em><strong>“我们很高兴这是你渡过的最好的圣诞节”</strong></em></p>
+<p><em><strong>————奥蕾莉亚&amp;涅芙依&amp;医生</strong></em></p>
+</blockquote>
+<p>游戏西语名:La Navidad Con Sylvie</p>
+<p>游戏中文名:与希尔薇的圣诞节</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Andorid</p>
+<p>游戏主角:希尔薇</p>
+<p>最新版本:1.0</p>
+<p>上次更新:约2018年</p>
+<p><img src="https://pic1.imgdb.cn/item/677a7b9ed0e0a243d4ef2e28.jpg"></p>
+<hr>
+<p>​	该作是由西班牙母语者作者<strong>Black Droid Mx</strong>所制作的以圣诞节为主题的同人游戏。(找不到作者的社交账号)</p>
+<p>​	主要讲述了大家在圣诞节这一天给希尔薇过了一个非常不错的圣诞节。</p>
+<p>​	该作流程较短，且作品较为简单。且因为是以节日为主题的节日同人，所以是不会再次更新的。</p>
+<h1 id="六、Psycho-Love-惊爱之恋"><a href="#六、Psycho-Love-惊爱之恋" class="headerlink" title="六、Psycho Love(惊爱之恋)"></a>六、Psycho Love(惊爱之恋)</h1><p>​	“这个女人，不是条子(警察)，就是钩子(卧底)。”</p>
+<blockquote>
+<p><em><strong>“不…</strong></em></p>
+<p><em><strong>不不不…</strong></em></p>
+<p><em><strong>不要啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！“</strong></em></p>
+<p><em><strong>————正在吃鸽子的武</strong></em></p>
+</blockquote>
+<p>游戏英语名:Psycho Love</p>
+<p>游戏中文名:惊爱之恋</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Andorid</p>
+<p>游戏主角:深杉爱子</p>
+<p>最新版本:1.3</p>
+<p>上次更新:2024年7月4日</p>
+<p><img src="https://pic1.imgdb.cn/item/677a7fbdd0e0a243d4ef2ea1.jpg"></p>
+<hr>
+<p>​	该作品是由秘鲁作者<a href="https://www.youtube.com/@Lic.Samuel09"><strong>Licenciado Samuel</strong></a>所制作以深杉爱子为主要角色的同人游戏，游戏的制作水平不错，非常值得游玩，也有大约为一个小时多的游戏时长的中篇的剧情供玩家游玩。</p>
+<p>​	故事主要讲述了原本为秘鲁黑帮的男主————武，为了躲避国际刑警的追捕而作为留学生逃往了日本，过上了较为平静的生活，但这种生活只是一时的，他每天都提心吊胆，生怕警察追踪到自己的行踪。</p>
+<p>​	直到有一天，他遇上了一个行为诡异的女孩，于是他的生活开始随之改变。</p>
+<p>​	游戏主要故事线开始于Raykbys的作品<strong>《一目钟情》</strong>后，大约是原作的角色们上大学时的时间，不仅有一目钟情原作的角色出场，还有其他几部的角色出场，如《蛊惑的幼虫》的凤蝶，《奴隶少女希尔薇》的卡西欧，并且后续似乎还要给爱子增加换装功能，实在是及其优秀的一部同人作品。</p>
+<p>​	该作虽然是前年才开始制作的同人游戏，但却从24年7月4号更新完1.3版本后开始持续断更直至今日。作者LS的生活较为繁忙，且秘鲁社会动荡不安，这些都为作者的更新带来了极大的困难，让我们相信LS能平安度过这些困难，为我们带来新的版本已经新的剧情吧。</p>
+<p>​	游戏内置着包括中文、日语、韩语、西班牙语、俄语、阿拉伯语等在内的几十种语言，虽然绝大多数为机翻，但是也能看出作者对游戏的热爱。</p>
+<p>​	游戏官网:<a href="https://licenciado-samuel.itch.io/psycho-love"><strong>Itch.io</strong></a></p>
+<h1 id="七、Teaching-Feeling-A-christmas-with-you-希尔薇-圣诞有你"><a href="#七、Teaching-Feeling-A-christmas-with-you-希尔薇-圣诞有你" class="headerlink" title="七、Teaching Feeling:A christmas with you(希尔薇:圣诞有你)"></a>七、Teaching Feeling:A christmas with you(希尔薇:圣诞有你)</h1><p>​	“是圣诞节啊…希尔薇还从来没过过一次圣诞节呢，希望这个圣诞节她能够过得开心。”</p>
+<blockquote>
+<p><em><strong>“真的…非常感谢…所作的一切…以及每个人”</strong></em></p>
+<p><em><strong>————希尔薇</strong></em></p>
+</blockquote>
+<p>游戏英语名:Teaching Feeling:A christmas with you</p>
+<p>游戏中文名:希尔薇:圣诞有你</p>
+<p>游戏引擎:Ren’py</p>
+<p>支持平台:Windows、Linux、Andorid</p>
+<p>游戏主角:希尔薇</p>
+<p>最新版本:Beta版</p>
+<p>上次更新:2024年1月23日</p>
+<p><img src="https://pic1.imgdb.cn/item/677a8792d0e0a243d4ef3030.jpg"></p>
+<hr>
+<p>​	该作品是由秘鲁作者<a href="https://www.youtube.com/@Lic.Samuel09"><strong>Licenciado Samuel</strong></a>所制作以圣诞节为主题的节日同人游戏，制作精良，流程较短，剧情温馨有趣。</p>
+<p>​	这是希尔薇入住家庭的第一个圣诞节，男主希望这能成为她记忆最深刻的一个圣诞节，于是和镇上的人们讨论过后，在涅芙依的店里举行一场盛大的圣诞晚会。</p>
+<p>​	该作的灵感来源于上文中提到过的La Navidad Con Sylvie(与希尔薇的圣诞节)，并以此作的剧情为蓝本，制作了圣诞有你，但是剧情、音乐以及程序方面较前者好了太多，可以说是及其不错的一部节日同人了。</p>
+<p>​	补充:作者LS本来还说过要做一部万圣节的同人，但是按照他个人生活的状况来看，估计得很久以后了。</p>
+<p>​	游戏官网:<a href="https://licenciado-samuel.itch.io/teaching-feeling-a-christmas-with-you"><strong>Itch.io</strong></a></p>
+<hr>
+<hr>
+<hr>
+<p>​	目前市面上的所有同人作品至此便以科普完毕，希望各位能够通过本篇知晓更多关于RayKbys的二创同人作品的信息，如果各位觉得本篇文章写得还算好的话，希望各位可以多转发转发本篇文章。</p>
+<hr>
+<h1 id="同人游戏下载贴"><a href="#同人游戏下载贴" class="headerlink" title="同人游戏下载贴"></a>同人游戏下载贴</h1><p>以下是我的汉化过的同人作品的下载贴子:</p>
+<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/8780442647?pid=149252383729">https://tieba.baidu.com/p/8780442647?pid=149252383729</a>	“双端-Creepy Love-毛骨悚然的爱汉化版本资源”</p>
+<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/7895607865?pid=144564354334">https://tieba.baidu.com/p/7895607865?pid=144564354334</a>	“Endering Nephy汉化版-PC&#x2F;Android双端发布”</p>
+<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/8893659272?pid=149764486962">https://tieba.baidu.com/p/8893659272?pid=149764486962</a>	“双端-Obsessive Love-迷恋之爱汉化版本资源”</p>
+<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/9106022191?pid=150664788860">https://tieba.baidu.com/p/9106022191?pid=150664788860</a>	“《惊爱之恋》新汉化&#x2F;《圣诞有你》汉化-双端双资源帖”</p>
+<p>其中我并没有把《与希尔薇的圣诞节》和《ONE》的汉化发出来，原因是这两篇碍于时间和较缺乏趣味性的故事内容，导致我当初汉化的汉化的时候并没有认真汉化，显得较为敷衍，下载链接放在下面，各位可以当做汉化半成品来看待</p>
+<p><a href="https://www.123684.com/s/2xZQjv-z16Pv">ONE下载链接</a> 解压码为:ONE(暂时失效)</p>
+<p><a href="https://www.123684.com/s/2xZQjv-516Pv">与希尔薇的圣诞节下载链接</a></p>
 ]]></content>
       <categories>
-        <category>Tyrano</category>
-      </categories>
-      <tags>
-        <tag>Tyrano</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同人小说《我与梦寐以求的她》(持续更新)</title>
-    <url>/post/56328/</url>
-    <content><![CDATA[<blockquote>
-<p>[!IMPORTANT]</p>
-<font color=red>
-
-<p>前排重要提醒:</p>
-<p>本小说搬运自国外小说网站Wattpad上用户的同人小说《<a href="https://www.wattpad.com/story/115296341-sylvie-el-regalo-que-siempre-hemos-a%C3%B1orado">Sylvie, el regalo que siempre hemos añorado</a>》(点击小说名前往原网站)，在此搬运并翻译为中文，并且已经过原作者授权。不定期更新</p>
-</font>
-</blockquote>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录:"></a>目录:</h1><h2 id="第一章-在荒诞中寻找理想"><a href="#第一章-在荒诞中寻找理想" class="headerlink" title="第一章:在荒诞中寻找理想"></a><a href="https://wraykbys.top/post/2562/">第一章:在荒诞中寻找理想</a></h2><h2 id="第二章-新的伙伴"><a href="#第二章-新的伙伴" class="headerlink" title="第二章:新的伙伴"></a><a href="https://wraykbys.top/post/2563/">第二章:新的伙伴</a></h2><h2 id="第三章-我与她的新纽带"><a href="#第三章-我与她的新纽带" class="headerlink" title="第三章:我与她的新纽带"></a><a href="https://wraykbys.top/post/2564/">第三章:我与她的新纽带</a></h2><h2 id="第四章-重生的小公主"><a href="#第四章-重生的小公主" class="headerlink" title="第四章:重生的小公主"></a><a href="https://wraykbys.top/post/2565/">第四章:重生的小公主</a></h2>]]></content>
-      <categories>
-        <category>小说</category>
+        <category>同人</category>
       </categories>
       <tags>
         <tag>同人</tag>
-        <tag>小说</tag>
       </tags>
   </entry>
   <entry>
@@ -1485,174 +712,947 @@ SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"�
       </tags>
   </entry>
   <entry>
-    <title>Ray-Kbys同人游戏介绍一览</title>
-    <url>/post/49615/</url>
-    <content><![CDATA[<h1 id="Ray-Kbys的同人游戏介绍一览"><a href="#Ray-Kbys的同人游戏介绍一览" class="headerlink" title="Ray-Kbys的同人游戏介绍一览"></a>Ray-Kbys的同人游戏介绍一览</h1><blockquote>
+    <title>保姆向-基于Electron Builder的Tyrano引擎游戏打包方式</title>
+    <url>/post/electron/</url>
+    <content><![CDATA[<p>&emsp;&emsp;打包问题，是每一位Tyrano用户都不得不品尝的一个环节。(Tyrano Studio的导出会比Tyrano Builder好一点)</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5238858cb8da5c83ae627.png"></p>
+<p>&emsp;&emsp;就是这样(</p>
+<p>&emsp;&emsp;不过究其原因，是因为Tyrano在打包的时候，后台会下载electron，但是下载速度又很慢，往往几分钟才下不到几MB(原包约100MB)，而且当下载时间过久的话则会下载失败，就会导致“导出”会一直转圈，但就是无法完成，因为导出需要Electron，但是Electron又下载失败了，就陷入了一个死循环。</p>
+<p>&emsp;&emsp;这一问题并不能用VPN解决，至少我无法用VPN解决，即使是挂着</p>
+<p>&emsp;&emsp;不过理论上只要下载好一次electron，后面就不用再下载第二次了，也就是不会再卡导出了。</p>
+<p>&emsp;&emsp;不过也有人可能会提出提前下好Electron然后替换下载，不过实际上并没有什么用，他每次下载，会在C:\Users\zeroi\AppData\Local\Temp路径内生成一个名为“electron-download-随机后缀”的文件夹，随机后缀部位每次会随机一定长度的随机字符串，所以基本是无法提前替换的。如果是等下载开始后再替换也没有什么用，因为校验文件环节需要等下载完成才会开始，即使你提前替换了，他后台进度条没有下载完成，那依旧会继续下载，还是卡着的局面。</p>
+<p>&emsp;&emsp;至于有没有其他解决方法，更换更好的VPN、更换旧版本Tyrano、让别人导出之类的都是方法，不过我们并不是来讨论这些解决方法的，这篇文章的主题就是让用户手动打包游戏。</p>
+<p>&emsp;&emsp;另外，本文章不会介绍下文下载的都是上面东西，太过浪费口舌，想知道是什么的自己去搜索就好了。</p>
+<h1 id="1-下载Node-js"><a href="#1-下载Node-js" class="headerlink" title="1.下载Node.js"></a>1.下载Node.js</h1><blockquote>
 <p>[!NOTE]</p>
-<p>前排提醒，本文章仅介绍同人游戏，不包括任何Ray-Kbys的原作</p>
+<p>如果本地已有Node.js，即可跳过该步骤</p>
 </blockquote>
-<h2 id="一、Creepy-Love-毛骨悚然的爱"><a href="#一、Creepy-Love-毛骨悚然的爱" class="headerlink" title="一、Creepy Love(毛骨悚然的爱)"></a>一、Creepy Love(毛骨悚然的爱)</h2><p>​	“我是一名普通的学生，最近我交了一个新的女朋友，她叫<strong>深杉爱子</strong>，她哪里都好，只是有一点小奇怪…</p>
-<p>​	就这样，在某一天，她向我献出了一份<strong>毛骨悚然的爱</strong>。”</p>
-<p>​	面对女朋友的奇怪礼物，“我”最终还是决定打开它，接受这份心意。</p>
-<blockquote>
-<p><em><strong>“你知道吗？我得尽可能保持它的新鲜度”</strong></em></p>
-<p><em><strong>————深杉爱子</strong></em></p>
-</blockquote>
+<p>&emsp;&emsp;首先打开<a href="https://nodejs.cn/download/">Node.js的下载界面</a></p>
+<p><img src="https://pic1.imgdb.cn/item/68a527ca58cb8da5c83b0ff3.png"></p>
+<p>&emsp;&emsp;此处选择<strong>长期支持版本</strong>即可，后选择<strong>Windows安装包(.msi)<strong>的</strong>64位</strong>进行下载即可。</p>
+<p>&emsp;&emsp;下载过来以后双击msi程序，</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5297f58cb8da5c83b1716.png"></p>
+<p><img src="https://pic1.imgdb.cn/item/68a5299858cb8da5c83b1718.png"></p>
+<p>&emsp;&emsp;此处可以将这一步的<strong>Add to PATH</strong>改为<strong>Entire feature will be installed on local hard drive</strong>。</p>
+<p>​	其余的一路默认安装过来即可。</p>
+<p>&emsp;&emsp;随后按下<strong>Win+R</strong>键，唤出<strong>运行</strong>窗口，输入<strong>cmd</strong>打开<strong>命令提示符</strong>，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;查看自己版本号，如果安装正确，应该将显示一串数字吗，这就是版本号了。</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52a4758cb8da5c83b18ac.png"></p>
+<h1 id="2-设置npm镜像源"><a href="#2-设置npm镜像源" class="headerlink" title="2.设置npm镜像源"></a>2.设置npm镜像源</h1><p>&emsp;&emsp;镜像源是很有必要的，npm本身的下载链接都指向国外，下载速度十分之慢，不设置镜像源的话，下载十分缓慢，而且很容易失败。</p>
+<p>&emsp;&emsp;还是一样打开<strong>命令提示符</strong>，随后输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;随后一个“&#x2F;”开始旋转，等到安装成功的提醒出现后即可，然后输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;进行检查，如果安装都正确，则会提示</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52ba158cb8da5c83b23dc.png"></p>
+<h1 id="3-Electron"><a href="#3-Electron" class="headerlink" title="3.Electron"></a>3.Electron</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>&emsp;&emsp;随后打开自己的项目文件夹，也就是和自己Tyrano启动器同一个目录的myprojec文件夹，在里面找到自己想要导出的项目文件夹，打开以后如下</p>
+<p>(TyranoBuilder的是builder_config.json，TyranoStudio的是studio_config.json，不过影响不大)</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52c1258cb8da5c83b2c17.png"></p>
+<p>&emsp;&emsp;我们这里只需要三个文件夹，也就是<strong>data</strong>、<strong>tyrano</strong>和<strong>index.html</strong>文件夹。</p>
+<p>&emsp;&emsp;你可以选择直接在项目文件夹内进行打包，也可以选择新建一个文件夹(随便你建在哪里)，然后把这三个文件夹复制过去进行打包操作，我这里是把三个文件复制到了新的文件夹内。</p>
+<p>&emsp;&emsp;我更推荐后者，因为打包会下载一些依赖，会使项目文件夹变得很臃肿。但如果你的游戏项目文件太大，比如你的游戏有3个G(万一呢)，移动耗时间且占空间的话，那也无所谓。</p>
 <hr>
-<p>游戏英文名:Creepy Love</p>
-<p>游戏中文名:毛骨悚然的爱</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Android</p>
-<p>游戏主角:深杉爱子</p>
-<p>最新版本:0.5</p>
-<p>上次更新:约2017-2018</p>
-<p><img src="https://pic1.imgdb.cn/item/677a51dfd0e0a243d4ef26eb.jpg"></p>
+<p>&emsp;&emsp;当你准备好以后，打开命令提示符，将目录移动到你要打包的项目内，就比如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:\Download\dabao</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;不过命令提示符默认路径是在C盘，像我这种目录在D盘的，需要再输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">D:</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;将目录换到D盘内。</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52e6758cb8da5c83b3d7b.png"></p>
+<p><img src="https://pic1.imgdb.cn/item/68a52e8758cb8da5c83b3d7f.png"></p>
 <hr>
-<p>​	该游戏是由西班牙母语者<a href="https://www.youtube.com/@TsukuneLee"><strong>Tsukune Lee</strong></a>制作的同人游戏。</p>
-<p>​	游戏主要讲述了男主与病娇少女深杉爱子的日常，同时以及一些其他角色的小段剧情。该同人的游戏流程篇幅不长，游戏时长仅仅不到两个小时，与爱子的好感度大于200后就没有什么新的剧情了，但同时它又作为最早的一批同人游戏，与七八年前就被创作出来，经典的同时又给后续一些作品留下了深刻的影响。</p>
-<p>​	同时游戏的更新基本早已废弃，所以不必期待该游戏的新版本。并且该作是我的早期汉化作品，当时的汉化水平不完善，如有汉化问题，属于正常现象，并且欢迎在评论区提出。</p>
+<p>&emsp;&emsp;然后在这个路径下的命令提示符内输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm i -D electron</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;看到这样就算安装好了</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52f2658cb8da5c83b3e38.png"></p>
+<p>&emsp;&emsp;同时，游戏目录变成这样</p>
+<p><img src="https://pic1.imgdb.cn/item/68a52f4458cb8da5c83b3e3b.png"></p>
+<p>&emsp;&emsp;也就是多了一个<strong>package.json</strong>和<strong>node_modules</strong>文件夹</p>
+<p>&emsp;&emsp;随后打开package.json文件，将里面的内容替换为</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;your-app&quot;</span>,        </span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这里可以将name后的your-app更改你自己游戏的名字，而version后的0.1.0可以改为自己的游戏版本号。</p>
+<p>&emsp;&emsp;比如像我这样，将游戏名字改成了pvz，版本号改为了1.1.4(仅供示范</p>
+<p>&emsp;&emsp;此处的version只能是三位数，1.1和1.1.4.5都不行。不过可以写预发布标签，预发布标签请见文章结尾的<strong>预发布标签</strong>一栏</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;pvz&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.1.4&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <hr>
+<p>&emsp;&emsp;随后新建一个<strong>main.js</strong>，和其他文件一个目录</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5308b58cb8da5c83b47b5.png"></p>
+<p>&emsp;&emsp;然后打开main.js文件，将里面的内容改为</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; app, <span class="title class_">BrowserWindow</span> &#125; = <span class="built_in">require</span>(<span class="string">&quot;electron&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createWindow</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>(&#123;</span><br><span class="line">    <span class="attr">width</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">600</span>,</span><br><span class="line">    <span class="attr">webPreferences</span>: &#123;</span><br><span class="line">      <span class="attr">nodeIntegration</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">  win.<span class="property">webContents</span>.<span class="title function_">openDevTools</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">whenReady</span>().<span class="title function_">then</span>(createWindow);</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;随后还是在命令提示符中，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;随后如果提示(底下那些报错无关紧要)</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5334d58cb8da5c83b6bc3.png"></p>
+<p>&emsp;&emsp;并且的成功跳出游戏窗口则可继续下一步。</p>
+<hr>
+<h2 id="去除调试"><a href="#去除调试" class="headerlink" title="去除调试"></a>去除调试</h2><p>&emsp;&emsp;不过此时游戏窗口会是这样的，顶上会有一排菜单栏，右边会有一个调试栏</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5339558cb8da5c83b76be.png"></p>
+<p>&emsp;&emsp;一般用不到这两个功能，打包后的游戏也不可能把这两个的功能给玩家用，所以在上面main.js打包的时候，可以将</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  win.loadFile(<span class="string">&quot;index.html&quot;</span>);</span><br><span class="line">  // 打开开发者工具</span><br><span class="line">  win.webContents.openDevTools();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这部分的**win.webContents.openDevTools();<strong>整行删掉，或者在这行前面加上</strong>&#x2F;&#x2F;**，将这行注释掉。</p>
+<h2 id="去除菜单栏"><a href="#去除菜单栏" class="headerlink" title="去除菜单栏"></a>去除菜单栏</h2><p>&emsp;&emsp;在代码**win.loadFile(“index.html”);<strong>，上面一行添加一行</strong>win.setMenu(null);**即可</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">win.<span class="title function_">setMenu</span>(<span class="literal">null</span>);</span><br><span class="line">win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;记得前面的缩进要和别的行对齐</p>
+<hr>
+<p>&emsp;&emsp;去除掉这两个东西的话，就会变成正常的窗口了</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5358358cb8da5c83b9ce7.png"></p>
+<h1 id="3-Electron-Builder"><a href="#3-Electron-Builder" class="headerlink" title="3.Electron-Builder"></a>3.Electron-Builder</h1><p>&emsp;&emsp;随后还是在该目录的命令提示符内，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm i -D electron-builder</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;安装Electron-Builder，这个就是主要用来打包的工具了</p>
+<p>&emsp;&emsp;安装后以后，将</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span>,</span><br><span class="line">  <span class="string">&quot;pack&quot;</span>: <span class="string">&quot;electron-builder --dir&quot;</span>,</span><br><span class="line">  <span class="string">&quot;dist&quot;</span>: <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;写到package.json里。</p>
+<p>&emsp;&emsp;完整package.json就应该是这样的</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;pvz&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.1.4&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;electron .&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pack&quot;</span>: <span class="string">&quot;electron-builder --dir&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dist&quot;</span>: <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;electron-builder&quot;</span>: <span class="string">&quot;^26.0.12&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;然后在命令提示符内输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run pack</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;然后会生成一个<strong>dist</strong>文件夹，你的游戏就在里面的<strong>win-unpacked</strong>文件夹内了。</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5383658cb8da5c83bb457.png"></p>
+<p>&emsp;&emsp;然后你就可以改个文件夹的名字，然后压缩成zip上传到网络上了。</p>
+<hr>
+<p>&emsp;&emsp;或者说你也可以输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dist</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;上面的<strong>npm run pack</strong>是单纯的打包为文件夹。</p>
+<p>&emsp;&emsp;这个<strong>npm run dist</strong>则是在此基础上还会打包为各个系统的安装包，不过这里应该只会有windows的安装包，因为前面写package.js的时候没有指定target，不过也够用了。</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5392558cb8da5c83bba6d.png"></p>
+<h1 id="4-其他设置"><a href="#4-其他设置" class="headerlink" title="4.其他设置"></a>4.其他设置</h1><h2 id="更改图标"><a href="#更改图标" class="headerlink" title="更改图标"></a>更改图标</h2><p>&emsp;&emsp;这一步更改的是窗口的图标</p>
+<p><img src="https://pic1.imgdb.cn/item/68a53ab958cb8da5c83bc5a0.png"></p>
+<p>&emsp;&emsp;在<strong>main.js</strong>文件的**win.loadFile(“index.html”);<strong>前添加一行</strong>win.setIcon(‘.&#x2F;ico.ico’);**即可</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">win.<span class="title function_">setIcon</span>(<span class="string">&#x27;./ico.ico&#x27;</span>);</span><br><span class="line">win.<span class="title function_">setMenu</span>(<span class="literal">null</span>);</span><br><span class="line">win.<span class="title function_">loadFile</span>(<span class="string">&quot;index.html&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这里的ico.ico可以随便命名，后缀支持ico，png和icns三个格式，没有大小限制，随后将图标放入项目文件夹即可，如下图</p>
+<p><img src="https://pic1.imgdb.cn/item/68a53a4e58cb8da5c83bc2af.png"></p>
+<hr>
+<p>&emsp;&emsp;这一步更改的是程序的图标</p>
+<p><img src="https://pic1.imgdb.cn/item/68a53c2458cb8da5c83bc7bc.png"></p>
+<p>&emsp;&emsp;首先打开<strong>package.json</strong>，添加</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;build&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;win&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;icon&quot;</span>: <span class="string">&quot;./ico.ico&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;即可，完整代码如下</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;pvz&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;main.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron .&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron-builder --dir&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;electron-builder&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;win&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;icon&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./ico.ico&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;electron-builder&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^26.0.12&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;不过注意，package.json的图标设置仅支持ico文件，并且仅支持256x256分辨率大小的ico文件。</p>
+<hr>
+<p>&emsp;&emsp;如果出现了打包完后图标并没有变化的场景，请右键exe，选择<strong>“属性”</strong>，查看图标。</p>
+<p><img src="https://pic1.imgdb.cn/item/68a53ec458cb8da5c83bd1db.png"></p>
+<p>&emsp;&emsp;如果出现以上情况，那么则是缓存问题，通常重启<strong>Windows资源管理器</strong>或者<strong>重启电脑</strong>即可</p>
+<hr>
+<p>&emsp;&emsp;如果属性也显示为默认图标，那么请检查图标文件的格式是否为ico，分辨率是否为256x256及以上。</p>
+<h2 id="预发布标签"><a href="#预发布标签" class="headerlink" title="预发布标签"></a>预发布标签</h2><table>
+<thead>
+<tr>
+<th align="left">预发布标签</th>
+<th align="left">中文名称</th>
+<th align="left">含义说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>alpha</code></td>
+<td align="left">内测版</td>
+<td align="left">早期测试版本，功能不完整，存在大量错误</td>
+<td align="left"><code>1.0.0-alpha.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>beta</code></td>
+<td align="left">公测版</td>
+<td align="left">功能相对完整，邀请用户测试，可能存在错误</td>
+<td align="left"><code>1.0.0-beta.2</code></td>
+</tr>
+<tr>
+<td align="left"><code>rc</code></td>
+<td align="left">发布候选版</td>
+<td align="left">功能完整，极可能成为正式版，进行最后测试</td>
+<td align="left"><code>1.0.0-rc.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>next</code></td>
+<td align="left">下一版本预览</td>
+<td align="left">下一个大版本的早期预览，可能包含破坏性变更</td>
+<td align="left"><code>2.0.0-next.0</code></td>
+</tr>
+<tr>
+<td align="left"><code>dev</code></td>
+<td align="left">开发版</td>
+<td align="left">自动化构建版本，与特定代码提交关联</td>
+<td align="left"><code>1.0.0-dev.1234</code></td>
+</tr>
+<tr>
+<td align="left"><code>canary</code></td>
+<td align="left">金丝雀版</td>
+<td align="left">在小范围用户&#x2F;环境中测试变更，用于A&#x2F;B测试</td>
+<td align="left"><code>1.0.0-canary.456</code></td>
+</tr>
+<tr>
+<td align="left"><code>preview</code></td>
+<td align="left">预览版</td>
+<td align="left">功能预览，让用户提前体验新特性</td>
+<td align="left"><code>1.0.0-preview</code></td>
+</tr>
+<tr>
+<td align="left"><code>snapshot</code></td>
+<td align="left">快照版</td>
+<td align="left">指向最新开发状态（Maven常用）</td>
+<td align="left"><code>1.0.0-snapshot</code></td>
+</tr>
+<tr>
+<td align="left"><code>unstable</code></td>
+<td align="left">不稳定版</td>
+<td align="left">明确告知版本极不稳定，风险很高</td>
+<td align="left"><code>1.0.0-unstable</code></td>
+</tr>
+<tr>
+<td align="left"><code>debug</code></td>
+<td align="left">调试版</td>
+<td align="left">包含额外调试信息，性能非最优</td>
+<td align="left"><code>1.0.0-debug</code></td>
+</tr>
+<tr>
+<td align="left"><code>experimental</code></td>
+<td align="left">实验版</td>
+<td align="left">包含高度实验性功能，可能被移除</td>
+<td align="left"><code>1.0.0-experimental</code></td>
+</tr>
+<tr>
+<td align="left"><code>edge</code></td>
+<td align="left">前沿版</td>
+<td align="left">最前沿的开发状态，极不稳定</td>
+<td align="left"><code>1.0.0-edge</code></td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;不过这并不是绝对的，你写不写都可以，预发布标签更多是一种约定俗成的写法，如果不写预发布标签就正常写<strong>1.0.0</strong>之类的即可。</p>
+<h2 id="Electron-Builder下载失败"><a href="#Electron-Builder下载失败" class="headerlink" title="Electron-Builder下载失败"></a>Electron-Builder下载失败</h2><p>&emsp;&emsp;如果打包时一直卡在此处，然后报错显示下载失败</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5461e58cb8da5c83c27d7.png"></p>
+<p>&emsp;&emsp;首先一样打开<strong>命令提示符</strong>，在里面输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;然后再次尝试打包即可。</p>
+<p>&emsp;&emsp;如果依旧无法打包，那么可以更换<strong>其他镜像源</strong>(这里不提供其他镜像源，请自行搜索寻找)，或者进行<strong>手动下载</strong>。</p>
+<hr>
+<p>&emsp;&emsp;这里只说<strong>手动下载</strong>的方法</p>
+<p>&emsp;&emsp;首先<strong>win+R</strong>唤出运行，输入</p>
+<figure class="highlight haml"><table><tr><td class="code"><pre><span class="line"><span class="tag">%<span class="selector-tag">LOCALAPPDATA</span></span>%/electron-builder/Cache</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;运行后将会打开文件夹，里面应该如图所示</p>
+<p><img src="https://pic1.imgdb.cn/item/68a546f958cb8da5c83c2dd4.png"></p>
+<p>&emsp;&emsp;然后<strong>nsis</strong>文件夹内应该还会有两个文件夹</p>
+<p><img src="https://pic1.imgdb.cn/item/68a5471f58cb8da5c83c2ef1.png"></p>
+<p>&emsp;&emsp;而winCodeSign文件夹里则会有一个文件夹</p>
+<p><img src="https://pic1.imgdb.cn/item/68a6f00058cb8da5c8410928.png"></p>
+<p>&emsp;&emsp;我们需要注意的<strong>nsis-3.0.4.1</strong>、<strong>nsis-resources-3.4.1</strong>、<strong>winCodeSign-2.6.0</strong>就是这三个文件夹(版本不一定对得上，也有可能是nsis-3.0.4.2或者winCodeSign-2.7.0之类的，一切按照你的文件夹内版本为准)</p>
+<p>&emsp;&emsp;随后打开Electron Builder的<a href="https://github.com/electron-userland/electron-builder-binaries/releases">Github</a>界面，找到和自己版本相符的文件</p>
+<p>&emsp;&emsp;比如我的nsis是3.0.4.1版本的，就往下拉，没有就去后几页找，找到对应版本</p>
+<p><img src="https://pic1.imgdb.cn/item/68a548ab58cb8da5c83c36c7.png"></p>
+<p>&emsp;&emsp;打开<strong>Assets</strong>后选择第一个压缩包进行下载，下载后将压缩包内的文件放入<strong>nsis-3.0.4.1</strong>内，进行覆盖即可，其他两个文件同理。</p>
 <blockquote>
 <p>[!NOTE]</p>
-<p>​	补充:该作者在2019年12月2日时有在Youtube上传了一个毛骨悚然的爱的新版本的视频，但是此后游戏的消息便石沉大海了</p>
-<p><img src="https://pic1.imgdb.cn/item/677a68f0d0e0a243d4ef2b39.png"></p>
+<p>再次提醒，请根据自己的文件的版本寻找对应文件，请勿将完全照抄教程</p>
 </blockquote>
-<h2 id="二、Endearing-Nephy-可爱的涅芙依"><a href="#二、Endearing-Nephy-可爱的涅芙依" class="headerlink" title="二、Endearing Nephy(可爱的涅芙依)"></a>二、Endearing Nephy(可爱的涅芙依)</h2><p>​	“不知道从什么时候开始，我去咖啡厅的次数逐渐增加了，是因为那里的食物美味吗？还是说那里的环境很好吗？亦或是说……”</p>
-<blockquote>
-<p><em><strong>“我很爱你。谢谢你也这么爱我♡”</strong></em></p>
-<p><em><strong>————涅芙依</strong></em></p>
-</blockquote>
-<p>游戏英文名:Endering Nephy</p>
-<p>游戏中文名:可爱的涅芙依</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Android</p>
-<p>游戏主角:涅芙依</p>
-<p>最新版本:0.7</p>
-<p>上次更新:约2019年</p>
-<p><img src="https://pic1.imgdb.cn/item/677a66e8d0e0a243d4ef2aad.jpg"></p>
-<hr>
-<p>​	该游戏是一款由西班牙母语者<strong>Dol Dev</strong>所制作(未找到该同人作者社交账号)，主要女主角为涅芙依的同人游戏。</p>
-<p>​	游戏主要内容为男主与涅芙依的一些日常交互，包括类原版的摸头与对话，只是将角色更换为了涅芙依，并且该游戏存在一个同居和示爱的阶段剧情，但是并没有具体的结局，并且游戏流程极短，大约只有十几分钟多，涅厨可以尝试游玩一番，但作为主要游戏日常游玩并不合适。</p>
-<p>​	该游戏最后一次更新的时间大约为2019年，所以此作基本也和毛骨悚然的爱一样大概率是不会再有什么新动静了，如果有新的消息的话我尽量第一时间更新。</p>
-<h1 id="三、Obsessive-Love-迷恋之爱"><a href="#三、Obsessive-Love-迷恋之爱" class="headerlink" title="三、Obsessive Love(迷恋之爱)"></a>三、Obsessive Love(迷恋之爱)</h1><p>​	“工作好烦啊…生活好累啊…这酒也好苦啊…该死的，宿醉后的头还真是痛得厉害。</p>
-<p>​	嗯？谁啊？别敲门了，来了。”</p>
-<blockquote>
-<p><em><strong>“我知道你必须做出非常艰难的决定，你为我牺牲了很多”</strong></em></p>
-<p><em><strong>————希尔薇</strong></em></p>
-</blockquote>
-<p>游戏英文名:Obsessive Love</p>
-<p>游戏中文名:迷恋之爱</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Android</p>
-<p>游戏主角:希尔薇</p>
-<p>最新版本:1.0</p>
-<p>上次更新:2019年</p>
-<p><img src="https://pic1.imgdb.cn/item/677a6e98d0e0a243d4ef2c03.jpg"></p>
-<hr>
-<p>​	该游戏由西班牙母语者<strong>Novak Love</strong>与[**El OtAkuシ**](<a href="https://www.youtube.com/@ElOtAkU_/search?query=obsessive">https://www.youtube.com/@ElOtAkU_/search?query=obsessive</a> love)所制作的一款以相对其他作品来说的多故事线和多结局的同人作品，其主要灵感于Wattpad平台的用户<a href="https://www.wattpad.com/user/MeroAngel"><strong>MeroAngel</strong></a>、SAS-SEMPAI与<a href="https://www.wattpad.com/user/SilverCristal"><strong>Cristina Martinez</strong></a>(旧名:SilverCristal)的同人小说，并且得到了几位用户的允许才得以制作出该作。(其中SAS的Wattpad账号我没找到，疑似改名了)</p>
-<p>​	故事拥有一条平行时空线和一条原版线路，并且拥有好几个不同的结局，但其中只有一条才是好结局，其余皆为坏结局。并且有大房静子、奥蕾莉亚等角色出场。因为大致是按照原版的剧情衍生展开的，所以在此具体内容不过多赘述。（游戏内部分图片会拉伸压缩，属于正常现象）</p>
-<p>​	该作因为本身是按照完结的同人小说改做的，所以是不会在更新了。</p>
-<p>(如果对同人小说感兴趣的话，我后续会尝试搬运且汉化这几位作者的小说)</p>
-<h1 id="四、ONE"><a href="#四、ONE" class="headerlink" title="四、ONE"></a>四、ONE</h1><p>​	“我会死吗？我会上天堂吗？我真的会…</p>
-<p>​	这到底是什么一回事？！”</p>
-<blockquote>
-<p><em><strong>“而且你长得太像他了，勾起了她曾经给我的很多回忆和感情”</strong></em></p>
-<p><em><strong>————希尔薇</strong></em></p>
-</blockquote>
-<p>游戏英文名:ONE</p>
-<p>游戏中文名:未作翻译</p>
-<p>游戏引擎:TyranoScript</p>
-<p>支持平台:Windows</p>
-<p>游戏主角:希尔薇</p>
-<p>最新版本:0.8</p>
-<p>上次更新:2020年12月29日</p>
-<p><img src="https://pic1.imgdb.cn/item/677a76f7d0e0a243d4ef2d85.jpg"></p>
-<hr>
-<p>​	游戏由西班牙母语者**<a href="https://www.youtube.com/@Twisted_Ambition_CL">Twisted Ambition</a>**所制作的一款同人游戏。</p>
-<p>​	游戏的故事时间线于Teaching Feeling的原主角医生死后所展开，主角<strong>杰克</strong>在回家的路上遭到了莫名的刺杀，等到他再一次睁开眼，却是一所陌生的诊所，这究竟是怎么一回事呢？而一位叫杰西的女孩，又是谁呢？</p>
-<p>​	该作少见的不同于其他同人作，使用了TyranoScript引擎制作，但作者的引擎编程水平却极差，从上面的主菜单图就可以看得出来。</p>
-<p>​	本作也拥有多条分支线，但是因为原作者较差的故事叙述能力与编程水平，该作的制作看上去极为潦草，因为制作的版本较少，内容也极其不完事，其单线游玩流程时长甚至不如可爱的涅芙依。</p>
-<p>​	游戏官网:<a href="https://ubercrack.itch.io/one"><strong>Itch.io</strong></a></p>
-<p>​	补充:该作者于2022年12月11日发了一个视频宣布了该作的无限期停更。</p>
-<p>​	补充2:该作者又与2024年11月宣布了该作的最终版的完成，并通知正在适配安卓版本</p>
-<h1 id="五、La-Navidad-Con-Sylvie-与希尔薇的圣诞节"><a href="#五、La-Navidad-Con-Sylvie-与希尔薇的圣诞节" class="headerlink" title="五、La Navidad Con Sylvie(与希尔薇的圣诞节)"></a>五、La Navidad Con Sylvie(与希尔薇的圣诞节)</h1><p>​	“啊，又到了圣诞节呢，这个圣诞节，应该给希尔薇准备什么样的惊喜呢…”</p>
-<blockquote>
-<p><em><strong>“我们很高兴这是你渡过的最好的圣诞节”</strong></em></p>
-<p><em><strong>————奥蕾莉亚&amp;涅芙依&amp;医生</strong></em></p>
-</blockquote>
-<p>游戏西语名:La Navidad Con Sylvie</p>
-<p>游戏中文名:与希尔薇的圣诞节</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Andorid</p>
-<p>游戏主角:希尔薇</p>
-<p>最新版本:1.0</p>
-<p>上次更新:约2018年</p>
-<p><img src="https://pic1.imgdb.cn/item/677a7b9ed0e0a243d4ef2e28.jpg"></p>
-<hr>
-<p>​	该作是由西班牙母语者作者<strong>Black Droid Mx</strong>所制作的以圣诞节为主题的同人游戏。(找不到作者的社交账号)</p>
-<p>​	主要讲述了大家在圣诞节这一天给希尔薇过了一个非常不错的圣诞节。</p>
-<p>​	该作流程较短，且作品较为简单。且因为是以节日为主题的节日同人，所以是不会再次更新的。</p>
-<h1 id="六、Psycho-Love-惊爱之恋"><a href="#六、Psycho-Love-惊爱之恋" class="headerlink" title="六、Psycho Love(惊爱之恋)"></a>六、Psycho Love(惊爱之恋)</h1><p>​	“这个女人，不是条子(警察)，就是钩子(卧底)。”</p>
-<blockquote>
-<p><em><strong>“不…</strong></em></p>
-<p><em><strong>不不不…</strong></em></p>
-<p><em><strong>不要啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！“</strong></em></p>
-<p><em><strong>————正在吃鸽子的武</strong></em></p>
-</blockquote>
-<p>游戏英语名:Psycho Love</p>
-<p>游戏中文名:惊爱之恋</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Andorid</p>
-<p>游戏主角:深杉爱子</p>
-<p>最新版本:1.3</p>
-<p>上次更新:2024年7月4日</p>
-<p><img src="https://pic1.imgdb.cn/item/677a7fbdd0e0a243d4ef2ea1.jpg"></p>
-<hr>
-<p>​	该作品是由秘鲁作者<a href="https://www.youtube.com/@Lic.Samuel09"><strong>Licenciado Samuel</strong></a>所制作以深杉爱子为主要角色的同人游戏，游戏的制作水平不错，非常值得游玩，也有大约为一个小时多的游戏时长的中篇的剧情供玩家游玩。</p>
-<p>​	故事主要讲述了原本为秘鲁黑帮的男主————武，为了躲避国际刑警的追捕而作为留学生逃往了日本，过上了较为平静的生活，但这种生活只是一时的，他每天都提心吊胆，生怕警察追踪到自己的行踪。</p>
-<p>​	直到有一天，他遇上了一个行为诡异的女孩，于是他的生活开始随之改变。</p>
-<p>​	游戏主要故事线开始于Raykbys的作品<strong>《一目钟情》</strong>后，大约是原作的角色们上大学时的时间，不仅有一目钟情原作的角色出场，还有其他几部的角色出场，如《蛊惑的幼虫》的凤蝶，《奴隶少女希尔薇》的卡西欧，并且后续似乎还要给爱子增加换装功能，实在是及其优秀的一部同人作品。</p>
-<p>​	该作虽然是前年才开始制作的同人游戏，但却从24年7月4号更新完1.3版本后开始持续断更直至今日。作者LS的生活较为繁忙，且秘鲁社会动荡不安，这些都为作者的更新带来了极大的困难，让我们相信LS能平安度过这些困难，为我们带来新的版本已经新的剧情吧。</p>
-<p>​	游戏内置着包括中文、日语、韩语、西班牙语、俄语、阿拉伯语等在内的几十种语言，虽然绝大多数为机翻，但是也能看出作者对游戏的热爱。</p>
-<p>​	游戏官网:<a href="https://licenciado-samuel.itch.io/psycho-love"><strong>Itch.io</strong></a></p>
-<h1 id="七、Teaching-Feeling-A-christmas-with-you-希尔薇-圣诞有你"><a href="#七、Teaching-Feeling-A-christmas-with-you-希尔薇-圣诞有你" class="headerlink" title="七、Teaching Feeling:A christmas with you(希尔薇:圣诞有你)"></a>七、Teaching Feeling:A christmas with you(希尔薇:圣诞有你)</h1><p>​	“是圣诞节啊…希尔薇还从来没过过一次圣诞节呢，希望这个圣诞节她能够过得开心。”</p>
-<blockquote>
-<p><em><strong>“真的…非常感谢…所作的一切…以及每个人”</strong></em></p>
-<p><em><strong>————希尔薇</strong></em></p>
-</blockquote>
-<p>游戏英语名:Teaching Feeling:A christmas with you</p>
-<p>游戏中文名:希尔薇:圣诞有你</p>
-<p>游戏引擎:Ren’py</p>
-<p>支持平台:Windows、Linux、Andorid</p>
-<p>游戏主角:希尔薇</p>
-<p>最新版本:Beta版</p>
-<p>上次更新:2024年1月23日</p>
-<p><img src="https://pic1.imgdb.cn/item/677a8792d0e0a243d4ef3030.jpg"></p>
-<hr>
-<p>​	该作品是由秘鲁作者<a href="https://www.youtube.com/@Lic.Samuel09"><strong>Licenciado Samuel</strong></a>所制作以圣诞节为主题的节日同人游戏，制作精良，流程较短，剧情温馨有趣。</p>
-<p>​	这是希尔薇入住家庭的第一个圣诞节，男主希望这能成为她记忆最深刻的一个圣诞节，于是和镇上的人们讨论过后，在涅芙依的店里举行一场盛大的圣诞晚会。</p>
-<p>​	该作的灵感来源于上文中提到过的La Navidad Con Sylvie(与希尔薇的圣诞节)，并以此作的剧情为蓝本，制作了圣诞有你，但是剧情、音乐以及程序方面较前者好了太多，可以说是及其不错的一部节日同人了。</p>
-<p>​	补充:作者LS本来还说过要做一部万圣节的同人，但是按照他个人生活的状况来看，估计得很久以后了。</p>
-<p>​	游戏官网:<a href="https://licenciado-samuel.itch.io/teaching-feeling-a-christmas-with-you"><strong>Itch.io</strong></a></p>
-<hr>
-<hr>
-<hr>
-<p>​	目前市面上的所有同人作品至此便以科普完毕，希望各位能够通过本篇知晓更多关于RayKbys的二创同人作品的信息，如果各位觉得本篇文章写得还算好的话，希望各位可以多转发转发本篇文章。</p>
-<hr>
-<h1 id="同人游戏下载贴"><a href="#同人游戏下载贴" class="headerlink" title="同人游戏下载贴"></a>同人游戏下载贴</h1><p>以下是我的汉化过的同人作品的下载贴子:</p>
-<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/8780442647?pid=149252383729">https://tieba.baidu.com/p/8780442647?pid=149252383729</a>	“双端-Creepy Love-毛骨悚然的爱汉化版本资源”</p>
-<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/7895607865?pid=144564354334">https://tieba.baidu.com/p/7895607865?pid=144564354334</a>	“Endering Nephy汉化版-PC&#x2F;Android双端发布”</p>
-<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/8893659272?pid=149764486962">https://tieba.baidu.com/p/8893659272?pid=149764486962</a>	“双端-Obsessive Love-迷恋之爱汉化版本资源”</p>
-<p>[百度贴吧]: <a href="https://tieba.baidu.com/p/9106022191?pid=150664788860">https://tieba.baidu.com/p/9106022191?pid=150664788860</a>	“《惊爱之恋》新汉化&#x2F;《圣诞有你》汉化-双端双资源帖”</p>
-<p>其中我并没有把《与希尔薇的圣诞节》和《ONE》的汉化发出来，原因是这两篇碍于时间和较缺乏趣味性的故事内容，导致我当初汉化的汉化的时候并没有认真汉化，显得较为敷衍，下载链接放在下面，各位可以当做汉化半成品来看待</p>
-<p><a href="https://www.123684.com/s/2xZQjv-z16Pv">ONE下载链接</a> 解压码为:ONE(暂时失效)</p>
-<p><a href="https://www.123684.com/s/2xZQjv-516Pv">与希尔薇的圣诞节下载链接</a></p>
 ]]></content>
       <categories>
-        <category>同人</category>
+        <category>Tyrano</category>
+      </categories>
+      <tags>
+        <tag>Tyrano</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>同人小说《我与梦寐以求的她》(持续更新)</title>
+    <url>/post/56328/</url>
+    <content><![CDATA[<blockquote>
+<p>[!IMPORTANT]</p>
+<font color=red>
+
+<p>前排重要提醒:</p>
+<p>本小说搬运自国外小说网站Wattpad上用户的同人小说《<a href="https://www.wattpad.com/story/115296341-sylvie-el-regalo-que-siempre-hemos-a%C3%B1orado">Sylvie, el regalo que siempre hemos añorado</a>》(点击小说名前往原网站)，在此搬运并翻译为中文，并且已经过原作者授权。不定期更新</p>
+</font>
+</blockquote>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录:"></a>目录:</h1><h2 id="第一章-在荒诞中寻找理想"><a href="#第一章-在荒诞中寻找理想" class="headerlink" title="第一章:在荒诞中寻找理想"></a><a href="https://wraykbys.top/post/2562/">第一章:在荒诞中寻找理想</a></h2><h2 id="第二章-新的伙伴"><a href="#第二章-新的伙伴" class="headerlink" title="第二章:新的伙伴"></a><a href="https://wraykbys.top/post/2563/">第二章:新的伙伴</a></h2><h2 id="第三章-我与她的新纽带"><a href="#第三章-我与她的新纽带" class="headerlink" title="第三章:我与她的新纽带"></a><a href="https://wraykbys.top/post/2564/">第三章:我与她的新纽带</a></h2><h2 id="第四章-重生的小公主"><a href="#第四章-重生的小公主" class="headerlink" title="第四章:重生的小公主"></a><a href="https://wraykbys.top/post/2565/">第四章:重生的小公主</a></h2>]]></content>
+      <categories>
+        <category>小说</category>
       </categories>
       <tags>
         <tag>同人</tag>
+        <tag>小说</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TeachingFeeling的改版教程(持续更新中)</title>
+    <url>/post/teaching/</url>
+    <content><![CDATA[<blockquote>
+<p>[!CAUTION]</p>
+<p>该教学风格主要针对那些对代码层面完全零基础的受众群体，故文章会介绍很多基础的知识，请根据自己的知识范围对其内容进行甄选查看。</p>
+</blockquote>
+<p><strong>该教程不作为最终版本，后续将会进行更改，如有问题可在评论区提出</strong></p>
+<script type="text/javascript">
+SAONotify("文章更新","2025.7.15 00:34<br>更新了部分\"自定义服装\"的教程</br>");
+</script>
+
+
+
+<h1 id="一、改版前的准备"><a href="#一、改版前的准备" class="headerlink" title="一、改版前的准备"></a>一、改版前的准备</h1><h2 id="1-什么是TyranoScript"><a href="#1-什么是TyranoScript" class="headerlink" title="1.什么是TyranoScript"></a>1.什么是TyranoScript</h2><p>&emsp;&emsp;关于本文章，与其说是针对希尔薇改版所准备的教程，不如是“在借用了希尔薇游戏代码为例子的情况下，教你如何使用TyranoScript”的教程，也就是说该教程本质上是在教你如何用TyranoScript制作一个GalGame。</p>
+<p>&emsp;&emsp;现在让我们言归正传，什么是TyranoScript？TyranoScript是一款基于 HTML5 和 JavaScript，能够制作出在NW.js框架或Electron框架上运行的游戏的游戏制作引擎，我们能够通过简洁、易懂的代码，制作一款属于自己的游戏，还可以通过其他开发者自制的插件，实现TyranoScript引擎本身不存在的功能。而《Teaching Feeling》(奴隶少女希尔薇)便是基于该引擎所制作的游戏。</p>
+<p>&emsp;&emsp;其中，该游戏的1.0到2.5.2版本，使用的是NW.js框架用于运行游戏，可以使用Tyrano官方的Tyrano Rider对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;而游戏的3.0到4.0.6版本，则使用了Electron框架用于运行游戏，可以使用Tyrano官方的Tyrano Script V5对游戏进行辅助修改。</p>
+<p>&emsp;&emsp;这里对两个框架的区别和作用不做过多介绍，只是稍作了解。</p>
+<hr>
+<h2 id="2-文本编辑器的选择"><a href="#2-文本编辑器的选择" class="headerlink" title="2.文本编辑器的选择"></a>2.文本编辑器的选择</h2><p>&emsp;&emsp;就和C++、Java或是Python那些代码语言一样，我们也是需要一款文本编辑器来对代码进行修改，这里针对电脑Windows端和手机安卓端各推荐一款编辑器</p>
+<p>&emsp;&emsp;<strong>电脑端推荐-Visual Studio Code</strong></p>
+<p>&emsp;&emsp;也就是我们俗称的VSC，该编辑器的优点在于拥有诸多的功能以及优秀的插件，其中Tyrano官方提供了VSC的语法高亮插件，使得我们能够更直白明了的查看游戏的代码。</p>
+<p>&emsp;&emsp;<strong>手机端推荐-MT管理器</strong></p>
+<p>&emsp;&emsp;手机端其实很遗憾的没有带有语法高亮的编辑器，只能使用原始的黑白文本，但这里还是推荐了MT管理器，原因是它针对文件管理相比较于其他管理器拥有更多的功能，并且采用双列文件管理，能够更方便我们对改版文件进行管理与更改。</p>
+<p><font color="Gray"><em>下图中的图片左侧为未启用语法高亮的代码片段，右侧为启用了语法高亮的代码片段</em></font></p>
+<p><img src="https://pic1.imgdb.cn/item/67e6d1490ba3d5a1d7e5cb50.png"></p>
+<hr>
+<h2 id="3-了解文件结构"><a href="#3-了解文件结构" class="headerlink" title="3.了解文件结构"></a>3.了解文件结构</h2><p>&emsp;&emsp;接下来，你需要了解游戏的文件目录结构，也就是存放游戏数据的data文件夹内的东西。</p>
+<p>&emsp;&emsp;其中，NW.js的data文件夹就在根目录，而Electron的data文件夹则存放于“.\resources\app”(此处的\代表目录分隔符，“.”代表游戏根目录，也就是说整体意思为游戏根目录下的resources文件夹内的app文件夹内)</p>
+<p>&emsp;&emsp;<font color="Gray"><em>如下图所示，左边为NW.js，右边为Electron</em></font></p>
+<p><img src="https://pic1.imgdb.cn/item/67e7ed6c0ba3d5a1d7e67dec.png"></p>
+<hr>
+<p>&emsp;&emsp;当你打开data文件夹，你则会看到以下文件夹，而他们的作用分别是</p>
+<p>&emsp;&emsp;&emsp;&emsp;bgimage——存放游戏背景图片</p>
+<p>&emsp;&emsp;&emsp;&emsp;bgm——存放游戏背景音乐</p>
+<p>&emsp;&emsp;&emsp;&emsp;fgimage——存放游戏内容图片(包括角色所有立绘以及衣服)</p>
+<p>&emsp;&emsp;&emsp;&emsp;image——存放游戏按键图片(包括对话按键，菜单按键在内的所有图片)</p>
+<p>&emsp;&emsp;&emsp;&emsp;scenario——存放游戏剧本文件(包括游戏文本以及变量)</p>
+<p>&emsp;&emsp;&emsp;&emsp;sound——存放游戏音效文件(包括做爱时的精液声)</p>
+<p>&emsp;&emsp;&emsp;&emsp;system——存放游戏系统配置文件(包括字体类型大小、快进速度等近100项游戏外的设置)</p>
+<p>&emsp;&emsp;&emsp;&emsp;video——存放游戏视频文件(包括游戏开头logo)</p>
+<p>&emsp;&emsp;<font color="Gray"><em>(另外在部分版本当中可能还存在scenario_old、scenariod_beat，这两个文件夹是作者Ray-Kbys对旧版本游戏的备份，完全无用，只是忘记删了。其余文件需要根据当前版本考虑作用，有些作者可能会乱塞东西。)</em></font></p>
+<hr>
+<p>&emsp;&emsp;对于以上这些文件夹的使用，取决于作者要怎么制作自己的改版，如果有人要制作一个新的开头动画，那文件需要放在video文件夹内，如果需要加入新的菜单按钮之类的，也更建议放到image文件夹内。这些分类一定程度上并不是固定的，虽然你也可以把按键放到fgimage文件夹内，但是更建议遵守规则来放置图片，因为图片的调用在系统中是按照默认文件夹来调用的，比如你想要调用一张按键图片，那系统会默认从image文件夹里面找，背景图和其他文件也是同理，会在对应文件夹去找，除非你在调用按键的时候额外写一个参数告诉系统你要从指定的文件夹里面去找图片，那样未免太过于麻烦了。</p>
+<hr>
+<h1 id="二、改版制作基础教程"><a href="#二、改版制作基础教程" class="headerlink" title="二、改版制作基础教程"></a>二、改版制作基础教程</h1><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>&emsp;&emsp;该部分为“改版制作基础教程”，虽说是改版，但由于知识点较为基础，所以可以在除了Teaching Feeling以外的使用了TyranoScript引擎的游戏上使用，或者自己用这些知识和TyranoScript引擎制作一款新的游戏也是问题不大的，并不用局限于Teaching Feeling，不过教程的代码和举例基本都是使用的Teaching Feeling，所以实际上会和其他TyranoScript引擎的游戏会有一些差异。</p>
+<h2 id="1-文件要素"><a href="#1-文件要素" class="headerlink" title="1.文件要素"></a>1.文件要素</h2><p>&emsp;&emsp;讲了那么多，现在已经可以开始正式进入教程了。</p>
+<p>&emsp;&emsp;首先，我们需要知道，在TyranoScript的游戏脚本文件中，主要由两种的东西构成，也就是<u><strong>文本</strong></u>(Text)和<u><strong>标签</strong></u>(Tag)，至于标记(Label)和名称标记(#)，本质上是辅助代码用的，名称标记更只是个附属用品，这个后文会讲到。<font size=2>(那个名称标记#其实并没有名字，这是我取的，所以英文名就写了它本身)</font></p>
+<p>&emsp;&emsp;那文本和标签具体是什么东西，可以让我们来看一段代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">再次初次见面、我叫希尔薇。<span class="selector-attr">[lr]</span></span><br><span class="line">感谢你收留我。<span class="selector-attr">[p]</span></span><br><span class="line">虽然无法干力气活、但我想如果你让我错简单的杂用程度的活我可以做到。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[chara_mod name=<span class="string">&quot;body&quot;</span> time=<span class="string">&quot;100&quot;</span> storage=<span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span></span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[chara_mod name=<span class="string">&quot;body&quot;</span> time=<span class="string">&quot;100&quot;</span> storage=<span class="string">&quot;s/body/stand-t.png&quot;</span> ]</span></span><br><span class="line">…求你、手下留情。<span class="selector-attr">[p]</span></span><br><span class="line"><span class="selector-attr">[stop_bgm]</span><span class="selector-attr">[black]</span><span class="selector-attr">[chara_stop]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[jump storage=<span class="string">&quot;intro/step1.ks&quot;</span> target=<span class="string">&quot;*step1&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
+
+<p><font color="Gray"><em>前面说的语法高亮只是由插件做成的第三方效果，TyranoScript本身在系统里没有对应的默认原生语法高亮，此处套用了css的语法高亮</em></font></p>
+<p>&emsp;&emsp;在上述代码中，你能够看到两样东西，分别是普通的文字文本，和带有括号的标签。</p>
+<h3 id="1-1-文本"><a href="#1-1-文本" class="headerlink" title="1.1 文本"></a>1.1 文本</h3><p>&emsp;&emsp;TyranoScript的文本就像小说一样，是不需要像其他游戏引擎或者程序语言那样，用任何代码或标识符将文本单独输出，比如游戏引擎Ren’py需要使用双引号(”“)来输出对话。</p>
+<p>&emsp;&emsp;因为代码被[]框住成为了标签，所以不用担心系统会把文本和代码搞混。</p>
+<p>&emsp;&emsp;也就是说，你只需要把文本输入进去，然后系统就能够读取到，并且显示在预设的聊天框内。</p>
+<h3 id="1-2-标签-重点"><a href="#1-2-标签-重点" class="headerlink" title="1.2 标签(重点)"></a>1.2 标签(重点)</h3><p>&emsp;&emsp;在上述代码中，你能看到诸如[lr]、[p]、[chara_mod name&#x3D;”body” time&#x3D;”100” storage&#x3D;”s&#x2F;body&#x2F;stand-c.png” ]、[stop_bgm]等标签。也许此时会疑惑，为什么又长又短，而这正是<strong>参数</strong>的不同造成的。</p>
+<p>&emsp;&emsp;(此处的[lr]并不是Tyranoscript引擎的原版标签，而是作者Ray-K自己自定义的，作用就是[l]和[r]的结合。)</p>
+<p>&emsp;&emsp;标签由两部分组成，分别是<u><strong>名称</strong></u>(Name)和<u><strong>参数</strong></u>(Parameter)</p>
+<p>&emsp;&emsp;当中，名称本质上是一个<strong>宏</strong>(Macro)的名称(<strong>见1.4.2</strong>)，用于增加可读性，比如上面有一个标签叫[stop_bgm]，它的名称就是stop_bgm，你一眼就可以看出来它是负责停止bgm播放的一个标签，但实际上也是如此，它的作用就是停止bgm的播放。</p>
+<p>&emsp;&emsp;而且所有标签的名称永远是[]内的第一位</p>
+<p>&emsp;&emsp;不同于官方的标签，由你自己定义的标签的名字是可以随意更改的，但是要记住，标签的命名尽量使用英文。空格用_代替。</p>
+<p>&emsp;&emsp;而参数比较特殊，它是对标签的一个补充，就比如上述标签中的</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;它由名称和参数两个部分组成，待在第一位的chara_mod就是它的名称，而后面的name、time、storage则是他的参数。这个标签的作用就是更改角色的图像，通常会用来更改角色的表情，但在此处用来更改整个角色立绘。</p>
+<p>&emsp;&emsp;这里我们倒着讲，最后一个storage参数的作用就是定义你要调用什么图片，在上面，它调用了fgimage文件夹里面，一个名称为s的文件夹内，名称为body的文件夹内的stand-c.png图片。（至于为什么是fgimage可以翻回去看一下文件结构那部分），所以在这里写作s&#x2F;body&#x2F;stand-c.png，后续不再做过多的赘述，直接用xxx&#x2F;xxx&#x2F;xxx的形式表示文件结构。</p>
+<p>&emsp;&emsp;time参数的作用在此处的作用是定义图片切换的淡出淡入时间，单位为毫秒(ms)，此处定义为了100，则代表着切换角色图片时会有0.1s的淡出淡入，如果设置为0的话则直接变换，不做淡出淡入。</p>
+<p>&emsp;&emsp;对于name参数，它作用就是用于管理同一name参数的角色图片。(实际上它并不是由chara_mod定义的，而是由另一个叫做chara_new的标签定义的，只不过我没在这里写出来。)</p>
+<p>&emsp;&emsp;比如上述代码中</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-c.png&quot;</span> ]</span><br><span class="line">不过、以前的主人说过“以听我的惨叫为消遣是最有价值使用方法”。[p]</span><br><span class="line">[chara_mod name<span class="operator">=</span><span class="string">&quot;body&quot;</span> time<span class="operator">=</span><span class="string">&quot;100&quot;</span> storage<span class="operator">=</span><span class="string">&quot;s/body/stand-t.png&quot;</span> ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;两个chara_mod标签分别调用了叫stand-c和stang-t的图片，但是它们的name都是boay。要注意，此处的name并不是指它们的文件名称叫做body，而是指它们在系统中都属于“boay”这一名称的分类。而且游戏中不能同时存在两个name一样的图片，则是会被切换(time的切换淡出淡入就是在这里使用的)，stand-t.png被调用后，由于场上已经存在name为body的图片了，所以stand-c.png就会消失在游戏里，stand-t.png则会出现在游戏中。</p>
+<p>&emsp;&emsp;当name为其他值的时候也是同样的道理，游戏里只能存在同一个name，后调用者会替换前调用者。但是chara_mod能调用哪些name，需要看chara_new赋予了什么样的name，如果说chara_new赋予三张图片的name分别是eye、body、hand，那你如果用chara_mod是调用出name为foot或是其他值的图片，否则游戏将会报错，因为chara_new并没有赋予这些不存在的值。</p>
+<p>&emsp;&emsp;<strong>而且务必要记住，参数后面的值要跟着半角上下引号(也就是英文输入法内的上下引号)。虽然一般情况下也可以不写，但是部分参数不写的话会报错，所以为了不用专门记哪些参数要加上下引号，这边建议是统一写上下引号</strong></p>
+<p><font color="Gray"><em>下图为游戏内stand-c和stand-t替换的过程</em></font></p>
+<p><img src="https://i.ptu.me/file/2025/03/29/IWTh.gif" alt="IWTh.gif"></p>
+<!--标签参数没有固定的位置，你可以把name写在time前面，也可以把time写在name前面-->
+
+<h4 id="1-2-1-基础标签"><a href="#1-2-1-基础标签" class="headerlink" title="1.2.1 基础标签"></a>1.2.1 基础标签</h4><p>&emsp;&emsp;接下来将会罗列几个基础的标签和他们对应的作用，以此便于你们能够做出最基本的文本</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>作用</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[r]</td>
+<td>文本换行</td>
+<td></td>
+</tr>
+<tr>
+<td>[l]</td>
+<td>停顿文本，单击屏幕后继续</td>
+<td></td>
+</tr>
+<tr>
+<td>[lr]</td>
+<td>停顿文本，单击屏幕后换行</td>
+<td></td>
+</tr>
+<tr>
+<td>[p]</td>
+<td>文本切页(这么讲便于理解)</td>
+<td></td>
+</tr>
+<tr>
+<td>[s]</td>
+<td>暂停代码运行</td>
+<td>该标签后的代码不会运行，可以防止不同作用的代码混起来</td>
+</tr>
+<tr>
+<td>[return_bace]</td>
+<td>返回行动菜单</td>
+<td>行动菜单即带有摸头，对话按键的那个界面</td>
+</tr>
+<tr>
+<td>[black]</td>
+<td>清除游戏背景</td>
+<td></td>
+</tr>
+<tr>
+<td>[cm]</td>
+<td>清空游戏文本</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="1-3-变量-重点"><a href="#1-3-变量-重点" class="headerlink" title="1.3 变量(重点)"></a>1.3 变量(重点)</h3><p>&emsp;&emsp;因为游戏的底层逻辑是基于标签以及变量组成的(不如说所有编程语言都差不多)，所以这部分和<strong>标签</strong>一样，非常的重要。</p>
+<h4 id="1-3-1-什么是变量"><a href="#1-3-1-什么是变量" class="headerlink" title="1.3.1 什么是变量"></a>1.3.1 什么是变量</h4><p>&emsp;&emsp;首先，我们来理解，什么是 <strong><u>变量</u></strong> (Variable)</p>
+<p>&emsp;&emsp;在原版游戏2.5.2中，当希尔薇对玩家的好感度低于50的时候，那么希尔薇就会在生病事件中死去，如果等于或大于50，则会活下来，开启后续事件。</p>
+<p>&emsp;&emsp;在这段事件中，“好感度”就是一个变量，用来判断玩家是否满足一个特定的条件。变量本身是游戏程序的保存下来的不同数值，就比如刚刚说的“好感度”，我们可以通过特定的代码更改这些变量的值。</p>
+<p>&emsp;&emsp;使用一个比较形象的比喻的话，那就是变量相当于一个盒子，每个盒子都拥有着自己的名字，盒子里面装的就是一个个数据，他们可以是字符串(也就是普通的文本)，可以是数字，也可以是其他东西。而游戏程序就是盒子外的人，根据指定的条件，来判断需不需要对某个盒子进行更改。</p>
+<p>&emsp;&emsp;也就是说，当一个叫做”好感度“的盒子里面的数字大于或者等于50的时候，盒子外的人才会决定让希尔薇活下去，否则希尔薇就会死亡。</p>
+<p>&emsp;&emsp;这就是变量在程序中最基本的运用。</p>
+<h4 id="1-3-2-变量的命名"><a href="#1-3-2-变量的命名" class="headerlink" title="1.3.2 变量的命名"></a>1.3.2 变量的命名</h4><p>&emsp;&emsp;变量是有着属于自己的命名方式的，你不可能在代码里面真的将变量命名为“好感度”，这种是我们自己的命名，对于游戏程序，我们还是要给变量取一个程序看得懂的名字。</p>
+<p>&emsp;&emsp;关于变量的命名，基本和所有编程语言一样，TyranoScript的变量命名也遵循一下几种规则</p>
+<p>&emsp;&emsp;<strong>1.请使用数字，英文字母和下划线</strong>(_)<strong>命名</strong></p>
+<p>&emsp;&emsp;**2.请勿使用空格，如果想使用分单词，可以使用驼峰式命名(**如MacCom，这种单词的首字母大写)<strong>，或使用下划线</strong>(_)<strong>代替空格</strong>(如Mac_Com)</p>
+<p>&emsp;&emsp;<strong>3.请勿使用数字开头</strong>(如1MacCom)</p>
+<p>&emsp;&emsp;但是作为JavaScript为基础代码的游戏，理论上命名也可以使用中日韩等字符，但是不建议这么写，另外在如果有部分变量在设置后就再也不会变化，建议使用全大写命名，便于分辨(如MACCOM)。</p>
+<p>&emsp;&emsp;另外在TyranoScript中，变量分为两个部分，也就是<strong>种类</strong>和<strong>名称</strong>，必须要遵循“<strong>种类.名称</strong>”式的命名法，例如变量“<strong>f.love</strong>”，f就是他的种类，love才是他的名字，中间必须用”**.**“来隔开。</p>
+<p>&emsp;&emsp;给变量取一个易懂的名字，可以很大概率提升你后续开发或是别人使用你代码时的效率，比如你想把一个变量用来当做游戏所度过的天数，那你就可以给这个变量命名为f.day或者f.tianshu，前者day就是天数、日子的英文，后者tianshu就是天数的拼音，这样你一眼就能看出来这个变量在游戏里有什么用，别人也可以。否则你给这个变量取一个名字叫做f.a114514，你第一眼也看不出这变量到底是干什么用的，别人也只能根据这个变量在代码里的作用猜测它到底是做什么的，实在是太过费时费力</p>
+<p>&emsp;&emsp;在TyranoScript中，所有的初始变量都写在了scenario的exp.ks文件中，便于管理，虽然说并不一样需要都写在exp.ks文件里，你写在其他地方一样赋值，就算写在游戏剧情里也可以，因为变量的设置只是后台的人操作，玩家看不见，但是便于管理，如果没有特殊需要的话，通常变量都是写在exp.ks文件中提前赋值，不然你把10个变量写在10不同的文件里，等你想找的时候你又不知道从何找起。（具体exp.ks文件位置在不同的游戏版本是不一定一样的，需要你自己找一下）</p>
+<hr>
+<h4 id="1-3-3-变量的种类"><a href="#1-3-3-变量的种类" class="headerlink" title="1.3.3 变量的种类"></a>1.3.3 变量的种类</h4><p>&emsp;&emsp;在TyranoScript中，变量有着三种类型，分别是<strong>普通变量</strong>、<strong>全局变量</strong>、<strong>临时变量</strong>三种，可以查看下列表格来更明确他们的作用(列表中的例子变量是随便取的名字)</p>
+<table>
+<thead>
+<tr>
+<th>种类名称</th>
+<th>种类</th>
+<th>种类作用</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>f</td>
+<td>普通变量</td>
+<td>游戏内最常见最基础的变量，每个存档的普通变量都不一定一样</td>
+<td>f.love f.name f.money</td>
+</tr>
+<tr>
+<td>tf</td>
+<td>临时变量</td>
+<td>无论给这种变量取什么名字赋什么值，所有这种变量在游戏程序被关闭后一定会被消除，不会永久保存</td>
+<td>tf.time tf.name tf.apple</td>
+</tr>
+<tr>
+<td>sf</td>
+<td>全局变量</td>
+<td>这种变量是全局的，所有存档共用一个变量。也就是说你在存档a设置了一个全局变量为1，那么存档b的这个变量也一样会被更改为1，就算重新开一个存档，这个变量还是1，除非重新赋值</td>
+<td>sf.hcg sf.hcg2</td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="1-3-4-变量的赋值"><a href="#1-3-4-变量的赋值" class="headerlink" title="1.3.4 变量的赋值"></a>1.3.4 变量的赋值</h4><p>&emsp;&emsp;我们可以来看一下以下代码</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=0&quot;</span> ][<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.lust=0&quot;</span> ]</span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.name=&#x27;主人&#x27;&quot;</span> ][<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.name_h=0&quot;</span> ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;其中，eval标签的作用就是给变量赋值，而参数exp就是具体的赋值表现，上述代码块中，存在四个普通变量，<strong>f.love</strong>变量(好感度)和<strong>f.lust</strong>变量(淫乱值)被赋予了0作为初始变量，这也是游戏一开始希尔薇没有任何好感度和淫乱值的原因。而<strong>f.name</strong>(玩家称呼)则被默认为了“主人”，所有游戏里的希尔薇如果在不更改称呼的情况下，就默认称呼玩家为主人。而最后一个<strong>f.name_h</strong>(玩家淫语称呼)则是和希尔薇在做爱的时候，希尔薇称呼玩家的特殊淫语，该变量在后期需要单独设置，所以这里被设置为0来表示不作任何值。</p>
+<p>&emsp;&emsp;而具体赋值语法则是<strong>[eval exp&#x3D;“变量赋值”]</strong></p>
+<p>&emsp;&emsp;其中“<strong>变量赋值</strong>”可以写最基本的赋值语句，也可以使用加减乘除进行最基本的更改</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=0&quot;</span> ]——将f.love直接设置为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love+3&quot;</span> ]——将f.love值加<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love-3&quot;</span> ]——将f.love值减<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love*3&quot;</span> ]——将f.love值乘<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love/3&quot;</span> ]——将f.love值除<span class="number">3</span></span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=&#x27;好感度爆棚1&#x27;&quot;</span> ]——将f.love值设置为字符串“好感度爆棚<span class="number">1</span>”(设置字符串时要给外面加上单引号，不加单引号只能设置为数字)</span><br><span class="line"></span><br><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.day/3&quot;</span> ]——将f.love的值设置为当前f.day的值的<span class="number">3</span>倍</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;以上是最基本的赋值语句，你也可以同时给多个变量赋值，但是需要用半角逗号（不能使用中文输入法的逗号）隔开比如</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">[<span class="built_in">eval</span> <span class="built_in">exp</span>=<span class="string">&quot;f.love=f.love/3,f.day=f.day+1,tf.awa=&#x27;awawawwaa&#x27;&quot;</span> ]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;上面说的只是最基本的赋值语句类型，对于目前来说已经足够用了，更多的赋值类型如有需要再说</p>
+<h3 id="1-4-其他"><a href="#1-4-其他" class="headerlink" title="1.4 其他"></a>1.4 其他</h3><h4 id="1-4-1-标记-重点"><a href="#1-4-1-标记-重点" class="headerlink" title="1.4.1 标记(重点)"></a>1.4.1 标记(重点)</h4><p>&emsp;&emsp;让我们假设，在一个文件里，写着有七八种实现不同功能的代码，那我们该如何精准的调用自己所需要的功能呢？你也许会说把它们写到不同的文件以此来调用，但是这样未免过于麻烦了。所以，这个时候，我们就需要用到<strong>标记</strong>了</p>
+<p>&emsp;首先，关于这一部分我们依旧需要讨论几个老生常谈的问题，即:</p>
+<p>&emsp;&emsp;&emsp;到底什么是标签？<br>&emsp;&emsp;&emsp;标签有什么用？<br>&emsp;&emsp;&emsp;如何使用标签？</p>
+<p>&emsp;&emsp;<strong><u>标记</u></strong>(Label)，<strong>在游戏中是对代码块的区分起到标识的作用</strong>。在文件中，标签都以*<em>星号(</em>)**作为开头。</p>
+<p>&emsp;&emsp;按照惯例，我们依旧结合代码来讲解。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*step1</span><br><span class="line"><span class="selector-attr">[set_sit]</span><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[show_sit]</span><span class="selector-attr">[show_repeat_role_room]</span><span class="selector-attr">[bgm_SG]</span><span class="selector-attr">[_]</span>（啊、怎么了吗…。<span class="selector-attr">[p_]</span><span class="selector-attr">[jump target=<span class="string">&quot;*before_menu&quot;</span> ]</span></span><br><span class="line">——————</span><br><span class="line">*show_bace</span><br><span class="line"><span class="selector-attr">[cm]</span><span class="selector-attr">[clearstack]</span><span class="selector-attr">[set_sit]</span><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[set_time_r]</span><span class="selector-attr">[show_sit]</span><span class="selector-attr">[show_repeat_role_room]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.act==&#x27;non&#x27;&quot;</span> ]</span><span class="selector-attr">[eval exp=<span class="string">&quot;f.act=0&quot;</span> ]</span><span class="selector-attr">[bgm_SG]</span><span class="selector-attr">[syl]</span><span class="selector-attr">[f/cl]</span>…早上好、主人。<span class="selector-attr">[p_]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[_]</span></span><br><span class="line">——————</span><br><span class="line">*before_menu</span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.act&gt;=7&quot;</span> ]</span><span class="selector-attr">[jump target=<span class="string">&quot;*night&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[set_time_r]</span><span class="selector-attr">[show_button_intro]</span></span><br><span class="line">——————</span><br><span class="line">*night</span><br><span class="line"><span class="selector-attr">[eval exp=<span class="string">&quot;f.last_act=&#x27;awake&#x27;,f.act=&#x27;non&#x27;,f.day=f.day+1,f.repeat_mode=0&quot;</span> ]</span><span class="selector-attr">[stop_bgm]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.intro_flag==0&quot;</span> ]</span><span class="selector-attr">[jump storage=<span class="string">&quot;intro/event.ks&quot;</span> target=<span class="string">&quot;*feed&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;f.day&gt;=4&quot;</span> ]</span><span class="selector-attr">[jump storage=<span class="string">&quot;intro/event.ks&quot;</span> target=<span class="string">&quot;*to_next&quot;</span> ]</span><span class="selector-attr">[endif]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[f/a_r_nt]</span><span class="selector-attr">[_]</span>…。<span class="selector-attr">[p_]</span>（已经到晚上了…准备睡觉吧。<span class="selector-attr">[p_]</span></span><br><span class="line"><span class="selector-attr">[syl]</span><span class="selector-attr">[f/r]</span>…晚安。<span class="selector-attr">[p_]</span><span class="selector-attr">[_]</span><span class="selector-attr">[black]</span>…。<span class="selector-attr">[p_]</span></span><br><span class="line"><span class="selector-attr">[jump target=<span class="string">&quot;*show_bace&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;上述代码是从同一个文件里拿出来的。从内容来看，你能够看到4个以*开头的单词，它们就是标记，用于给不同的代码块命名，方便调用，在这里，它们的作用各不相同，你现在不需要知道里面的语句到底是干什么的，你只需要知道它们的大致作用就可以了。而且它们还划分出了四个不同的代码块。(“——————”在源代码中并不存在，这里是为了方便明确不同的代码块而手动添加的。)</p>
+<p>&emsp;&emsp;&emsp;step1————用于在开局收养完希尔薇后增加一个过渡对话。<br>&emsp;&emsp;&emsp;show_bace————用于开始新的一天<br>&emsp;&emsp;&emsp;before_menu————在你用行动菜单进行摸头对话等操作后判断是不是晚上了，如果是则转跳到night，如果不是则将推进一格时间并且重新显示行动菜单(因为对话会清除行动菜单的按键)<br>&emsp;&emsp;&emsp;night————在条件符合时触发游戏初期的吃饭睡觉等事件，如果无事件触发则正常触发夜晚对话，然后转跳到show_bace开启新的一天</p>
+<p>&emsp;&emsp;首先我们要知道，系统是从文件第一行开始，逐行往下阅读代码，直到最后一行，这个过程是不可逆的，不可能先阅读1、3、5、7、9行，再阅读2、4、6、8、10行这样子。而标记就给系统提供一个便捷的中间调用的功能。</p>
+<p>&emsp;&emsp;就比如你调用了上述的代码文件，那么它只会从*step1开始逐行往下调用，但是假设你需要从*night开始调用呢？标记就把这部分标记了出来，告诉系统可以从这里开始调用。</p>
+<p>&emsp;&emsp;如果没有标记，那么上述四个功能就会变为一体，你无法单独调用其中任何一个功能，每次调用都要从头开始，而有了标记后，他们四个功能独立了，就变得可以单独调用代码块了。</p>
+<p>&emsp;&emsp;而且标记除了分隔代码块以外，还起到和变量名称一样的说明作用，像*night一眼就能看出来是和夜晚有关的代码块，但是命名和变量名不同的是，你可以使用中文或日文等其他语言，比如“*夜晚调用”、“*开启下一天”之类的，但是为了美观，通常还是建议使用英文。</p>
+<p>&emsp;&emsp;所以标记让游戏代码读取变得更加高效，在没有需要额外调用代码情况下，你可以将不同的代码块按顺序放在一起，只要他们的顺序能达成你的目的。如果需要额外调用，那再使用调用语句就可以了。</p>
+<hr>
+<p>&emsp;&emsp;但是也有人会问，那我们应该如何阻止阅读完上一个代码块后，系统继续向下一个代码块运行呢？</p>
+<p>&emsp;&emsp;在这里，我们有两种方法:</p>
+<p>&emsp;&emsp;<strong>1.使用jump标签</strong></p>
+<p>&emsp;&emsp;&emsp;jump标签的作用就是跳转到对应文件或者对应标记，它有两个参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数作用</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>storage</td>
+<td>指定跳转文件，如为空则使用本文件</td>
+<td>[jump storage&#x3D;”intro&#x2F;opening.ks”]  ——跳转到intro&#x2F;opening.ks文件的开头开始读取代码</td>
+</tr>
+<tr>
+<td>target</td>
+<td>指定跳转标记，如为空则从文件开头读取</td>
+<td>[jump target&#x3D;”*opening”] ——跳转到本文件的*opening标记开始读取代码<br />[jump target&#x3D;”*no” storage&#x3D;”intro&#x2F;opening.ks”] ——跳转到inrto&#x2F;opening.ks的*no标记处开始读取代码</td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;&emsp;注意，这两个参数必须至少存在一个，不可以两个参数都不写</p>
+<p>&emsp;&emsp;<strong>2.使用[s]参数</strong></p>
+<p>&emsp;&emsp;&emsp;具体可以看前文<strong>1.2.1 基础标签</strong>一章中[s]的部分，它可以使代码运行到它这里就完全不再继续往下运行，这通常用在一个代码块的结尾处，用于分隔上下两个代码块，否则这一段代码块运行完了以后就会自动运行下一块。但务必记住在使用[s]的时候要有调用出去的方法，否则如果你在游戏对话的时候使用了这个，那你对话就会完全卡住无法运行。前文的before_menu之所以可以阻止代码的运行，是因为[show_button_intro]标签宏内带有[s]，如果没有[s]的话，就会自动运行到*night。</p>
+<h4 id="1-4-2-宏-重点"><a href="#1-4-2-宏-重点" class="headerlink" title="1.4.2 宏(重点)"></a>1.4.2 宏(重点)</h4><p>&emsp;&emsp;<strong><u>宏</u></strong>(macro)，也算是TyranoScript语法中较为总要的一环了，合理编写运用宏可以极大的节省你在编程过程中的时间。</p>
+<p>&emsp;&emsp;大多人也许或多或少用过鼠标宏、键盘宏或者手柄宏之类的功能，这里也就是要牵扯到宏的原理——即<strong>将较长的指令序列用某种规则对应到较短的指令序列的规则或模式。</strong></p>
+<p>&emsp;&emsp;简单来说，也就是将某段较长的代码、指令之类的东西和一个较短的代码、指令绑定在一起，当你使用短代码、指令的时候就自动映射执行长代码、指令。举个形象点的例子，就像是毕加索的全名，几十个字，但当人们说“毕加索”的时候，和毕加索全名指的都是一个人，只是并没有展开称呼全名而已。宏也是类似，当你输入一个宏时，它的背后是另一段长代码。</p>
+<p>&emsp;&emsp;那怎么定义一个宏呢？我们可以使用[macro]和[endmacro]来定义一个宏，只需要在这之间写入代码即可。</p>
+<p>&emsp;&emsp;看得迷迷糊糊或看不懂也没关系，按照老惯例，我们来进入实例讲解的环节，搭配实例来理解即可：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[bgm_ST]</span></span><br><span class="line"><span class="selector-attr">[set_stand]</span></span><br><span class="line"><span class="selector-attr">[f/nt]</span></span><br><span class="line"><span class="selector-attr">[bg_town]</span></span><br><span class="line"><span class="selector-attr">[set_weather]</span></span><br><span class="line"><span class="selector-attr">[show_stand]</span></span><br><span class="line"><span class="selector-attr">[act_win_stand]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;在这一段代码中的带括号的都是宏，从[bgm_ST]到[act_win_stand]都是，不过这里并不全讲解，我们只讲解[bgm_ST]和[bg_town]，因为这两个讲解起来简单且方便方便。</p>
+<p>&emsp;&emsp;那么当我们把其余讲不到的宏去掉以后，代码变成了这样:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[bgm_ST]</span></span><br><span class="line"><span class="selector-attr">[bg_town]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;当我们查找macro.ks后，可以看到这两个宏的原代码是这样的(我缩进了一下代码方便讲解，原代码是没有缩进，连在一行里的)</p>
+<p><strong>[bgm_ST]</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bgm_ST&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[eval exp=<span class="string">&quot;f.current_bgm=&#x27;ST&#x27;&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[playbgm loop=<span class="string">&quot;true&quot;</span> storage=<span class="string">&quot;Smooth_Turquoise.ogg&quot;</span> ]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>[bg_town]</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bg_town&quot;</span> ]</span></span><br><span class="line">	<span class="selector-attr">[bg time=<span class="string">&quot;400&quot;</span> method=<span class="string">&quot;crossfade&quot;</span> storage=<span class="string">&quot;bg/town.jpg&quot;</span> ]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;(代码块中的macro用于开始定义宏，name用于定义宏的名称，底下的endmacro则是结束定义，也就是说，一个宏所包含的代码只在macro和endmacro之间。)</p>
+<p>&emsp;&emsp;从上述代码可以看出，[bgm_ST]主要作用是播放Smooth_Turquoise.ogg音频。</p>
+<p>&emsp;&emsp;而[bg_town]的作用更简单，调用town.jpg作为背景图。</p>
+<p>&emsp;&emsp;RayK将这两大段定义成了[bgm_ST]和[bg_town]两个宏，否则的话你会看到这样的代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*hiroba</span><br><span class="line"><span class="selector-attr">[cm]</span></span><br><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bgm_ST&quot;</span> ]</span><span class="selector-attr">[eval exp=<span class="string">&quot;f.current_bgm=&#x27;ST&#x27;&quot;</span> ]</span><span class="selector-attr">[playbgm loop=<span class="string">&quot;true&quot;</span> storage=<span class="string">&quot;Smooth_Turquoise.ogg&quot;</span> ]</span><span class="selector-attr">[endmacro]</span></span><br><span class="line"><span class="selector-attr">[macro name=<span class="string">&quot;bg_town&quot;</span> ]</span><span class="selector-attr">[bg time=<span class="string">&quot;400&quot;</span> method=<span class="string">&quot;crossfade&quot;</span> storage=<span class="string">&quot;bg/town.jpg&quot;</span> ]</span><span class="selector-attr">[endmacro]</span></span><br><span class="line"><span class="selector-attr">[_]</span>（在这里稍微休息一下吧。<span class="selector-attr">[lr]</span></span><br><span class="line">（坐在喷水池的边缘向希尔薇招手让她坐在我身边。<span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;每次调用的时候都很麻烦，要么写一遍，要么复制一遍，但是定义为宏的话就只需要写[bgm_ST]和[bg_town]短短的几个字母即可了。</p>
+<hr>
+<p>&emsp;&emsp;当然，宏并不死板，就像其他计算机语言一样，它也有<strong>参数传递</strong>。</p>
+<p>&emsp;&emsp;接下来看一段代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[macro name=newtag]</span></span><br><span class="line">    <span class="selector-attr">[font color=%iro]</span></span><br><span class="line">    Teaching Feeling</span><br><span class="line">    <span class="selector-attr">[resetfont]</span></span><br><span class="line"><span class="selector-attr">[endmacro]</span></span><br><span class="line"></span><br><span class="line">——————</span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[newtag iro=0x000000]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;在这段代码中，定义一个名字叫做newtag的宏，功能是打出“Teaching Feeling”这句话，但字体的颜色是黑色(font用于自定义字体颜色，resetfont用于划定改变颜色的字体范围)。</p>
+<p>&emsp;&emsp;但是在宏中，我们能看到它设置颜色的部分“color&#x3D;%iro”并没有直接输入HTML颜色代码(最后的0x000000就是HTML颜色代码，浏览器可以找到颜色表或者颜色图，这里的0x000000就指黑色)，而是输入一个<strong>形参</strong>“%iro”，直到调用newtag时才输入了<strong>实参</strong>“0x000000”。</p>
+<p>&emsp;&emsp;这样做的好处是什么？就是用户能够更加方便的编辑自己所要的颜色，假设你要想输入10个不同颜色的“Teaching Feeling”，就不需要定义十个宏或者写十遍代码，而是只需要在传递的时候更改自己的实参即可。本质上就是前面标签那一章提到的参数，只不过你可以自定义参数的名字和参数的位置。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><strong>形参</strong>也就是形式参数，指的是在定义函数、宏之类时写入的虚拟函数，本身并不存在，上述的%iro就是一个形参(TyranoScript定义形参时，前面必须要加%)。就像是占位符一样，占着这个位，告诉程序这里有个参数，但是参数的内容暂时先空着。<br><strong>实参</strong>是实际参数，就是实际存在的参数，比如“[newtag iro&#x3D;0x000000]”中的”0x000000”就是一个实参，也可以是一个变量，填写形参占位的空白。</p>
+<p>就好像你公司部门的主管被辞退了，那么这个空着的主管职位就是一个形参，告诉你这里有个职位，但是是谁当暂时空着，而过几天来了个叫甲的新主管，那么这个新的主管就是实参。“主管”这个职位是由人们主观定义出来的一个职位，是形参。但是担任主管工作的甲是客观上存在的一个人，那么他是实参。</p>
+</blockquote>
+<h1 id="二、改版制作扩展教程"><a href="#二、改版制作扩展教程" class="headerlink" title="二、改版制作扩展教程"></a>二、改版制作扩展教程</h1><h3 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h3><p>&emsp;&emsp;该教程区别于“改版制作基础教程”，基础教程不仅仅适用于Teaching Feeling，也同样适用于其他任何使用TyranoScript游戏引擎的游戏。而“改版制作扩展教程”是在基础教程的基础上，专门实现一些仅仅适用于Teaching Feeling的功能，例如添加更多衣服、更多CG、或者像随机服装之类这种在别的游戏没用，只适用于Teaching Feeling的教程。所以如果你学习这些教程的目的并不是为了制作该游戏的改版，而是为了自己制作一款新游戏的话，那就没有必要看着一章节了。</p>
+<p>&emsp;&emsp;<strong>该部分教程仅适用于原版2.5.2或任何以2.5.2为基础所制作的改版，理论上2.x大部分都适用，但我并没有测试过。</strong></p>
+<h3 id="1-服装添加教程"><a href="#1-服装添加教程" class="headerlink" title="1. 服装添加教程"></a>1. 服装添加教程</h3><h4 id="1-1-文件命名"><a href="#1-1-文件命名" class="headerlink" title="1.1 文件命名"></a>1.1 文件命名</h4><p>&emsp;&emsp;&emsp;先不着急来讲服装部分，我们要先认识自定义服装系统，在2.4版本及以前，Ray-Kbys是由制作自定义服装系统的，也就是玩家可以更便捷的添加自定义服装，不过我们这里用的是2.5.2，所以无法使用该功能，打2.5版本开始这功能就被删除了，只剩下了一个壳。</p>
+<p>&emsp;&emsp;不过重点不是自定义服装系统本身，而是它的命名方式，Ray-Kbys为了方便玩家添加服装而使用了一套命名方式便于管理，目前玩家自制服装最多的服装包来源于国外整合，其命名形式也使用了此套命名。不过并不是全都是如此命名，也有可能直接命名为什么“外套”、“坐姿”之类的名字，这里只不过提出来让用户更方便的辨认。</p>
+<p>&emsp;&emsp;命名方式为:</p>
+<p>&emsp;&emsp;&emsp;&emsp;字母_v_服装名.png</p>
+<p>&emsp;&emsp;不同的字母则代表希尔薇在不同情景下的服装，比如D代表换装界面的服装，R代表行动菜单界面的坐姿服装。后面的服装名则只是单纯的命名用处。例如R_v_army.png就代表希尔薇坐姿的army(军装)服装图片。</p>
+<p>&emsp;&emsp;除此之外，服装除了本体图片还会有部分扩展图片，比如左右袖子，因为部分动作下的希尔薇的胳膊会有遮挡，所以通常大部分情况下，左右袖子是和本体图片分开的，也就是两张额外的图片，而他们的命名通常就只是在原图片名字后面添加下划线(_)，例如</p>
+<p>&emsp;&emsp;&emsp;R_v_army.png————军装身体部分<br>&emsp;&emsp;&emsp;R_v_army_.png————军座左袖子部分<br>&emsp;&emsp;&emsp;R_v_army__.png————军装右袖子部分</p>
+<p>&emsp;&emsp;而添加服装的时候就把这三张图片放在一起即可。(其实这里的军装并没有右袖子，因为希尔薇坐姿时的侧身会把右臂挡住，所以并没有右袖子，但是按照游戏代码来说，添加服装时必须添加一整套，所以即使没有右袖子也要添加一张空白图片进去，这里的右袖子就是一张大小1*1的空白图片，这种图片在其他姿势也有。)</p>
+<p>&emsp;&emsp;以下是全字母和对应作用:</p>
+<table>
+<thead>
+<tr>
+<th>字母</th>
+<th>对应场景</th>
+<th>额外图片</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>D</td>
+<td>换装场景立绘</td>
+<td>无额外图片</td>
+</tr>
+<tr>
+<td>F</td>
+<td>正常站姿立绘</td>
+<td>后缀带_为袖子部分</td>
+</tr>
+<tr>
+<td>Hf</td>
+<td>掀衣服露私处立绘</td>
+<td>后缀带_为袖子部分，带_a为手臂部分</td>
+</tr>
+<tr>
+<td>Hx1</td>
+<td>H时的正常体位cg</td>
+<td>无额外图片</td>
+</tr>
+<tr>
+<td>Hx2</td>
+<td>背对且坐在医生上面cg</td>
+<td>无额外图片</td>
+</tr>
+<tr>
+<td>N</td>
+<td>摸头立绘</td>
+<td>无额外图片</td>
+</tr>
+<tr>
+<td>R</td>
+<td>行动菜单坐姿</td>
+<td>后缀带_为左袖子，带__为右袖子</td>
+</tr>
+<tr>
+<td>S</td>
+<td>吃饭时的坐姿</td>
+<td>后缀带_为正常坐姿右袖子和左袖口，带__为左袖子。带__a为抬手吃东西的右手袖子，带_a为左手袖子</td>
+</tr>
+</tbody></table>
+<p>&emsp;&emsp;以上是正常自定义服装会用的命名，如果还是听不懂，可以根据我提供的链接下载示例服装配合教程理解。</p>
+<hr>
+<p>&emsp;&emsp;除此以外，服装也是有分种类的，例如衣服，帽子，袜子，眼睛等等，上述表格中的“额外图片”指的是衣服的额外图片，像帽子的所有字母分类都没有额外图片。</p>
+<p>&emsp;&emsp;下述的是分类文件夹名称和对应类型的衣服:</p>
+<p><strong>服装分类</strong></p>
+<table>
+<thead>
+<tr>
+<th>文件夹名称</th>
+<th>对应服装</th>
+<th>示例服装</th>
+<th>调用标记</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>b_acc</td>
+<td>身上挂件</td>
+<td>乳贴、乳环</td>
+<td>*ri_re</td>
+</tr>
+<tr>
+<td>dress</td>
+<td>衣裤(4.0版本以前不分上下装)</td>
+<td>水手服，轻薄的衣服</td>
+<td>*c_re</td>
+</tr>
+<tr>
+<td>glass</td>
+<td>眼镜</td>
+<td>圆形眼镜</td>
+<td>*g_re</td>
+</tr>
+<tr>
+<td>gloves</td>
+<td>手套</td>
+<td>皮带手套</td>
+<td>*a_re</td>
+</tr>
+<tr>
+<td>hat</td>
+<td>帽子</td>
+<td>兽耳装饰品、发箍、鸭舌帽</td>
+<td>*h_re</td>
+</tr>
+<tr>
+<td>neck</td>
+<td>脖子装饰</td>
+<td>围巾、围裙</td>
+<td>*ne_re</td>
+</tr>
+<tr>
+<td>pin</td>
+<td>前发(发夹)(通常同一个发夹会有片分、中分、露额三张图片，这个只能靠自己辨认了，这部分命名有些自由)</td>
+<td>细发卡</td>
+<td>*p_re</td>
+</tr>
+<tr>
+<td>socks</td>
+<td>袜子</td>
+<td>短袜子、长条纹(黑)</td>
+<td>*s_re</td>
+</tr>
+<tr>
+<td>und_b</td>
+<td>上半身内衣</td>
+<td>普通的胸罩、蕾丝的胸罩</td>
+<td>*ub_re</td>
+</tr>
+<tr>
+<td>und_p</td>
+<td>下半身内衣</td>
+<td>普通的内裤、类似的内裤</td>
+<td>*up_re</td>
+</tr>
+</tbody></table>
+<h4 id="1-2-调用部分"><a href="#1-2-调用部分" class="headerlink" title="1.2 调用部分"></a>1.2 调用部分</h4><p>&emsp;&emsp;接下来我们就得需要把衣服添加到游戏里了，首先我们需要知道衣服应该放在什么位置，基本所有正常立绘的衣服都放在fgimage&#x2F;s里，而Hf，Hx1和Hx2会稍微有些不一样，这三个是做爱时的衣服立绘，单独分开在fgimage&#x2F;H、fgimage&#x2F;Hx1、fgimage&#x2F;Hx2里。而s、H、Hx1、Hx2这四个文件夹里面游戏衣服分类了，看上面那个<strong>服装分类</strong>的表格就好了。</p>
+<p>&emsp;&emsp;然后首先你需要知道调用服装的原理，简单来说也就只是将几个变量分别设置为衣服图片的名字和种类，然后游戏会根据这几个变量里写着的衣服名称和种类在文件夹里寻找它，找到的话就会调用它，如果是带额外图片的就会一起调用，这也就是为什么衣服的额外图片必须用空白图片占位的原因了。</p>
+<p>&emsp;&emsp;下面是一个最简单的调用语句:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[button target=<span class="string">&quot;*c_re&quot;</span> graphic=<span class="string">&quot;number/mod/ori_halfclothe.png&quot;</span> x=<span class="string">&quot;835&quot;</span> y=<span class="string">&quot;435&quot;</span> exp=<span class="string">&quot;f.dress_t=&#x27;elf&#x27;,f.dress_c=&#x27;1&#x27;&quot;</span> ]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这个代码的主要作用是生成一个替换衣服为精灵服装的按钮，我是把它写到了替换服装的自定义服装界面(这部分后面再讲)。</p>
+<p>&emsp;&emsp;当中的**target&#x3D;”*c_re”**就是上面表格提过的调用标记了，代表设置为衣裤部分。</p>
+<p>&emsp;&emsp;而后面的graphic和x、y是设置按钮的图标和位置，这里不多讲，重点在结尾的两个变量，f.dress_t和f.dress_c上面，这两个变量的作用就是设置需要更换的衣服的名字，f.dress_t+f.dress_c就是文件名字，至于为什么要把文件名字分开设置，是因为影响到希尔薇衣服出门的逻辑。</p>
+<p>&emsp;&emsp;在游戏中，有一段代码是负责希尔薇是否能出门的，你之所以看到希尔薇只穿胸罩出不了门，就是因为这里的判断未通过，而判断的方式，就是检测身上穿的东西有没有指定的f.dress_t变量，而胸罩的变量名称为f.under_b_t和f.under_b_c，自然和f.dress_t没关系了。</p>
+<p>&emsp;&emsp;可能不是很好理解，我举例子讲好了。</p>
+<p>&emsp;&emsp;比如我这里调用的精灵服位置是”fgimage\s\dress\D\elf1.png”，可以看出来，我这件衣服的文件名字叫elf1，所以我把他名字拆成elf和1，然后写给f.dress_t和f.dress_c，然后再把”elf”写到出门服装判定里，这样当我穿上精灵服后就可以正常出门了、但是如果我没把f.dress_t&#x3D;“elf”的判定写到出门代码里，那么我就算穿上精灵服也出不了门。至于f.dress_c&#x3D;“1”则是为了不用每次添加服装都添加新的出门判定，因为你可以把衣服命名为elf1、elf2、elf3，这样加新衣服就可以只改后面的f.dress_c了。</p>
+<p>&emsp;&emsp;然后我们只要点击这个按钮，就可以把衣服替换为精灵服了。</p>
+<p><img src="https://pic1.imgdb.cn/item/687530f758cb8da5c8adc96f.gif"></p>
+<p>我这都写的什么乱七八糟的，自定义服装教程这一部分写的很乱，而且还没写完，如果有看不懂的地方，可以找博主询问</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>改版</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>保姆向-如何在Tyrano中设置一个日期检测</title>
+    <url>/post/101/</url>
+    <content><![CDATA[<p>&emsp;&emsp;该教程尽量用较直白且详细的语气去说明如何制作一个日期检测的方法，可以将当前现实时间的的时间保存为变量，如何运用到游戏里</p>
+<p>&emsp;&emsp;就假设我们需要制作一个生日祝福的功能，玩家可以设置自己的生日，当现实时间与玩家在游戏内设置的日期相同时则触发生日剧情。需要做出这一步功能，我们需要三个步骤:</p>
+<p>&emsp;&emsp;&emsp;&emsp;1.获取现实时间<br>&emsp;&emsp;&emsp;&emsp;2.让玩家设置生日<br>&emsp;&emsp;&emsp;&emsp;3.校对两者</p>
+<h1 id="一、获取现实时间"><a href="#一、获取现实时间" class="headerlink" title="一、获取现实时间"></a>一、获取现实时间</h1><p>&emsp;&emsp;TyranoScript的普通语法是不支持这一点的，所以我们需要用到**函数(Function)**。</p>
+<p>&emsp;&emsp;我们都知道，TyranoScript本身是基于JavaScript所开发的游戏引擎，但他有着自己的一套语法，那我们能不能在TyranoScript里使用JavaScript本身的代码和语法吗？答案是可以的，也就是上面所说的函数。</p>
+<p>&emsp;&emsp;TyranoScript的函数与Python之类编程语言不同，TyranoScript的函数只有一个功能，就是在TyranoScript中使用JavaScript的语法与代码，很多TyranoScript本身做不到的功能，都可以通过JavaScript来实现，那么下面就让我们来看这段代码:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[iscript]</span><br><span class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();  <span class="comment">// 创建Date对象并赋值给now变量</span></span><br><span class="line"><span class="keyword">var</span> year = now.<span class="title function_">getFullYear</span>();  <span class="comment">// 获取当前年份并存储到year变量里</span></span><br><span class="line"><span class="keyword">var</span> month = now.<span class="title function_">getMonth</span>() + <span class="number">1</span>;  <span class="comment">// 获取当前月份并存储到month变量里</span></span><br><span class="line"><span class="keyword">var</span> day = now.<span class="title function_">getDate</span>();  <span class="comment">// 获取当前日期并存储到day变量里</span></span><br><span class="line"><span class="keyword">var</span> hours = now.<span class="title function_">getHours</span>();  <span class="comment">// 获取当前小时并存储到hours变量里</span></span><br><span class="line"><span class="keyword">var</span> minutes = now.<span class="title function_">getMinutes</span>();  <span class="comment">// 获取当前分数并存储到minutes变量里</span></span><br><span class="line"><span class="keyword">var</span> seconds = now.<span class="title function_">getSeconds</span>();  <span class="comment">//获取当前秒数并存储到seconds</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//===============================================</span></span><br><span class="line"></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.year=&quot;</span> + year &#125;);  <span class="comment">//将year变量的内容赋给sf.year变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.month=&quot;</span> + month &#125;);  <span class="comment">//将month变量的内容赋给sf.month变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.day=&quot;</span> + day &#125;);  <span class="comment">//将day变量的内容赋给sf.day变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.hours=&quot;</span> + hours &#125;);  <span class="comment">//将hours变量的内容赋给sf.hours变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.minutes=&quot;</span> + minutes &#125;);  <span class="comment">//将minutes变量的内容赋给sf.minutes变量</span></span><br><span class="line"><span class="variable constant_">TYRANO</span>.<span class="property">kag</span>.<span class="property">ftag</span>.<span class="title function_">startTag</span>(<span class="string">&quot;eval&quot;</span>, &#123; <span class="attr">exp</span>: <span class="string">&quot;sf.seconds=&quot;</span> + seconds &#125;);  <span class="comment">//将seconds变量的内容赋给sf.seconds变量</span></span><br><span class="line">[endscript]</span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;如代码块所示，这块代码就是最主要的内容，还是蛮简单了，上半部分的代码负责获取当前各个时间，包括年份，月份，日期以及时分秒，然后存储到对应的变量里，但要注意，目前的变量是JavaScript的变量，并不是TyranoScript变量，所以我们还专门写了下半部分的代码，可以将JavaScript代码的值赋给TyranoScript的变量。</p>
+<p>&emsp;&emsp;例如，当前时间是2025年11月28日19时02分20秒，那么经过这些代码以后，这些变量的值就会是:</p>
+<p>&emsp;&emsp;sf.year&#x3D;2025，sf.month&#x3D;11，sf.day&#x3D;28，sf.hours&#x3D;19，sf.minutes&#x3D;02，sf.seconds&#x3D;20</p>
+<p>&emsp;&emsp;而sf这种变量类型已经在以前的教程中讲过了，这里不再赘述，当然如果你想把变量改成别的名字和类型，比如f.awa之类的，也是没问题，只要作用正确并且你能够记住这个变量干什么用的，随便叫什么都可以。</p>
+<p>&emsp;&emsp;只需要把上述代码写到first.ks，亦或是title.ks&#x2F;title_screen.ks这种游戏启动必定会加载的文件里，那么每次启动游戏都可以获取到当前游戏启动的时间。</p>
+<h2 id="二、让玩家设置生日"><a href="#二、让玩家设置生日" class="headerlink" title="二、让玩家设置生日"></a>二、让玩家设置生日</h2><p>&emsp;&emsp;第二步就是让玩家设置生日，这一步的方法很多，最方便的是写几个输入框用于获取玩家生日。</p>
+<p>&emsp;&emsp;这一步只需要用到edit标签即可</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;*sf.api*&quot;</span> length=100 width=450 left=170 top=165]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;这里的name参数内容用于写你要赋值的变量，比如我这里写了sf.api，那么当玩家在输入框里输入任何字符后并提交后，那么玩家写的内容就会给这个sf.api，length用于设置输入框高度，width设置输入框宽度，left和top分别设置输入框的xy轴坐标。</p>
+<p>&emsp;&emsp;另外还有几个没写到的，maxchars可以设置输入框可输入最大长度，size可以设置输入的字大小，color可以设置输入的文字颜色(使用html颜色代码)。</p>
+<p>&emsp;&emsp;你可以多设置几个输入框并提示让玩家在不同的输入框里写入自己的出生年月日之类的。</p>
+<p>&emsp;&emsp;另外，输入框在输入完字后需要专门的提交标签，看下述代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*config</span><br><span class="line"><span class="selector-attr">[button graphic=<span class="string">&quot;number/1/02.png&quot;</span> x=<span class="string">&quot;500&quot;</span> y=<span class="string">&quot;500&quot;</span> target=<span class="string">&quot;*commit2&quot;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[edit name=<span class="string">&quot;sf.api&quot;</span> length=100 width=450 left=170 top=165]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-attr">[s]</span></span><br><span class="line"></span><br><span class="line">*commit2</span><br><span class="line"><span class="selector-attr">[commit]</span><span class="selector-attr">[jump target=<span class="string">&quot;*config&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;第一个button标签设置了一个转跳到commit2的功能，而commit2只有一个功能，那就是<strong>commit</strong>标签，然后转跳回来。</p>
+<p>&emsp;&emsp;commit标签只有一个功能，就是将当<strong>前屏幕中显示的所有输入框</strong>的内容全都提交给对应的name。比如上述代码中，我edit要提交的变量是sf.api，那么假设玩家在输入框输入了“123456789”，不管按什么按键，都是无法提交的，也就是sf.api的内容依旧是空的，只有使用commit标签，才能够将输入的内容提交给对应的变量。所以我专门写了一个按钮，用于使用commit提交输入框的内容。</p>
+<h1 id="三、比对变量"><a href="#三、比对变量" class="headerlink" title="三、比对变量"></a>三、比对变量</h1><p>&emsp;&emsp;这一步其实没啥好说的，也很简单。</p>
+<p>&emsp;&emsp;你只要专门写一个语句用于比较当前显示日期和玩家设置的生日一不一样就可以了。</p>
+<p>&emsp;&emsp;假设我用第一步的函数获取到了当前日期，然后又用第二部的输入框获取到了玩家的出生年月日，分别设置为f.year，f.month，f.day，那么我就可以这样</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[if exp=<span class="string">&quot;sf.year==f.year &amp;&amp; sf.month==f.month &amp;&amp; sf.day==f.day&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[jump target=<span class="string">&quot;*awa&quot;</span> storage=<span class="string">&quot;birthday.ks&quot;</span>]</span></span><br><span class="line"><span class="selector-attr">[endif]</span></span><br></pre></td></tr></table></figure>
+
+<p>&emsp;&emsp;第一步就是比较两边变量的值一不一样，如果一样就跳转到专门的剧情文件里，当然你要精准到时分秒的话，那就在后面继续加上sf.hours之类的比对即可，用&amp;&amp;分开即可。</p>
+]]></content>
+      <categories>
+        <category>Tyrano</category>
+      </categories>
+      <tags>
+        <tag>Tyrano</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客体验Bug反馈处</title>
+    <url>/post/211112/</url>
+    <content><![CDATA[<blockquote>
+<p>[!IMPORTANT]</p>
+<p>如有问题请于该文章的评论区进行反馈</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>如何使用TyranoStory</title>
+    <url>/post/story/</url>
+    <content><![CDATA[<h1 id="一、什么是TyranoStory"><a href="#一、什么是TyranoStory" class="headerlink" title="一、什么是TyranoStory"></a>一、什么是TyranoStory</h1><p>&nbsp;&nbsp;TyranoStory是TyranoScript官方所发布的模板工具，可以使玩家轻松创建一个聊天故事型视觉小说游戏。因为本质上是基于TyranoScript而制作的扩展，所以TyranoScript原本的标签都可以使用，除此之外，也有一些TyranoStory独有的标签。</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0b77cc5157e1a882336e3.png"></p>
+<h1 id="二、游戏前的准备"><a href="#二、游戏前的准备" class="headerlink" title="二、游戏前的准备"></a>二、游戏前的准备</h1><p>&nbsp;&nbsp;首先，用户需要一个加载游戏的工具，也就是官方的<a href="https://tyrano.jp/dl/rider">TyranoRider</a>工具，以及<a href="https://tyrano.jp/story/download/">TyranoStory</a>本体(理论上也可以使用TyranoStudio，不过Studio版本较高，所以更建议使用TyranoRider)</p>
+<p>&nbsp;&nbsp;解压TyranoStory后，启动TyranoRider，点击图中的“<strong>プロジェクトを選択</strong>”，随后选择index.html即可。最后点击“<strong>ゲーム開始</strong>”即可启动游戏文件。</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0b8abc5157e1a88234504.png"></p>
+<h1 id="三、TyranoStory的使用"><a href="#三、TyranoStory的使用" class="headerlink" title="三、TyranoStory的使用"></a>三、TyranoStory的使用</h1><h2 id="1-基本的对话"><a href="#1-基本的对话" class="headerlink" title="1.基本的对话"></a>1.基本的对话</h2><p>&nbsp;&nbsp;接下来我们就需要开始学习TyranoStory的使用了，它的使用本身并不难，我们需要使用的最基本的标签是<strong>chat_talk</strong>，它的参数如下:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名</th>
+<th align="left">参数作用</th>
+<th align="left">可用参数内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">pos</td>
+<td align="left">可用于指定说话人的头像位置，left为左，right为右，center为中间</td>
+<td align="left">left&#x2F;right&#x2F;center</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">可用于指定说话人的名字，当pos参数为center时，该参数无效</td>
+<td align="left">自行填写</td>
+</tr>
+<tr>
+<td align="left">delay</td>
+<td align="left">可用于消息加载的延迟，单位为毫秒(类似于对方正在输入中)</td>
+<td align="left">消息时间</td>
+</tr>
+<tr>
+<td align="left">face</td>
+<td align="left">可用于指定说话人的头像图片，默认根目录位置在fgimage内</td>
+<td align="left">图片路径</td>
+</tr>
+<tr>
+<td align="left">layer</td>
+<td align="left">可设置该角色的整个气泡的图层优先级</td>
+<td align="left">数字或指定参数</td>
+</tr>
+<tr>
+<td align="left">bgcolor</td>
+<td align="left">可用于指定消息颜色背景，设置为trams或transparent时清除背景颜色</td>
+<td align="left">十六进制颜色代码</td>
+</tr>
+<tr>
+<td align="left">folder</td>
+<td align="left">可以指定graphic的根目录，不填写时默认为fgimage</td>
+<td align="left">文件夹名称</td>
+</tr>
+<tr>
+<td align="left">graphic</td>
+<td align="left">可指定角色发送的图片，默认根目录位置在fgimage内，支持PNG JPG PNG BMP GIF</td>
+<td align="left">图片路径</td>
+</tr>
+<tr>
+<td align="left">graphic_height</td>
+<td align="left">可以指定graphic参数发送的图片的高度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">graphic_width</td>
+<td align="left">可以指定graphic参数发送的图片的宽度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">指定聊天气泡的宽度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">bottom</td>
+<td align="left">指定聊天气泡的高度</td>
+<td align="left">数字</td>
+</tr>
+<tr>
+<td align="left">reflect</td>
+<td align="left">翻转角色头像，不填写默认为False</td>
+<td align="left">True&#x2F;False</td>
+</tr>
+<tr>
+<td align="left">se</td>
+<td align="left">指定聊天气泡出现时的音效</td>
+<td align="left">音频路径</td>
+</tr>
+<tr>
+<td align="left">id</td>
+<td align="left">用于指定id，可在JavaScript函数中调用</td>
+<td align="left">数字或英文</td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;理解了这些，那么来看实例:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[chat_talk pos=<span class="string">&quot;right&quot;</span> name=<span class="string">&quot;1&quot;</span> graphic=<span class="string">&quot;chat/logo.png&quot;</span> text=<span class="string">&quot;awa&quot;</span> face=<span class="string">&quot;chat/yamato/normal.png&quot;</span> delay=1000  bgcolor=<span class="string">&quot;0xFF7F50&quot;</span> graphic_width=270 graphic_height=120 width=400 bottom=300]</span></span><br><span class="line"><span class="selector-attr">[p]</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;表现出来的效果如下:</p>
+<p><img src="https://pic1.imgdb.cn/item/68d0c100c5157e1a88239e70.png"></p>
+<p>&nbsp;&nbsp;这里不过多讲解内容，用户们可以对着标签和上面的表格自己参照一下具体的作用。</p>
+<p>&nbsp;&nbsp;(下面是用户名字被设置在左边和中间的效果，第二个awa是背景被设置为透明的效果。)</p>
+<img src="https://pic1.imgdb.cn/item/68d0c16ec5157e1a8823a363.png" style="zoom: 80%;" />
+
+
+
+<p>&nbsp;&nbsp;另外，用户可以使用**[chat_config]**来填写默认数值，则默认指定部分数值，使得玩家不用每一次都手动设置，建议写在剧本开头:</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数名</th>
+<th align="left">参数作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">top</td>
+<td align="left">可以指定聊天区域的内容与游戏屏幕顶部的距离</td>
+</tr>
+<tr>
+<td align="left">left</td>
+<td align="left">可以指定聊天区域的内容与屏幕左侧的距离</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">可以指定整个聊天区域的显示高度</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">可以指定整个聊天区域的显示宽度</td>
+</tr>
+<tr>
+<td align="left">face_width</td>
+<td align="left">可以指定表情部分的图像宽度，默认为100</td>
+</tr>
+<tr>
+<td align="left">margin_face</td>
+<td align="left">可以更改表情部分与屏幕边缘的距离，默认为20</td>
+</tr>
+<tr>
+<td align="left">left_bgcolor</td>
+<td align="left">可以指定在左侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">right_bgcolor</td>
+<td align="left">可以指定在中央显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">center_bgcolor</td>
+<td align="left">可以指定在右侧显示的聊天的默认背景色，以0x000000形式指定。指定“transparent”可以使背景透明</td>
+</tr>
+<tr>
+<td align="left">name_font_size</td>
+<td align="left">可以指定角色名字的字体大小</td>
+</tr>
+<tr>
+<td align="left">name_font_color</td>
+<td align="left">可以指定角色名字的字体颜色，以0x000000形式指定</td>
+</tr>
+<tr>
+<td align="left">under_height</td>
+<td align="left">可以指定消息显示的区域高度，即当消息达到这个高度时，气泡会向上滚动。建议保留足够的空间以便在屏幕底部进行点击操作。默认值为屏幕高度的70%</td>
+</tr>
+<tr>
+<td align="left">margin_top</td>
+<td align="left">可以指定气泡顶部的空间，默认为25</td>
+</tr>
+<tr>
+<td align="left">zindex</td>
+<td align="left">可以指定在图层中的图层顺序，值越大越靠前显示</td>
+</tr>
+<tr>
+<td align="left">anim_time</td>
+<td align="left">可以指定数值。指定0以上的值时，气泡会以动画形式移动，以毫秒为单位指定</td>
+</tr>
+<tr>
+<td align="left">se</td>
+<td align="left">可以为显示气泡时设置音效</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Tyrano</category>
+      </categories>
+      <tags>
+        <tag>Tyrano</tag>
       </tags>
   </entry>
 </search>
